@@ -1,0 +1,9 @@
++===============================+===============================+====================================================================+
+| Launch Setup Clock            | Launch Hold Clock             | Pin                                                                |
++===============================+===============================+====================================================================+
+| clk_out1_mb_usb_clk_wiz_1_0_1 | clk_out1_mb_usb_clk_wiz_1_0_1 | mb_block_i/hdmi_text_controller_0/inst/glyph_module/Blue_reg[0]/D  |
+| clk_out1_mb_usb_clk_wiz_1_0_1 | clk_out1_mb_usb_clk_wiz_1_0_1 | mb_block_i/hdmi_text_controller_0/inst/glyph_module/Blue_reg[1]/D  |
+| clk_out1_mb_usb_clk_wiz_1_0_1 | clk_out1_mb_usb_clk_wiz_1_0_1 | mb_block_i/hdmi_text_controller_0/inst/glyph_module/Blue_reg[3]/D  |
+| clk_out1_mb_usb_clk_wiz_1_0_1 | clk_out1_mb_usb_clk_wiz_1_0_1 | mb_block_i/hdmi_text_controller_0/inst/glyph_module/Red_reg[1]/D   |
+| clk_out1_mb_usb_clk_wiz_1_0_1 | clk_out1_mb_usb_clk_wiz_1_0_1 | mb_block_i/hdmi_text_controller_0/inst/glyph_module/Green_reg[3]/D |
++-------------------------------+-------------------------------+--------------------------------------------------------------------+

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mb_ball" location="C:/Users/sidra/Documents/GitHub/ECE_385/Lab_6/Lab_6.2/lab_6.2_sid/lab_6.2_sid.sdk/mb_ball" platform="C:/Users/sidra/Documents/GitHub/ECE_385/Lab_6/Lab_6.2/lab_6.2_sid/lab_6.2_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="mb_ball_system" sysConfig="mb_usb_hdmi_top" runtime="cpp" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="4cffd8483f6b75f3aa703f877784cd12">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.1380900217" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.716887961" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

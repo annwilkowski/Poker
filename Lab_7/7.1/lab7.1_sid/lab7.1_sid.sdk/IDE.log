@@ -1,0 +1,739 @@
+09:08:13 DEBUG : Logs will be stored at 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/IDE.log'.
+09:08:16 INFO  : Platform repository initialization has completed.
+09:08:16 INFO  : Registering command handlers for Vitis TCF services
+09:08:16 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\temp_xsdb_launch_script.tcl
+09:08:21 INFO  : XSCT server has started successfully.
+09:08:24 INFO  : plnx-install-location is set to ''
+09:08:25 INFO  : Successfully done setting XSCT server connection channel  
+09:08:25 INFO  : Successfully done query RDI_DATADIR 
+09:08:25 INFO  : Successfully done setting workspace for the tool. 
+09:09:24 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+09:09:24 INFO  : Result from executing command 'getPlatforms': 
+09:09:24 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:09:24 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+09:09:27 INFO  : Platform 'mb_usb_hdmi_top' is added to custom repositories.
+09:18:59 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+09:18:59 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+09:25:11 INFO  : Checking for BSP changes to sync application flags for project 'mb_text'...
+09:25:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:25:36 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+09:25:36 INFO  : 'jtag frequency' command is executed.
+09:25:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+09:25:38 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+09:25:38 INFO  : Context for processor 'microblaze_0' is selected.
+09:25:38 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+09:25:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:25:38 INFO  : Context for processor 'microblaze_0' is selected.
+09:25:38 INFO  : System reset is completed.
+09:25:41 INFO  : 'after 3000' command is executed.
+09:25:41 INFO  : Context for processor 'microblaze_0' is selected.
+09:25:41 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+09:25:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+09:25:41 INFO  : Context for processor 'microblaze_0' is selected.
+09:25:41 INFO  : 'con' command is executed.
+09:25:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:25:41 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+09:29:26 INFO  : Disconnected from the channel tcfchan#2.
+09:29:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:29:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+09:29:36 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+09:29:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:29:42 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+09:29:42 INFO  : 'jtag frequency' command is executed.
+09:29:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+09:29:43 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+09:29:43 INFO  : Context for processor 'microblaze_0' is selected.
+09:29:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+09:29:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:29:43 INFO  : Context for processor 'microblaze_0' is selected.
+09:29:43 INFO  : System reset is completed.
+09:29:46 INFO  : 'after 3000' command is executed.
+09:29:46 INFO  : Context for processor 'microblaze_0' is selected.
+09:29:47 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+09:29:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+09:29:47 INFO  : Context for processor 'microblaze_0' is selected.
+09:29:47 INFO  : 'con' command is executed.
+09:29:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:29:47 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+09:33:45 INFO  : Checking for BSP changes to sync application flags for project 'mb_text'...
+09:33:50 INFO  : Disconnected from the channel tcfchan#3.
+09:33:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:33:51 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+09:33:51 INFO  : 'jtag frequency' command is executed.
+09:33:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+09:33:52 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+09:33:52 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+09:33:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:33:52 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:52 INFO  : System reset is completed.
+09:33:55 INFO  : 'after 3000' command is executed.
+09:33:55 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:56 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+09:33:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+09:33:56 INFO  : Context for processor 'microblaze_0' is selected.
+09:33:56 INFO  : 'con' command is executed.
+09:33:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:33:56 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+09:34:16 INFO  : Disconnected from the channel tcfchan#4.
+09:34:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:34:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+09:34:26 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+09:34:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:34:29 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+09:34:29 INFO  : 'jtag frequency' command is executed.
+09:34:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+09:34:30 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+09:34:30 INFO  : Context for processor 'microblaze_0' is selected.
+09:34:30 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+09:34:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:34:30 INFO  : Context for processor 'microblaze_0' is selected.
+09:34:30 INFO  : System reset is completed.
+09:34:33 INFO  : 'after 3000' command is executed.
+09:34:33 INFO  : Context for processor 'microblaze_0' is selected.
+09:34:34 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+09:34:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+09:34:34 INFO  : Context for processor 'microblaze_0' is selected.
+09:34:34 INFO  : 'con' command is executed.
+09:34:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:34:34 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+09:35:03 INFO  : Checking for BSP changes to sync application flags for project 'mb_text'...
+09:35:11 INFO  : Disconnected from the channel tcfchan#5.
+09:35:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:35:12 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+09:35:12 INFO  : 'jtag frequency' command is executed.
+09:35:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+09:35:13 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+09:35:14 INFO  : Context for processor 'microblaze_0' is selected.
+09:35:14 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+09:35:14 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:35:14 INFO  : Context for processor 'microblaze_0' is selected.
+09:35:14 INFO  : System reset is completed.
+09:35:17 INFO  : 'after 3000' command is executed.
+09:35:17 INFO  : Context for processor 'microblaze_0' is selected.
+09:35:17 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+09:35:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+09:35:17 INFO  : Context for processor 'microblaze_0' is selected.
+09:35:17 INFO  : 'con' command is executed.
+09:35:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:35:17 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+10:01:23 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+10:01:42 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+10:01:42 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+10:01:47 INFO  : Disconnected from the channel tcfchan#6.
+10:01:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:01:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:01:57 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:01:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:01:59 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+10:01:59 INFO  : 'jtag frequency' command is executed.
+10:01:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+10:02:01 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+10:02:01 INFO  : Context for processor 'microblaze_0' is selected.
+10:02:01 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+10:02:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+10:02:01 INFO  : Context for processor 'microblaze_0' is selected.
+10:02:01 INFO  : System reset is completed.
+10:02:04 INFO  : 'after 3000' command is executed.
+10:02:04 INFO  : Context for processor 'microblaze_0' is selected.
+10:02:04 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+10:02:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+10:02:04 INFO  : Context for processor 'microblaze_0' is selected.
+10:02:04 INFO  : 'con' command is executed.
+10:02:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+10:02:04 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+11:21:02 INFO  : Checking for BSP changes to sync application flags for project 'mb_text'...
+11:22:08 INFO  : Disconnected from the channel tcfchan#8.
+11:22:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:22:09 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+11:22:09 INFO  : 'jtag frequency' command is executed.
+11:22:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+11:22:10 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+11:22:10 INFO  : Context for processor 'microblaze_0' is selected.
+11:22:10 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+11:22:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:22:10 INFO  : Context for processor 'microblaze_0' is selected.
+11:22:10 INFO  : System reset is completed.
+11:22:13 INFO  : 'after 3000' command is executed.
+11:22:13 INFO  : Context for processor 'microblaze_0' is selected.
+11:22:14 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+11:22:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+11:22:14 INFO  : Context for processor 'microblaze_0' is selected.
+11:22:14 INFO  : 'con' command is executed.
+11:22:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:22:14 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+11:23:35 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+11:23:35 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+11:23:36 INFO  : Checking for BSP changes to sync application flags for project 'mb_text'...
+11:23:43 INFO  : Disconnected from the channel tcfchan#9.
+11:23:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:23:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+11:23:53 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+11:23:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:23:56 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+11:23:56 INFO  : 'jtag frequency' command is executed.
+11:23:56 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+11:23:57 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+11:23:57 INFO  : Context for processor 'microblaze_0' is selected.
+11:23:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+11:23:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:23:57 INFO  : Context for processor 'microblaze_0' is selected.
+11:23:57 INFO  : System reset is completed.
+11:24:00 INFO  : 'after 3000' command is executed.
+11:24:00 INFO  : Context for processor 'microblaze_0' is selected.
+11:24:01 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+11:24:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+11:24:01 INFO  : Context for processor 'microblaze_0' is selected.
+11:24:01 INFO  : 'con' command is executed.
+11:24:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:24:01 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+11:24:54 INFO  : Disconnected from the channel tcfchan#11.
+11:24:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:24:55 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+11:24:55 INFO  : 'jtag frequency' command is executed.
+11:24:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+11:24:57 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+11:24:57 INFO  : Context for processor 'microblaze_0' is selected.
+11:24:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+11:24:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+11:24:57 INFO  : Context for processor 'microblaze_0' is selected.
+11:24:57 INFO  : System reset is completed.
+11:25:00 INFO  : 'after 3000' command is executed.
+11:25:00 INFO  : Context for processor 'microblaze_0' is selected.
+11:25:00 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+11:25:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+11:25:00 INFO  : Context for processor 'microblaze_0' is selected.
+11:25:00 INFO  : 'con' command is executed.
+11:25:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+11:25:00 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+19:05:40 INFO  : Disconnected from the channel tcfchan#12.
+19:05:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:05:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:05:50 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+19:05:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:05:54 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+19:05:54 INFO  : 'jtag frequency' command is executed.
+19:05:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:05:55 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:05:56 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:56 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:05:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:05:56 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:56 INFO  : System reset is completed.
+19:05:59 INFO  : 'after 3000' command is executed.
+19:05:59 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:59 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+19:05:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+19:05:59 INFO  : Context for processor 'microblaze_0' is selected.
+19:05:59 INFO  : 'con' command is executed.
+19:05:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:05:59 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+19:58:49 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+19:59:08 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+19:59:08 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm
+19:59:13 INFO  : Disconnected from the channel tcfchan#13.
+19:59:14 INFO  : The hardware specification used by project 'mb_text' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+19:59:14 INFO  : The file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+19:59:14 INFO  : The file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+19:59:14 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text\_ide\bitstream' in project 'mb_text'.
+19:59:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:59:15 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+19:59:15 INFO  : 'jtag frequency' command is executed.
+19:59:18 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+19:59:18 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+19:59:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:59:18 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+20:00:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:00:08 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+20:00:08 INFO  : 'jtag frequency' command is executed.
+20:00:11 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+20:00:11 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+20:00:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:00:11 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+20:01:42 DEBUG : Logs will be stored at 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/IDE.log'.
+20:01:43 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\temp_xsdb_launch_script.tcl
+20:01:46 INFO  : XSCT server has started successfully.
+20:01:46 INFO  : Successfully done setting XSCT server connection channel  
+20:01:46 INFO  : plnx-install-location is set to ''
+20:01:46 INFO  : Successfully done setting workspace for the tool. 
+20:01:48 INFO  : Platform repository initialization has completed.
+20:01:48 INFO  : Registering command handlers for Vitis TCF services
+20:01:53 INFO  : Successfully done query RDI_DATADIR 
+20:02:02 INFO  : Checking for BSP changes to sync application flags for project 'mb_text'...
+20:02:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:02:14 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+20:02:15 INFO  : 'jtag frequency' command is executed.
+20:02:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:02:16 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:02:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:02:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:02:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:02:16 INFO  : Context for processor 'microblaze_0' is selected.
+20:02:16 INFO  : System reset is completed.
+20:02:19 INFO  : 'after 3000' command is executed.
+20:02:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:02:20 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+20:02:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+20:02:20 INFO  : Context for processor 'microblaze_0' is selected.
+20:02:20 INFO  : 'con' command is executed.
+20:02:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:02:20 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+20:03:25 INFO  : Disconnected from the channel tcfchan#1.
+20:03:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:03:26 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+20:03:26 INFO  : 'jtag frequency' command is executed.
+20:03:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:03:27 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:03:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:28 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:03:28 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:03:28 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:28 INFO  : System reset is completed.
+20:03:31 INFO  : 'after 3000' command is executed.
+20:03:31 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:31 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+20:03:31 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+20:03:31 INFO  : Context for processor 'microblaze_0' is selected.
+20:03:31 INFO  : 'con' command is executed.
+20:03:31 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:03:31 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+20:04:25 INFO  : Disconnected from the channel tcfchan#2.
+20:04:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:04:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:35 ERROR : Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+20:04:35 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+20:04:35 INFO  : 'jtag frequency' command is executed.
+20:04:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:04:36 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:04:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:04:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:04:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:36 INFO  : System reset is completed.
+20:04:39 INFO  : 'after 3000' command is executed.
+20:04:39 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:40 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+20:04:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+20:04:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:40 INFO  : 'con' command is executed.
+20:04:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:04:40 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+20:04:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:04:40 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+20:04:40 INFO  : 'jtag frequency' command is executed.
+20:04:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:04:42 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:04:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:04:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:04:42 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:42 INFO  : System reset is completed.
+20:04:45 INFO  : 'after 3000' command is executed.
+20:04:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:45 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+20:04:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+20:04:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:04:45 INFO  : 'con' command is executed.
+20:04:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:04:45 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+20:08:18 INFO  : Disconnected from the channel tcfchan#3.
+20:08:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:08:19 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+20:08:19 INFO  : 'jtag frequency' command is executed.
+20:08:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:08:21 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+20:08:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:21 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+20:08:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:08:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:21 INFO  : System reset is completed.
+20:08:24 INFO  : 'after 3000' command is executed.
+20:08:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:24 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+20:08:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+20:08:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:25 INFO  : 'con' command is executed.
+20:08:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:08:25 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+21:02:15 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+21:02:53 INFO  : Hardware specification for platform project 'mb_usb_hdmi_top' is updated.
+21:03:05 INFO  : Result from executing command 'removePlatformRepo': 
+21:03:17 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
+21:03:17 INFO  : Result from executing command 'getPlatforms': 
+21:03:35 INFO  : Disconnected from the channel tcfchan#4.
+21:03:36 INFO  : The hardware specification used by project 'mb_text' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:03:36 INFO  : The file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text\_ide\bitstream\mb_usb_hdmi_top.bit' stored in project is removed.
+21:03:36 INFO  : The file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text\_ide\bitstream\mb_usb_hdmi_top.mmi' stored in project is removed.
+21:03:36 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text\_ide\bitstream' in project 'mb_text'.
+21:03:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:03:36 INFO  : Jtag cable 'RealDigital Boo 8874292303C2A' is selected.
+21:03:36 INFO  : 'jtag frequency' command is executed.
+21:03:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:03:38 INFO  : Device configured successfully with "C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit"
+21:03:38 INFO  : Context for processor 'microblaze_0' is selected.
+21:03:38 INFO  : Hardware design and registers information is loaded from 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+21:03:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:03:38 INFO  : Context for processor 'microblaze_0' is selected.
+21:03:38 INFO  : System reset is completed.
+21:03:41 INFO  : 'after 3000' command is executed.
+21:03:41 INFO  : Context for processor 'microblaze_0' is selected.
+21:03:41 INFO  : The application 'C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf' is downloaded to processor 'microblaze_0'.
+21:03:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292303C2A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.sdk/mb_text/Debug/mb_text.elf
+----------------End of Script----------------
+
+21:03:41 INFO  : Context for processor 'microblaze_0' is selected.
+21:03:41 INFO  : 'con' command is executed.
+21:03:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:03:41 INFO  : Launch script is exported to file 'C:\Users\sidra\Documents\GitHub\ECE_385\Lab_7\7.1\lab7.1_sid\lab7.1_sid.sdk\mb_text_system\_ide\scripts\debugger_mb_text-default.tcl'
+21:05:41 INFO  : Disconnected from the channel tcfchan#7.

@@ -1,0 +1,7 @@
+Time resolution is 1 ps
+Block Memory Generator module hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.BRAM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+Info: Read back of control register: 001f6000
+Time: 216400 ns  Iteration: 0  Process: /hdmi_text_controller_tb/Initial284_150  Scope: hdmi_text_controller_tb.TEST_VECTORS  File: c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/testing/ip_repo_sid/hdmi_text_controller_2_0/src/hdmi_text_controller_v1_0_tb.sv Line: 318
+Saving bitmap 'lab7_1_sim.bmp'.
+$finish called at time : 15648350 ns : File "c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/testing/ip_repo_sid/hdmi_text_controller_2_0/src/hdmi_text_controller_v1_0_tb.sv" Line 327
+INFO: xsimkernel Simulation Memory Usage: 80680 KB (Peak: 80680 KB), Simulation CPU Usage: 75811 ms

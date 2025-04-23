@@ -1,0 +1,157 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu Apr  3 20:21:59 2025
+| Host         : DESKTOP-227SA2M running 64-bit major release  (build 9200)
+| Command      : report_methodology -file mb_usb_hdmi_top_methodology_drc_routed.rpt -pb mb_usb_hdmi_top_methodology_drc_routed.pb -rpx mb_usb_hdmi_top_methodology_drc_routed.rpx
+| Design       : mb_usb_hdmi_top
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 20
++-----------+----------+--------------------------------------------------------+------------+
+| Rule      | Severity | Description                                            | Violations |
++-----------+----------+--------------------------------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert                           | 2          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                      | 1          |
+| TIMING-16 | Warning  | Large setup violation                                  | 12         |
+| TIMING-18 | Warning  | Missing input or output delay                          | 3          |
+| ULMTCS-2  | Warning  | Control Sets use limits require reduction              | 1          |
+| XDCC-7    | Warning  | Scoped Clock constraint overwritten on the same source | 1          |
++-----------+----------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/oserdes_m_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encg/dout_reg[9]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[1]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[2]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[3]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/cnt_reg[4]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[0]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[1]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[2]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[3]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[4]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[5]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[6]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[7]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[8]/CLR,
+mb_block_i/hdmi_text_controller_0/inst/vga_to_hdmi/inst/encr/dout_reg[9]/CLR
+ (the first 15 of 42 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) mb_block_i/mdm_1/U0/MDM_Core_I1/JTAG_CONTROL_I/sel_n_reg/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-16#1 Warning
+Large setup violation  
+There is a large setup violation of -1.337 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Blue_reg[3]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#2 Warning
+Large setup violation  
+There is a large setup violation of -1.342 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Red_reg[2]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#3 Warning
+Large setup violation  
+There is a large setup violation of -1.589 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Green_reg[2]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#4 Warning
+Large setup violation  
+There is a large setup violation of -1.591 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Green_reg[3]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#5 Warning
+Large setup violation  
+There is a large setup violation of -1.618 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Blue_reg[1]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#6 Warning
+Large setup violation  
+There is a large setup violation of -1.621 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Blue_reg[2]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#7 Warning
+Large setup violation  
+There is a large setup violation of -1.623 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Green_reg[1]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#8 Warning
+Large setup violation  
+There is a large setup violation of -1.623 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Red_reg[1]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#9 Warning
+Large setup violation  
+There is a large setup violation of -1.659 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Red_reg[3]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#10 Warning
+Large setup violation  
+There is a large setup violation of -1.664 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Red_reg[0]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#11 Warning
+Large setup violation  
+There is a large setup violation of -1.705 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Blue_reg[0]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-16#12 Warning
+Large setup violation  
+There is a large setup violation of -1.707 ns between mb_block_i/hdmi_text_controller_0/inst/hdmi_text_controller_v1_0_AXI_inst/slv_regs_reg[419][0]/C (clocked by clk_out1_mb_usb_clk_wiz_1_0_1) and mb_block_i/hdmi_text_controller_0/inst/glyph_module/Green_reg[0]/D (clocked by clk_out_1x_clk_wiz_0_1). Large setup violations at the end of those stages might be difficult to fix during the post-placement implementation flow and could be the result of non-optimal XDC constraints or non-optimal design architecture
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on reset_rtl_0 relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on uart_rtl_0_rxd relative to clock(s) clk_100
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on uart_rtl_0_txd relative to clock(s) clk_100
+Related violations: <none>
+
+ULMTCS-2#1 Warning
+Control Sets use limits require reduction  
+This design uses 2480 control sets (vs. available limit of 8150, determined by 1 control set per CLB). This exceeds the control set use guideline of 15 percent. This is at a level where reduction is REQUIRED (see UG949). Use report_control_sets to get more details.
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk] (Source: C:/ECE_385/Lab_7/7.1/lab7.1_anna/lab7.1_anna.srcs/constrs_1/imports/lab7_1_provided_fa24/mb_usb_hdmi_top.xdc (Line: 1))
+Previous: create_clock -period 10.000 [get_ports Clk] (Source: c:/ECE_385/Lab_7/7.1/lab7.1_anna/lab7.1_anna.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc (Line: 56))
+Related violations: <none>
+
+

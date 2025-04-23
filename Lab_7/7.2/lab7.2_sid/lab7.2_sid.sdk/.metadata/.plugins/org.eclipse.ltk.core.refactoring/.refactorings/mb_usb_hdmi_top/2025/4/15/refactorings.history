@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;hdmi_text_controller.c, hdmi_text_controller.h, Makefile&apos; to &apos;src&apos;" description="Move 3 resources to &apos;src&apos;" destination="hw/drivers/hdmi_text_controller_v1_0/src" element1="hw/drivers/hdmi_text_controller_v1_0/hdmi_text_controller.c" element2="hw/drivers/hdmi_text_controller_v1_0/hdmi_text_controller.h" element3="hw/drivers/hdmi_text_controller_v1_0/Makefile" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="3" stamp="1744281241335" updateReferences="true"/>
+</session>

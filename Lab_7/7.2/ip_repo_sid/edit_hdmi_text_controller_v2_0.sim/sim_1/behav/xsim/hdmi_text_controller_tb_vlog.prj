@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../hdmi_text_controller_2_0/src/clk_wiz_0" \
+"../../../../hdmi_text_controller_2_0/src/clk_wiz_0/clk_wiz_0_clk_wiz.v" \
+"../../../../hdmi_text_controller_2_0/src/clk_wiz_0/clk_wiz_0.v" \
+"../../../../edit_hdmi_text_controller_v2_0.ip_user_files/ipstatic/simulation/blk_mem_gen_v8_4.v" \
+"../../../../hdmi_text_controller_2_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+
+sv xil_defaultlib  --include "../../../../hdmi_text_controller_2_0/src/clk_wiz_0" \
+"../../../../hdmi_text_controller_2_0/src/Color_Mapper.sv" \
+"../../../../hdmi_text_controller_2_0/src/VGA_controller.sv" \
+"../../../../hdmi_text_controller_2_0/src/font_rom.sv" \
+"../../../../hdmi_text_controller_2_0/hdl/hdmi_text_controller_v1_0.sv" \
+"../../../../hdmi_text_controller_2_0/hdl/hdmi_text_controller_v1_0_AXI.sv" \
+"../../../../hdmi_text_controller_2_0/src/hdmi_text_controller_v1_0_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

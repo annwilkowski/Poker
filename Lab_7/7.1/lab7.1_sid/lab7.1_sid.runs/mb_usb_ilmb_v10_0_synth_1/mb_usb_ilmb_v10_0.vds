@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Apr  2 06:58:55 2025
+# Process ID: 98740
+# Current directory: C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1
+# Command line: vivado.exe -log mb_usb_ilmb_v10_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source mb_usb_ilmb_v10_0.tcl
+# Log file: C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1/mb_usb_ilmb_v10_0.vds
+# Journal file: C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1\vivado.jou
+# Running On: Sid_ASUS, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16354 MB
+#-----------------------------------------------------------
+source mb_usb_ilmb_v10_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 371.977 ; gain = 64.504
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/ip_repo/hdmi_text_controller_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: mb_usb_ilmb_v10_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 8b859a7611e3417d to dir: C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.cache/ip/2022.2/8/b/8b859a7611e3417d/mb_usb_dlmb_v10_0.dcp to C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1/mb_usb_ilmb_v10_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.cache/ip/2022.2/8/b/8b859a7611e3417d/mb_usb_dlmb_v10_0_sim_netlist.v to C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1/mb_usb_ilmb_v10_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.cache/ip/2022.2/8/b/8b859a7611e3417d/mb_usb_dlmb_v10_0_sim_netlist.vhdl to C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1/mb_usb_ilmb_v10_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.cache/ip/2022.2/8/b/8b859a7611e3417d/mb_usb_dlmb_v10_0_stub.v to C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1/mb_usb_ilmb_v10_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.cache/ip/2022.2/8/b/8b859a7611e3417d/mb_usb_dlmb_v10_0_stub.vhdl to C:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.1/lab7.1_sid/lab7.1_sid.runs/mb_usb_ilmb_v10_0_synth_1/mb_usb_ilmb_v10_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP mb_usb_ilmb_v10_0, cache-ID = 8b859a7611e3417d.
+INFO: [Common 17-206] Exiting Vivado at Wed Apr  2 06:59:06 2025...

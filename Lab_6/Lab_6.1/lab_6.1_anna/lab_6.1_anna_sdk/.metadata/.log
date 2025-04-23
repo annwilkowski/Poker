@@ -1,0 +1,1599 @@
+!SESSION 2025-03-13 23:50:02.828 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file C:\ECE_385\Lab_6\Lab_6.1\lab_6.1_anna\lab_6.1_anna_sdk\.metadata\.bak_0.log
+Created Time: 2025-03-14 02:05:13.355
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.357
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.359
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.385
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887100000012A]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.387
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.430
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.430
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.438
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887100000012A]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.438
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.480
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.481
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.496
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887100000012A]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.498
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.533
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.533
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.554
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887100000012A]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.556
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.596
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.596
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "RealDigital Boo 887100000012A" && level == 0}], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.642
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "RealDigital Boo 887100000012A" && level == 0}], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.642
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.648
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.732
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.754
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887100000012A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.754
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.804
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.804
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.899
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:13.899
+!MESSAGE XSCT Command: [fpga -file C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/_ide/bitstream/mb_intro_top.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.196
+!MESSAGE XSCT command with result: [fpga -file C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/_ide/bitstream/mb_intro_top.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.260
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.309
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.309
+!MESSAGE XSCT Command: [loadhw -hw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa -regs], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.330
+!MESSAGE XSCT command with result: [loadhw -hw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa -regs], Result: [null, mb_intro_top_8]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.330
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.337
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.339
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.371
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.371
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.386
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:15.386
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.397
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.399
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.495
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.495
+!MESSAGE XSCT Command: [dow C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/Debug/mb_blink.elf], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.652
+!MESSAGE XSCT command with result: [dow C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/Debug/mb_blink.elf], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.686
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.727
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.727
+!MESSAGE XSCT Command: [con], Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.769
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-30: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.793
+!MESSAGE XSCT Command: [disconnect tcfchan#50], Thread: Thread-2220
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 02:05:18.800
+!MESSAGE XSCT command with result: [disconnect tcfchan#50], Result: [null, ]. Thread: Thread-2220
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 05:58:48.096
+!MESSAGE TCF channel terminated
+!STACK 0
+java.net.SocketException: Connection reset
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:186)
+	at java.base/java.net.SocketInputStream.read(SocketInputStream.java:140)
+	at java.base/java.io.BufferedInputStream.read1(BufferedInputStream.java:290)
+	at java.base/java.io.BufferedInputStream.read(BufferedInputStream.java:351)
+	at java.base/java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:186)
+	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:85)
+	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:329)
+!SESSION 2025-03-14 11:27:57.532 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2025-03-14 11:29:22.883
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2025-03-14 11:29:28.205
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-03-14 11:29:34.569
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-03-14 11:29:34.570
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2025-03-14 11:29:34.571
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:38.587
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:38.588
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:38.602
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:49.938
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:49.953
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:49.954
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:49.957
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:49.957
+!MESSAGE XSCT Command: [setws C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk], Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:49.960
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, C:/Xilinx/Vitis/2022.2/data]. Thread: Worker-6: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:29:49.967
+!MESSAGE XSCT command with result: [setws C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk], Result: [null, ]. Thread: Thread-24
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.240
+!MESSAGE XSCT Command: [::hsi::utils::openhw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.546
+!MESSAGE XSCT command with result: [::hsi::utils::openhw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Result: [null, ]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.561
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/system.mss ], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.571
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/system.mss ], Result: [null, ]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.574
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/system.mss], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.582
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/system.mss], Result: [null, {"procname": "microblaze_0",
+"osname": "standalone",
+"osver": "8.0",
+}]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-03-14 11:30:26.583
+!MESSAGE Generating MD5 hash for file: C:\ECE_385\Lab_6\Lab_6.1\lab_6.1_anna\lab_6.1_anna_sdk\mb_intro_top\export\mb_intro_top\sw\mb_intro_top\standalone_microblaze_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.589
+!MESSAGE XSCT Command: [::hsi::utils::closesw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/system.mss], Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:26.591
+!MESSAGE XSCT command with result: [::hsi::utils::closesw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/sw/mb_intro_top/standalone_microblaze_0/system.mss], Result: [null, ]. Thread: Worker-3: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.587
+!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.595
+!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Result: [null, {"device": "7s50",
+"family": "spartan7",
+"timestamp": "Thu Mar 13 23:28:18 2025",
+"vivado_version": "2022.2",
+"part": "xc7s50csga324-1",
+}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.597
+!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.604
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Result: [null, {"axi_gpio_0": {"hier_name": "axi_gpio_0",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_gpio_1": {"hier_name": "axi_gpio_1",
+"type": "axi_gpio",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"axi_uartlite_0": {"hier_name": "axi_uartlite_0",
+"type": "axi_uartlite",
+"version": "2.0",
+"ip_type": "PERIPHERAL",
+},
+"clk_wiz_1": {"hier_name": "clk_wiz_1",
+"type": "clk_wiz",
+"version": "6.0",
+"ip_type": "PERIPHERAL",
+},
+"mdm_1": {"hier_name": "mdm_1",
+"type": "mdm",
+"version": "3.2",
+"ip_type": "DEBUG",
+},
+"microblaze_0": {"hier_name": "microblaze_0",
+"type": "microblaze",
+"version": "11.0",
+"ip_type": "PROCESSOR",
+},
+"microblaze_0_axi_intc": {"hier_name": "microblaze_0_axi_intc",
+"type": "axi_intc",
+"version": "4.1",
+"ip_type": "INTERRUPT_CNTLR",
+},
+"microblaze_0_axi_periph": {"hier_name": "microblaze_0_axi_periph",
+"type": "axi_interconnect",
+"version": "2.1",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_dlmb_v10": {"hier_name": "microblaze_0_local_memory_dlmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {"hier_name": "microblaze_0_local_memory_ilmb_bram_if_cntlr",
+"type": "lmb_bram_if_cntlr",
+"version": "4.0",
+"ip_type": "MEMORY_CNTLR",
+},
+"microblaze_0_local_memory_ilmb_v10": {"hier_name": "microblaze_0_local_memory_ilmb_v10",
+"type": "lmb_v10",
+"version": "3.0",
+"ip_type": "BUS",
+},
+"microblaze_0_local_memory_lmb_bram": {"hier_name": "microblaze_0_local_memory_lmb_bram",
+"type": "blk_mem_gen",
+"version": "8.4",
+"ip_type": "MEMORY",
+},
+"rst_clk_wiz_1_100M": {"hier_name": "rst_clk_wiz_1_100M",
+"type": "proc_sys_reset",
+"version": "5.0",
+"ip_type": "PERIPHERAL",
+},
+}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.821
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.826
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Result: [null, {}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.826
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.871
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0], Result: [null, {"axi_gpio_0": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "16",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "16",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741824,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "16",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "16",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741828,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741832,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073741836,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742108,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742120,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073742112,
+},
+},
+"axi_gpio_1": {"GPIO_DATA": {"description": "Channel-1 AXI GPIO Data register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "17",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "17",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073807360,
+},
+"GPIO_TRI": {"description": "Channel-1 AXI GPIO 3-State Control register",
+"address_offset": "0x4",
+"access": "read-write",
+"size": "17",
+"interface": "S_AXI",
+"fields": {"Channel_1_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "17",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073807364,
+},
+"GPIO2_DATA": {"description": "Channel-2 AXI GPIO Data register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_DATA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO Data Register.
+For each I/O bit programmed as input
+  R - Reads value on the input pin.
+  W - No effect.
+For each I/O bit programmed as output
+  R - Reads value on GPIO_O pins
+  W - Writes value to the corresponding AXI GPIO 
+      data register bit and output pin
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073807368,
+},
+"GPIO2_TRI": {"description": "Channel-2 AXI GPIO 3-State Control register",
+"address_offset": "0xC",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_2_GPIO_TRI": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "AXI GPIO 3-State Control Register
+Each I/O pin of the AXI GPIO is individually programmable as an input or output   For each of the bits     0 - I/O pin configured as output     1 - I/O pin configured as input
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073807372,
+},
+"GIER": {"description": "Global_Interrupt_Enable register",
+"address_offset": "0x11C",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Global_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "31",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master enable for the device interrupt output
+  0 - Disabled
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073807644,
+},
+"IP_IER": {"description": "IP Interrupt Enable register",
+"address_offset": "0x128",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 1 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Enable": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable Channel 2 Interrupt
+  0 - Disabled (masked)
+  1 - Enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073807656,
+},
+"IP_ISR": {"description": "IP Interrupt Status register",
+"address_offset": "0x120",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"Channel_1_Interrupt_Status": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 1 Interrupt Status
+  0 - No Channel 1 input interrupt
+  1 - Channel 1 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Channel_2_Interrupt_Status": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Channel 2 Interrupt Status
+  0 - No Channel 2 input interrupt
+  1 - Channel 2 input interrupt
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1073807648,
+},
+},
+"axi_uartlite_0": {"RX_FIFO": {"description": "Receive data FIFO",
+"address_offset": "0x0",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_DATA": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Receive Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033280,
+},
+"TX_FIFO": {"description": "Transmit data FIFO",
+"address_offset": "0x4",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"TX_DATA": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "8",
+"desc": "UART Transmit Data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033284,
+},
+"CTRL_REG": {"description": "UART Lite control register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RST_TXFIFO": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the transmit FIFO
+Writing a 1 to this bit position clears the transmit FIFO
+  0 - Do nothing
+  1 - Clear the transmit FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RST_RXFIFO": {"access": "write-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Reset/clear the receive FIFO
+Writing a 1 to this bit position clears the receive FIFO
+  0 - Do nothing
+  1 - Clear the receive FIFO
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Enable_Intr": {"access": "write-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Enable interrupt for the AXI UART Lite
+  0 - Disable interrupt signal
+  1 - Enable interrupt signal
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033292,
+},
+"STAT_REG": {"description": "UART Lite status register",
+"address_offset": "0x8",
+"access": "read-only",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"RX_FIFO_Valid_Data": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO has data.
+  0 - Receive FIFO is empty
+  1 - Receive FIFO has data
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"RX_FIFO_Full": {"access": "read-only",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the receive FIFO is full.
+  0 - Receive FIFO is not full
+  1 - Receive FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Empty": {"access": "read-only",
+"bit_offset": "2",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is empty.
+  0 - Transmit FIFO is not empty
+  1 - Transmit FIFO is empty
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"TX_FIFO_Full": {"access": "read-only",
+"bit_offset": "3",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates if the transmit FIFO is full.
+  0 - Transmit FIFO is not full
+  1 - Transmit FIFO is full
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Intr_Enabled": {"access": "read-only",
+"bit_offset": "4",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that interrupts is enabled.
+  0 - Interrupt is disabled
+  1 - Interrupt is enabled
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Overrun_Error": {"access": "read-only",
+"bit_offset": "5",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a overrun error has occurred after the last time the status register was read. Overrun is when a new character has been received but the receive FIFO is full. The received character is ignored and not written into the receive FIFO. This bit is cleared when the status register is read.      0 - No overrun error has occurred      1 - Overrun error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Frame_Error": {"access": "read-only",
+"bit_offset": "6",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a frame error has occurred after the last time the status register was read. Frame error is defined as detection of a stop bit with the value 0. The receive character is ignored and not written to the receive FIFO. This bit is cleared when the status register is read.      0 - No frame error has occurred   1 - Frame error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"Parity_Error": {"access": "read-only",
+"bit_offset": "7",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Indicates that a parity error has occurred after the last time the status register was read. If the UART is configured without any parity handling, this bit is always 0. The received character is written into the receive FIFO. This bit is cleared when the status register is read.      0 - No parity error has occurred      1 - Parity error has occurred
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1080033288,
+},
+},
+"microblaze_0_axi_intc": {"ISR": {"description": "Interrupt Status Register",
+"address_offset": "0x0",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Status Register.
+For each bit up to number of periperhal interrupts:
+  R - Reads active interrupt signal.
+  W - No effect after MER HIE bit has been set, otherwise writes active interrupt signal.
+For remaining bits defined by number of software interrupts:
+  R - Reads software interrupt value.
+  W - Writes software interrupt value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616192,
+},
+"IPR": {"description": "Interrupt Pending Register",
+"address_offset": "0x4",
+"access": "read-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Pending Register.
+For each bit:
+  R - Reads logical AND of bits in ISR and IER.
+  W - No effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616196,
+},
+"IER": {"description": "Interrupt Enable Register",
+"address_offset": "0x8",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Enable Register.
+For each bit:
+  R - Reads interrupt enable value.
+  W - Writes interrupt enable value.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616200,
+},
+"IAR": {"description": "Interrupt Acknowledge Register",
+"address_offset": "0xC",
+"access": "write-only",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "write-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Acknowledge Register.
+For each bit:
+  W - Acknowledge interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616204,
+},
+"SIE": {"description": "Set Interrupt Enables",
+"address_offset": "0x10",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Set Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 enables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616208,
+},
+"CIE": {"description": "Clear Interrupt Enables",
+"address_offset": "0x14",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Clear Interrupt Enables
+For each bit:
+  R - Reads active interrupt.
+  W - Writing 1 disables the interrupt, writing 0 has no effect.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616212,
+},
+"IVR": {"description": "Interrupt Vector Register",
+"address_offset": "0x18",
+"access": "read-only",
+"size": "5",
+"interface": "S_AXI",
+"fields": {"IVN": {"access": "read-only",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "5",
+"desc": "Interrupt Vector Number.
+  R - Reads ordinal of highest priority, enabled, active interrupt.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616216,
+},
+"MER": {"description": "Master Enable Register",
+"address_offset": "0x1C",
+"access": "read-write",
+"size": "2",
+"interface": "S_AXI",
+"fields": {"ME": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Master IRQ Enable.
+  0 - All interrupts disabled.
+  1 - All interrupts can be enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+"HIE": {"access": "read-write",
+"bit_offset": "1",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Hardware Interrupt Enable.
+  0 - HW interrupts disabled.
+  1 - HW interrupts enabled.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616220,
+},
+"IMR": {"description": "Interrupt Mode Register",
+"address_offset": "0x20",
+"access": "read-write",
+"size": "1",
+"interface": "S_AXI",
+"fields": {"INT": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "1",
+"desc": "Interrupt Mode Register.
+For each bit:
+  R - Reads interrupt mode.
+  W - Sets interrupt mode, where 0 is normal mode and 1 is fast mode.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616224,
+},
+"IVAR[0]": {"description": "Interrupt Vector Address Register 0",
+"address_offset": "0x100",
+"access": "read-write",
+"size": "32",
+"interface": "S_AXI",
+"fields": {"IVA": {"access": "read-write",
+"bit_offset": "0",
+"bit_range": "",
+"bit_width": "32",
+"desc": "Interrupt vector address of active interrupt 0 with highest priority.
+",
+"enum_values": "",
+"lsb": "",
+"mod_write_val": "",
+"msb": "",
+"read_action": "",
+},
+},
+"memoryAddr": 1092616448,
+},
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr": {},
+"microblaze_0_local_memory_ilmb_bram_if_cntlr": {},
+}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.876
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.887
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0], Result: [null, {"axi_gpio_0_S_AXI": {"name": "axi_gpio_0",
+"base": "0x40000000",
+"high": "0x4000FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_gpio_1_S_AXI": {"name": "axi_gpio_1",
+"base": "0x40010000",
+"high": "0x4001FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"axi_uartlite_0_S_AXI": {"name": "axi_uartlite_0",
+"base": "0x40600000",
+"high": "0x4060FFFF",
+"size": "65536",
+"slaveintf": "S_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_axi_intc_s_axi": {"name": "microblaze_0_axi_intc",
+"base": "0x41200000",
+"high": "0x4120FFFF",
+"size": "65536",
+"slaveintf": "s_axi",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"microblaze_0_local_memory_dlmb_bram_if_cntlr_SLMB_Mem": {"name": "microblaze_0_local_memory_dlmb_bram_if_cntlr",
+"base": "0x00000000",
+"high": "0x00007FFF",
+"size": "32768",
+"slaveintf": "SLMB",
+"type": "MEMORY",
+"flags": "7",
+"segment": "Mem",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.887
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_ENABLED], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.892
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_ENABLED], Result: [null, 1]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.892
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.892
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_EVENT_COUNTERS], Result: [null, 5]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.892
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.919
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, 1]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.920
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.924
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_DEBUG_COUNTER_WIDTH], Result: [null, 32]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.924
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_FREQ], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.924
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_FREQ], Result: [null, 100000000]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.924
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.930
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0 C_CPU_CLK_FREQ_HZ], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.930
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.950
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa], Result: [null, {"microblaze_0": {"bscan": "2",
+"index": "0",
+},
+}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.955
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa mdm_1], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.955
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa mdm_1], Result: [null, {}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.955
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa mdm_1], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.955
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa mdm_1], Result: [null, {"microblaze_0": {},
+}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.955
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa mdm_1], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.955
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa mdm_1], Result: [null, microblaze_0]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:41.969
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 11:30:44.406
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1191)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.483
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.487
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.878
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000012A]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.878
+!MESSAGE XSCT Command: [version -server], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.878
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2022.2]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.884
+!MESSAGE XSCT Command: [version], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.884
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2022.2.0
+SW Build 0 on 2022-10-13-12:09:39
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.898
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.905
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000012A]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.907
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.928
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.932
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.942
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000012A]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.944
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.960
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.960
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.965
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000012A]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.971
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.992
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.992
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:44.998
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000012A]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.000
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.021
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.023
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.029
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  RealDigital Boo 887100000012A]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.029
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.052
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.052
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "RealDigital Boo 887100000012A" && level == 0}], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.073
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "RealDigital Boo 887100000012A" && level == 0}], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.073
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.075
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.075
+!MESSAGE XSCT Command: [::hsi::utils::get_clock_info -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.084
+!MESSAGE XSCT command with result: [::hsi::utils::get_clock_info -json C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa microblaze_0], Result: [null, {"Clk": "100000000",
+"Dbg_Clk": "",
+}]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.105
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.116
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* RealDigital Boo 887100000012A]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.116
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.135
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==1}], Result: [null,      2  xc7s50 (idcode 0362f093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.148
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.259
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000012A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:45.259
+!MESSAGE XSCT Command: [fpga -file C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/_ide/bitstream/mb_intro_top.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.669
+!MESSAGE XSCT command with result: [fpga -file C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/_ide/bitstream/mb_intro_top.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.732
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.770
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.770
+!MESSAGE XSCT Command: [loadhw -hw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa -regs], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.812
+!MESSAGE XSCT command with result: [loadhw -hw C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_intro_top/export/mb_intro_top/hw/mb_intro_top.xsa -regs], Result: [null, mb_intro_top_0]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.812
+!MESSAGE XSCT Command: [configparams mdm-detect-bscan-mask 2], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.812
+!MESSAGE XSCT command with result: [configparams mdm-detect-bscan-mask 2], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.812
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.838
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.841
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.844
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:46.844
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:49.866
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:49.869
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:49.985
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:49.985
+!MESSAGE XSCT Command: [dow C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/Debug/mb_blink.elf], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:50.143
+!MESSAGE XSCT command with result: [dow C:/ECE_385/Lab_6/Lab_6.1/lab_6.1_anna/lab_6.1_anna_sdk/mb_blink/Debug/mb_blink.elf], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:50.189
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:50.318
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:50.318
+!MESSAGE XSCT Command: [con], Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:50.350
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-2: Launching Debugger_mb_blink-GDB
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:50.378
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-100
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-03-14 11:30:50.383
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-100
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 12:57:46.365
+!MESSAGE Cannot send datagram packet to /192.168.229.255
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendEmptyPacket(LocatorService.java:1102)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendAll(LocatorService.java:1119)
+	at org.eclipse.tcf.internal.services.local.LocatorService.refresh_timer(LocatorService.java:715)
+	at org.eclipse.tcf.internal.services.local.LocatorService$1$1.run(LocatorService.java:233)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:243)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 12:57:46.382
+!MESSAGE Cannot send datagram packet to /10.168.41.255
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendEmptyPacket(LocatorService.java:1102)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendAll(LocatorService.java:1119)
+	at org.eclipse.tcf.internal.services.local.LocatorService.refresh_timer(LocatorService.java:715)
+	at org.eclipse.tcf.internal.services.local.LocatorService$1$1.run(LocatorService.java:233)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:243)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 12:57:46.390
+!MESSAGE Cannot send datagram packet to /192.168.10.255
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendEmptyPacket(LocatorService.java:1102)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendAll(LocatorService.java:1119)
+	at org.eclipse.tcf.internal.services.local.LocatorService.refresh_timer(LocatorService.java:715)
+	at org.eclipse.tcf.internal.services.local.LocatorService$1$1.run(LocatorService.java:233)
+	at org.eclipse.tcf.protocol.Protocol$3.run(Protocol.java:243)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 12:57:48.221
+!MESSAGE Cannot send datagram packet to /10.168.41.1
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendPeersRequest(LocatorService.java:1048)
+	at org.eclipse.tcf.internal.services.local.LocatorService$7.run(LocatorService.java:744)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 12:57:48.223
+!MESSAGE Cannot send datagram packet to /192.168.10.82
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendPeersRequest(LocatorService.java:1048)
+	at org.eclipse.tcf.internal.services.local.LocatorService$7.run(LocatorService.java:744)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+
+!ENTRY org.eclipse.tcf 4 0 2025-03-14 12:57:48.225
+!MESSAGE Cannot send datagram packet to /192.168.229.1
+!STACK 0
+java.net.SocketException: Network is unreachable: Datagram send failed
+	at java.base/java.net.TwoStacksPlainDatagramSocketImpl.send(Native Method)
+	at java.base/java.net.DatagramSocket.send(DatagramSocket.java:695)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendDatagramPacket(LocatorService.java:965)
+	at org.eclipse.tcf.internal.services.local.LocatorService.sendPeersRequest(LocatorService.java:1048)
+	at org.eclipse.tcf.internal.services.local.LocatorService$7.run(LocatorService.java:744)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98)
+	at java.base/java.lang.Thread.run(Thread.java:829)

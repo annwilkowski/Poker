@@ -1,0 +1,12 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "c:/ECE_385/Lab_7/7.1/ip_repo_anna/hdmi_text_controller_1_0/src/Color_Mapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module draw_text
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "c:/ECE_385/Lab_7/7.1/ip_repo_anna/hdmi_text_controller_1_0/src/VGA_controller.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "c:/ECE_385/Lab_7/7.1/ip_repo_anna/hdmi_text_controller_1_0/src/font_rom.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module font_rom
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "c:/ECE_385/Lab_7/7.1/ip_repo_anna/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_text_controller_v1_0
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "c:/ECE_385/Lab_7/7.1/ip_repo_anna/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_AXI.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_text_controller_v1_0_AXI
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "c:/ECE_385/Lab_7/7.1/ip_repo_anna/hdmi_text_controller_1_0/src/hdmi_text_controller_v1_0_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module hdmi_text_controller_tb
