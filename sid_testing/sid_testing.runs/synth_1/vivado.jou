@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Apr 25 04:53:18 2025
+# Process ID: 24536
+# Current directory: C:/Users/sidra/Documents/GitHub/Poker/sid_testing/sid_testing.runs/synth_1
+# Command line: vivado.exe -log player.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source player.tcl
+# Log file: C:/Users/sidra/Documents/GitHub/Poker/sid_testing/sid_testing.runs/synth_1/player.vds
+# Journal file: C:/Users/sidra/Documents/GitHub/Poker/sid_testing/sid_testing.runs/synth_1\vivado.jou
+# Running On: SidFW, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 33618 MB
+#-----------------------------------------------------------
+source player.tcl -notrace
