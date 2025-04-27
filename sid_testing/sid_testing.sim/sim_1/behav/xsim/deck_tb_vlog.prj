@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  --include "../../../../../game_logic/src" \
+"../../../../../game_logic/src/LFSR.sv" \
+"../../../../../game_logic/src/deck.sv" \
+"../../../../../game_logic/sim/deck_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

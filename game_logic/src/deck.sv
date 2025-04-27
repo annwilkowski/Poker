@@ -20,7 +20,7 @@ module card_deck (
 
     deck_t state;
     card_t deck  [52];
-    logic [5:0] top_card_number, rand_out;
+    logic [5:0] top_card_idx, rand_out;
 
     pseudo_rand_lfsr rand_num_gen (
         .clk(clk),
@@ -28,7 +28,7 @@ module card_deck (
         .rand_out(rand_out)
     );
 
-    assign top_card = deck[top_card_number];
+    assign top_card = deck[top_card_idx];
     assign ready = (state == shuffled);
 
     // Controls actual deck
@@ -41,43 +41,43 @@ module card_deck (
             end
         end else begin
             if (state == shuffling) begin
-                deck[top_card_number] <= deck[rand_out];
-                deck[rand_out] <= deck[top_card_number];
+                deck[top_card_idx] <= deck[rand_out];
+                deck[rand_out] <= deck[top_card_idx];
             end
         end
     end
-    // Controls state and top_card_number
+    // Controls state and top_card_idx
     always_ff @(posedge clk) begin : state_next
         if (reset) begin
             state <= unshuffled;
-            top_card_number <= 0;
+            top_card_idx <= 0;
         end else begin
             // Remains the same by default
             state <= state;
-            top_card_number <= top_card_number;
+            top_card_idx <= top_card_idx;
 
             unique case (state)
                 unshuffled: begin
                     if (start_shuffle) begin
                         state <= shuffling;
-                        top_card_number <= 0;
+                        top_card_idx <= 0;
                     end
                 end
                 shuffling: begin
-                    if (top_card_number == 51) begin
+                    if (top_card_idx == 51) begin
                         state <= shuffled;
-                        top_card_number <= 0;
+                        top_card_idx <= 0;
                     end else begin
-                        top_card_number <= top_card_number + 1;
+                        top_card_idx <= top_card_idx + 1;
                         state <= shuffling;
                     end
                 end
                 shuffled: begin
                     if (start_shuffle) begin
                         state <= shuffling;
-                        top_card_number <= 0;
+                        top_card_idx <= 0;
                     end else if (draw_card) begin
-                        top_card_number <= top_card_number + 1;
+                        top_card_idx <= top_card_idx + 1;
                     end
                 end
             endcase

@@ -1,0 +1,6 @@
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/sidra/Documents/GitHub/Poker/game_logic/src/LFSR.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pseudo_rand_lfsr
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/sidra/Documents/GitHub/Poker/game_logic/src/deck.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module card_deck
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Users/sidra/Documents/GitHub/Poker/game_logic/sim/deck_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module deck_tb
