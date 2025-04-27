@@ -1,5 +1,8 @@
 `include "poker_types.svh"
-
+// Deck that shuffles itself using pseudo random numbers
+// Takes 52 clock cycles to shuffle after start_shuffle is asserted
+// ready is asserted when shuffling is done
+// reset sets deck to new deck order
 module card_deck (
     input  logic  clk,
     input  logic  reset,
@@ -28,7 +31,7 @@ module card_deck (
     assign top_card = deck[top_card_number];
     assign ready = (state == shuffled);
 
-
+    // Controls actual deck
     always_ff @(posedge clk) begin : deck_next
         if (reset) begin
             for (int i = 0; i < 4; i++) begin
@@ -36,7 +39,6 @@ module card_deck (
                     deck[i*13+j] <= '{rank: rank_t'(j), suit: suit_t'(i)};
                 end
             end
-            top_card_number <= 6'b0;
         end else begin
             if (state == shuffling) begin
                 deck[top_card_number] <= deck[rand_out];
@@ -44,14 +46,16 @@ module card_deck (
             end
         end
     end
-
+    // Controls state and top_card_number
     always_ff @(posedge clk) begin : state_next
         if (reset) begin
             state <= unshuffled;
             top_card_number <= 0;
         end else begin
+            // Remains the same by default
             state <= state;
             top_card_number <= top_card_number;
+
             unique case (state)
                 unshuffled: begin
                     if (start_shuffle) begin
@@ -78,7 +82,6 @@ module card_deck (
                 end
             endcase
         end
-
     end
 
 

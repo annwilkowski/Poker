@@ -53,7 +53,7 @@ module poker_fsm (
     logic [9:0] bet_amount;
     logic make_bet;
     logic [9:0] player_stacks[8];
-    card_t current_cards[2][8];
+    card_t current_cards[8][2];
 
     // Game state next-state logic 
     always_comb begin : game_next
