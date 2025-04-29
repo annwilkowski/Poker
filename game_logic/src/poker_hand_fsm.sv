@@ -6,40 +6,52 @@ module poker_hand_fsm (
     input logic reset,
     // Game level inputs
     input logic advance,  // Indicates when user input is valid and game should advance
-    input logic [2:0] player_count,  // set when fsm transitions from idle to shuffling or on reset
+    input logic [2:0] player_count,     // Latched when FSM transitions from idle to shuffling or on reset
     input logic check_or_call,
     input logic bet_or_raise,
     input logic fold,
+    output logic [2:0] button,  // Tells you who the dealer is
     output card_t player_cards[2][8],
-    output logic [9:0] pot
+    output logic [MAX_STACK_W-1:0] player_stacks[8],
+    output logic [MAX_STACK_W-1:0] pot,
+    output hand_state_t curr_state
 );
+
+    /** -------------------------- Parameters -------------------------- **/
+    parameter big_blind = 2;
+    parameter small_blind = 1;
 
     /** -------------------------- Net Instantations -------------------------- **/
 
     // Round state variables
-    logic [9:0] pot_size;  // Max of 1024
-    logic [2:0] num_players, player_turn;  // Max of 8 players
-    typedef enum logic [2:0] {
-        idle,
-        shuffling,  // Shuffle deck
-        dealing,    // Deal cards to players (has to be done one by one)
-        pre_flop,
-        flop,
-        turn,
-        river,
-        showdown
-    } hand_t;
+    logic [MAX_STACK_W-1:0] pot_size;  // Max of 2048
+    logic [2:0] num_players, player_turn;  // Max of 8 players. Player 1 is to the left of Player 0
+    logic folded_players[8];
+    logic [MAX_STACK_W-1:0] call_size;
 
-    hand_t state, next_state;  // Stages of a hand
+    // typedef enum logic [2:0] {
+    //     idle,
+    //     shuffling,  // Shuffle deck
+    //     dealing,    // Deal cards to players (has to be done one by one)
+    //     pre_flop,
+    //     flop,
+    //     turn,
+    //     river,
+    //     showdown
+    // } hand_state_t;
+
+    hand_state_t state, next_state;  // Stages of a hand
+
     // Player Signals
     // Inputs
     logic [7:0] player_en;  // Also its own enable signal. Only 1 player can be dealt to at a time
     card_t input_cards[2];
     logic set_cards;
-    logic [9:0] bet_amount;
+    logic [MAX_STACK_W-1:0] bet_amount;
     logic make_bet;
+    logic add_profit;
     // Outputs
-    logic [9:0] player_stacks[8];
+    logic [MAX_STACK_W-1:0] current_stacks[8], prev_bet[8];
     card_t current_cards[2][8];
 
     // Deck Signals
@@ -55,6 +67,7 @@ module poker_hand_fsm (
 
     /* -------------------------- Continuous Assignments -------------------------- */
     assign player_cards = current_cards;
+    assign player_stacks = current_stacks;
     assign pot = pot_size;
 
 
@@ -67,12 +80,14 @@ module poker_hand_fsm (
             player players (
                 .clk          (clk),
                 .player_reset (reset),
-                .en           (player_en),
+                .en           (player_en[i]),
                 .input_cards  (input_cards),
                 .set_cards    (set_cards),
                 .bet_amount   (bet_amount),
                 .make_bet     (make_bet),
-                .current_stack(player_stacks[i]),
+                .add_profit   (add_profit),
+                .prev_bet     (prev_bet[i]),
+                .current_stack(current_stacks[i]),
                 .cards        (current_cards[i])
             );
         end
@@ -126,9 +141,11 @@ module poker_hand_fsm (
     // Card Logic
     always_ff @(posedge clk) begin
         if (reset) begin
-            // Round level
+            // Round level signals
             pot_size <= 10'b0;
             player_turn <= 3'b0;
+            button <= 3'b0;
+            for (int i = 0; i < 8; i++) folded_players[i] <= 1'b0;
             // Deck signals
             start_shuffle <= 1'b0;
             input_cards[0] <= '{rank: Ace, suit: Spades};
@@ -139,11 +156,10 @@ module poker_hand_fsm (
             deal_count <= 3'b0;
             card_idx <= 1'b0;
             draw_card <= 1'b0;
+            call_size <= 0;
         end else begin
             unique case (state)
                 idle: begin
-                    pot_size <= 10'b0;
-                    player_turn <= 3'b0;
                     if (next_state == shuffling) start_shuffle <= 1'b1;
                 end
                 shuffling: begin
@@ -151,18 +167,19 @@ module poker_hand_fsm (
                 end
                 dealing: begin
                     if (deal_count <= num_players) begin  // Deal cards to players one by one
-                        if (~card_idx) begin
+                        if (~card_idx) begin  // draw first card
                             set_cards <= 1'b0;
                             input_cards[card_idx] <= top_card;
                             card_idx <= 1'b1;
                             draw_card <= 1'b1;
-                        end else if (card_idx && draw_card) begin
+                        end else if (card_idx && draw_card) begin  // draw second card and enable player
                             input_cards[card_idx] <= top_card;
                             player_en[deal_count] <= 1'b1;
-                        end else begin
-                            card_idx   <= 1'b0;
-                            set_cards  <= 1'b1;
-                            draw_card  <= 1'b0;
+                        end else begin  // set card and stop drawing cards
+                            player_en[deal_count] <= 1'b0;
+                            card_idx <= 1'b0;
+                            set_cards <= 1'b1;
+                            draw_card <= 1'b0;
                             deal_count <= deal_count + 1;
                         end
                     end else begin  // Wait until next state
@@ -174,7 +191,26 @@ module poker_hand_fsm (
                     end
                 end
                 pre_flop: begin
-                    
+                    if (deal_count == 0) begin  // Small blind
+                        make_bet <= 1'b1;
+                        bet_amount <= small_blind;
+                        player_en[button+1] <= 1'b1;
+                        deal_count <= deal_count + 1;
+                    end else if (deal_count == 3'b001) begin  // Big blind
+                        bet_amount <= big_blind;
+                        player_en[button+2] <= 1'b1;
+                        deal_count <= deal_count + 1;
+                        pot_size <= 3;
+                    end else if (deal_count == 2 && advance) begin  // wait for game fsm to accept 
+                        if (check_or_call) begin
+
+                        end else
+                        if (bet_or_raise) begin
+
+                        end else if (fold) begin
+                            folded_players[player_turn] <= 1'b1;
+                        end
+                    end
                 end
                 flop: begin
 
@@ -186,7 +222,7 @@ module poker_hand_fsm (
 
                 end
                 showdown: begin
-
+                    button <= button + 1;
                 end
             endcase
         end
