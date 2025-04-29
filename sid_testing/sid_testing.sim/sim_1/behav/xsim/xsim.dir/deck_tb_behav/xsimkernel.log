@@ -1,0 +1,4 @@
+Running: xsim.dir/deck_tb_behav/xsimk.exe -simmode gui -wdb deck_tb_behav.wdb -simrunnum 0 -socket 56899
+Design successfully loaded
+Design Loading Memory Usage: 9204 KB (Peak: 9204 KB)
+Design Loading CPU Usage: 61 ms
