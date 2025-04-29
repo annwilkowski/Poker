@@ -1,14 +1,15 @@
-
-*** Running vivado
-    with args -log card_deck.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source card_deck.tcl
-
-
-
-****** Vivado v2022.2 (64-bit)
-  **** SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
-  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Sun Apr 27 06:36:41 2025
+# Process ID: 15956
+# Current directory: C:/Users/sidra/Documents/GitHub/Poker/sid_testing/sid_testing.runs/synth_1
+# Command line: vivado.exe -log card_deck.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source card_deck.tcl
+# Log file: C:/Users/sidra/Documents/GitHub/Poker/sid_testing/sid_testing.runs/synth_1/card_deck.vds
+# Journal file: C:/Users/sidra/Documents/GitHub/Poker/sid_testing/sid_testing.runs/synth_1\vivado.jou
+# Running On: Sid_ASUS, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 16354 MB
+#-----------------------------------------------------------
 source card_deck.tcl -notrace
 create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 372.621 ; gain = 63.879
 Command: read_checkpoint -auto_incremental -incremental C:/Users/sidra/Documents/GitHub/Poker/sid_testing/sid_testing.srcs/utils_1/imports/synth_1/player.dcp
