@@ -2,10 +2,63 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="mb_usb" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1745387449"/>
-    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1745387449"/>
-    <Generation Name="SIMULATION" State="STALE" Timestamp="1745387449"/>
-    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1745387449"/>
-    <FileCollection Name="SOURCES" Type="SOURCES"/>
+    <Generation Name="SYNTHESIS" State="STALE" Timestamp="1745902444"/>
+    <Generation Name="IMPLEMENTATION" State="STALE" Timestamp="1745902444"/>
+    <Generation Name="SIMULATION" State="STALE" Timestamp="1745902444"/>
+    <Generation Name="HW_HANDOFF" State="STALE" Timestamp="1745902444"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="synth\mb_usb.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\mb_usb.v" Type="Verilog">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="mb_usb.bmm" Type="BMM">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="mb_usb_ooc.xdc" Type="XDC">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="OUT_OF_CONTEXT"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="hw_handoff\mb_usb.hwh" Type="HwHandoff">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="mb_usb.bda">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="synth\mb_usb.hwdef">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="HW_HANDOFF"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+      <File Name="sim\mb_usb.protoinst">
+        <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SIMULATION"/>
+        <ProcessingOrder Val="NORMAL"/>
+      </File>
+    </FileCollection>
   </CompositeFile>
 </Root>

@@ -1,3 +1,0 @@
-Time resolution is 1 ps
-Block Memory Generator module hdmi_text_controller_tb.hdmi_text_controller_v1_0_inst.hdmi_text_controller_v1_0_AXI_inst.BRAM.inst.\native_mem_module.blk_mem_gen_v8_4_5_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
-$finish called at time : 435080 ns : File "c:/Users/sidra/Documents/GitHub/ECE_385/Lab_7/7.2/ip_repo_sid/hdmi_text_controller_2_0/src/hdmi_text_controller_v1_0_tb.sv" Line 338

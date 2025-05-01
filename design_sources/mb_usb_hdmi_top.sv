@@ -31,14 +31,14 @@ module mb_usb_hdmi_top(
     output logic hdmi_tmds_clk_n,
     output logic hdmi_tmds_clk_p,
     output logic [2:0]hdmi_tmds_data_n,
-    output logic [2:0]hdmi_tmds_data_p,
+    output logic [2:0]hdmi_tmds_data_p
         
     //HEX displays
-    output logic [7:0] hex_segA,
-    output logic [3:0] hex_gridA,
-    output logic [7:0] hex_segB,
-    output logic [3:0] hex_gridB
-);
+//    output logic [7:0] hex_segA,
+//    output logic [3:0] hex_gridA,
+//    output logic [7:0] hex_segB,
+//    output logic [3:0] hex_gridB
+   );
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
     logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
@@ -53,21 +53,21 @@ module mb_usb_hdmi_top(
     
     
     //Keycode HEX drivers
-    hex_driver HexA (
-        .clk(Clk),
-        .reset(reset_ah),
-        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], keycode0_gpio[19:16]}),
-        .hex_seg(hex_segA),
-        .hex_grid(hex_gridA)
-    );
+//    hex_driver HexA (
+//        .clk(Clk),
+//        .reset(reset_ah),
+//        .in({keycode0_gpio[31:28], keycode0_gpio[27:24], keycode0_gpio[23:20], keycode0_gpio[19:16]}),
+//        .hex_seg(hex_segA),
+//        .hex_grid(hex_gridA)
+//    );
     
-    hex_driver HexB (
-        .clk(Clk),
-        .reset(reset_ah),
-        .in({keycode0_gpio[15:12], keycode0_gpio[11:8], keycode0_gpio[7:4], keycode0_gpio[3:0]}),
-        .hex_seg(hex_segB),
-        .hex_grid(hex_gridB)
-    );
+//    hex_driver HexB (
+//        .clk(Clk),
+//        .reset(reset_ah),
+//        .in({keycode0_gpio[15:12], keycode0_gpio[11:8], keycode0_gpio[7:4], keycode0_gpio[3:0]}),
+//        .hex_seg(hex_segB),
+//        .hex_grid(hex_gridB)
+//    );
     
     mb_usb mb_block_i (
         .clk_100MHz(Clk),
@@ -134,18 +134,8 @@ module mb_usb_hdmi_top(
     );
 
     
-    //Ball Module
-    ball ball_instance(
-        .Reset(reset_ah),
-        .frame_clk(),                    //Figure out what this should be so that the ball will move
-        .keycode(keycode0_gpio[7:0]),    //Notice: only one keycode connected to ball by default
-        .BallX(ballxsig),
-        .BallY(ballysig),
-        .BallS(ballsizesig)
-    );
-    
     //Color Mapper Module   
-    color_mapper color_instance(
+    graphics color_instance(
         .BallX(ballxsig),
         .BallY(ballysig),
         .DrawX(drawX),
