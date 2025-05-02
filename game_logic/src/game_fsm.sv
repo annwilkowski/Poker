@@ -2,8 +2,15 @@
 
 module game_fsm (
     input logic clk,
-    reset
-
+    reset,
+output logic [2:0] button,  // Tells you who the dealer is
+    output card_t player_cards[2][8],
+    output logic [MAX_STACK_W-1:0] player_stacks[8],
+    output logic [MAX_STACK_W-1:0] current_pot,
+    output card_t flop[3],
+    output card_t turn,
+    output card_t river,
+    output hand_state_t curr_state
 );
 
 
@@ -13,9 +20,8 @@ module game_fsm (
     logic [4:0] hand_number;  // 32 hands 
 
     typedef enum logic [1:0] {
-        idle,     // Intro screen
+        start_screen,     // Intro screen
         playing,  // Game being played
-        halt      // Game over
     } game_t;
 
     game_t game_state, game_next_state;  // Overall state machine

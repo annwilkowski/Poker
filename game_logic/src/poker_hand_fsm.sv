@@ -17,10 +17,14 @@ module poker_hand_fsm (
     input logic bet_or_raise,
     input logic fold,
     input logic [MAX_STACK_W-1:0] bet_input,
+
     output logic [2:0] button,  // Tells you who the dealer is
     output card_t player_cards[2][8],
     output logic [MAX_STACK_W-1:0] player_stacks[8],
     output logic [MAX_STACK_W-1:0] current_pot,
+    output card_t flop[3],
+    output card_t turn,
+    output card_t river,
     output hand_state_t curr_state
 );
 
@@ -210,6 +214,45 @@ module poker_hand_fsm (
 
 
                 pre_flop: begin
+                    
+                    end
+                end
+
+                flop: begin
+
+                end
+
+                turn: begin
+
+                end
+
+                river: begin
+
+                end
+
+                showdown: begin
+                    button <= button + 1;
+                end
+            endcase
+        end
+    end
+
+    // Betting Logic
+    always_ff @(posedge clk) begin
+        if (reset) begin
+
+        end else begin
+            unique case (state)
+                idle: begin
+
+                end
+                shuffling: begin
+
+                end
+                dealing: begin
+
+                end
+                pre_flop: begin
                     // Small Blind auto-bet
                     if (deal_count == 0) begin
                         make_bet <= 1'b1;
@@ -256,45 +299,6 @@ module poker_hand_fsm (
                                 folded_players[player_turn] <= 1'b1;
                             end
                         end
-                    end
-                end
-
-                flop: begin
-
-                end
-
-                turn: begin
-
-                end
-
-                river: begin
-
-                end
-
-                showdown: begin
-                    button <= button + 1;
-                end
-            endcase
-        end
-    end
-
-    // Betting Logic
-    always_ff @(posedge clk) begin
-        if (reset) begin
-
-        end else begin
-            unique case (state)
-                idle: begin
-
-                end
-                shuffling: begin
-
-                end
-                dealing: begin
-
-                end
-                pre_flop: begin
-
                 end
                 flop: begin
 
