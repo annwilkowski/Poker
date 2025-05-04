@@ -10,7 +10,9 @@ WARNING: [XSIM 43-4100] "C:/Poker/anna_poker/anna_poker.sim/sim_1/behav/xsim/glb
 WARNING: [XSIM 43-4100] "C:/Poker/anna_poker/anna_poker.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_Game_Screen_sv_85414438
 Compiling module xil_defaultlib.font_rom
+Compiling module xil_defaultlib.card_text_display
 Compiling module xil_defaultlib.graphics
 Compiling module xil_defaultlib.vga_controller
 Compiling module xil_defaultlib.hdmi_text_controller_tb

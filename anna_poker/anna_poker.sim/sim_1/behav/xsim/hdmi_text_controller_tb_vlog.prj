@@ -1,9 +1,10 @@
 # compile verilog/system verilog design source files
-sv xil_defaultlib  --include "../../../../anna_poker.gen/sources_1/bd/mb_usb/ipshared/7698" --include "../../../../anna_poker.gen/sources_1/bd/mb_usb/ipshared/ec67/hdl" \
-"../../../../../graphics/Color_Mapper.sv" \
+sv xil_defaultlib  --include "../../../../anna_poker.gen/sources_1/bd/mb_usb/ipshared/7698" --include "../../../../anna_poker.gen/sources_1/bd/mb_usb/ipshared/ec67/hdl" --include "../../../../../graphics" \
+"../../../../../graphics/Game_Screen.sv" \
 "../../../../../graphics/VGA_controller.sv" \
+"../../../../../graphics/card_text_display.sv" \
 "../../../../../graphics/font_rom.sv" \
-"../../../../../graphics/graphics_tb.sv" \
+"../../../../../graphics/sim/game_screen_tb.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

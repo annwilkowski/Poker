@@ -5,21 +5,22 @@
    <db_ref_list>
       <db_ref path="hdmi_text_controller_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="\$unit_Game_Screen_sv_85414438 " />
             <top_module name="glbl" />
             <top_module name="hdmi_text_controller_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="167.699 ns"></ZoomEndTime>
-      <Cursor1Time time="40.000 ns"></Cursor1Time>
+      <ZoomStartTime time="7,439,110.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="7,445,530.001 ns"></ZoomEndTime>
+      <Cursor1Time time="7,440,320.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="195"></NameColumnWidth>
+      <NameColumnWidth column_width="180"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="21" />
+   <WVObjectSize size="33" />
    <wvobject fp_name="/hdmi_text_controller_tb/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -92,16 +93,67 @@
       <obj_property name="ElementShortName">vc[9:0]</obj_property>
       <obj_property name="ObjectShortName">vc[9:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/curr_char" type="logic">
-      <obj_property name="ElementShortName">curr_char</obj_property>
-      <obj_property name="ObjectShortName">curr_char</obj_property>
-   </wvobject>
    <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/font_x" type="array">
-      <obj_property name="ElementShortName">font_x[2:0]</obj_property>
-      <obj_property name="ObjectShortName">font_x[2:0]</obj_property>
+      <obj_property name="ElementShortName">font_x[3:0]</obj_property>
+      <obj_property name="ObjectShortName">font_x[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/font_y" type="array">
-      <obj_property name="ElementShortName">font_y[3:0]</obj_property>
-      <obj_property name="ObjectShortName">font_y[3:0]</obj_property>
+      <obj_property name="ElementShortName">font_y[4:0]</obj_property>
+      <obj_property name="ObjectShortName">font_y[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/DrawX" type="array">
+      <obj_property name="ElementShortName">DrawX[9:0]</obj_property>
+      <obj_property name="ObjectShortName">DrawX[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/DrawY" type="array">
+      <obj_property name="ElementShortName">DrawY[9:0]</obj_property>
+      <obj_property name="ObjectShortName">DrawY[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_x" type="array">
+      <obj_property name="ElementShortName">font_x[3:0]</obj_property>
+      <obj_property name="ObjectShortName">font_x[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_y" type="array">
+      <obj_property name="ElementShortName">font_y[4:0]</obj_property>
+      <obj_property name="ObjectShortName">font_y[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/card" type="array">
+      <obj_property name="ElementShortName">card</obj_property>
+      <obj_property name="ObjectShortName">card</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_data" type="array">
+      <obj_property name="ElementShortName">font_data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">font_data[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/red_font" type="logic">
+      <obj_property name="ElementShortName">red_font</obj_property>
+      <obj_property name="ObjectShortName">red_font</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/black_font" type="logic">
+      <obj_property name="ElementShortName">black_font</obj_property>
+      <obj_property name="ObjectShortName">black_font</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/text_on" type="logic">
+      <obj_property name="ElementShortName">text_on</obj_property>
+      <obj_property name="ObjectShortName">text_on</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_address" type="array">
+      <obj_property name="ElementShortName">font_address[10:0]</obj_property>
+      <obj_property name="ObjectShortName">font_address[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/Rank_font_addr" type="array">
+      <obj_property name="ElementShortName">Rank_font_addr[0:12][10:0]</obj_property>
+      <obj_property name="ObjectShortName">Rank_font_addr[0:12][10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/suit_font_addr" type="array">
+      <obj_property name="ElementShortName">suit_font_addr[0:3][10:0]</obj_property>
+      <obj_property name="ObjectShortName">suit_font_addr[0:3][10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/ten_x" type="array">
+      <obj_property name="ElementShortName">ten_x[2:0]</obj_property>
+      <obj_property name="ObjectShortName">ten_x[2:0]</obj_property>
    </wvobject>
 </wave_config>

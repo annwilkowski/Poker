@@ -2,14 +2,11 @@
 module graphics (
     input logic [9:0] DrawX,
     input logic [9:0] DrawY,
-    //input logic [31:0] vram,
-    //input logic [31:0] scene,  
     input logic clk,
 
-    //output logic [10:0] vram_sel,
-    output logic [ 3:0] Red,
-    output logic [ 3:0] Green,
-    output logic [ 3:0] Blue
+    output logic [3:0] Red,
+    output logic [3:0] Green,
+    output logic [3:0] Blue
 );
 
     // Card Text Storage
