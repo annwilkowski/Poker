@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1746572706" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hand_eval_5card.dcp">
   <File Type="PA-TCL" Name="hand_comparator.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="hand_comparator_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="hand_comparator_reports.tcl"/>
   <File Type="RDS-RDS" Name="hand_comparator.vds"/>
   <File Type="RDS-UTIL" Name="hand_comparator_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="hand_comparator_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="hand_comparator.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="hand_comparator_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="hand_comparator_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../game_logic/src/poker_types.svh">
@@ -75,9 +72,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>
