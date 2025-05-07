@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log card_deck.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source card_deck.tcl
+EAStep vivado -log hand_comparator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hand_comparator.tcl

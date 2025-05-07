@@ -40,7 +40,7 @@ module deck_tb;
             #10 draw_card <= 1;
             #10 draw_card <= 0;
         end
-        
+
         #10 start_shuffle <= 1;
         #10 start_shuffle <= 0;
         #10;

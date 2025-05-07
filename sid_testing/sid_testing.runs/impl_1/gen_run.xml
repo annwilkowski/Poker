@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1746512401">
+  <File Type="ROUTE-PWR" Name="hand_comparator_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="hand_comparator.tcl"/>
+  <File Type="BITSTR-MMI" Name="hand_comparator.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="hand_comparator_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="hand_comparator_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="hand_comparator_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="hand_comparator_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="hand_comparator_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="hand_comparator_opt.dcp"/>
+  <File Type="OPT-DRC" Name="hand_comparator_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="hand_comparator.hwdef"/>
+  <File Type="PWROPT-DCP" Name="hand_comparator_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="hand_comparator_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="hand_comparator_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="hand_comparator_placed.dcp"/>
+  <File Type="PLACE-IO" Name="hand_comparator_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="hand_comparator_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="hand_comparator_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="hand_comparator_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="hand_comparator_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="hand_comparator_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="hand_comparator_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="hand_comparator.bin"/>
+  <File Type="PLACE-TIMING" Name="hand_comparator_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="hand_comparator_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="hand_comparator.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="hand_comparator_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="hand_comparator_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="hand_comparator_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="hand_comparator.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="hand_comparator_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="hand_comparator_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="hand_comparator_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="hand_comparator_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="hand_comparator_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="hand_comparator_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="hand_comparator_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="hand_comparator_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="hand_comparator_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="hand_comparator_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="hand_comparator_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="hand_comparator_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="hand_comparator_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="hand_comparator_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="hand_comparator_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="hand_comparator_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="hand_comparator_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="hand_comparator_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="hand_comparator_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="hand_comparator_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="hand_comparator_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="hand_comparator_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="hand_comparator_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="hand_comparator_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="hand_comparator_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="hand_comparator_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="hand_comparator_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="hand_comparator.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="hand_comparator_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="hand_comparator_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="hand_comparator.nky"/>
+  <File Type="BITSTR-BMM" Name="hand_comparator_bd.bmm"/>
+  <File Type="PDI-FILE" Name="hand_comparator.pdi"/>
+  <File Type="RCFI_FILE" Name="hand_comparator.rcfi"/>
+  <File Type="CFI_FILE" Name="hand_comparator.cfi"/>
+  <File Type="RNPI_FILE" Name="hand_comparator.rnpi"/>
+  <File Type="NPI_FILE" Name="hand_comparator.npi"/>
+  <File Type="RBD_FILE" Name="hand_comparator.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="hand_comparator.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="hand_comparator.sysdef"/>
+  <File Type="BG-BGN" Name="hand_comparator.bgn"/>
+  <File Type="BG-DRC" Name="hand_comparator.drc"/>
+  <File Type="RDI-RDI" Name="hand_comparator.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="hand_comparator_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="hand_comparator_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../game_logic/src/poker_types.svh">
+      <FileInfo>
+        <Attr Name="IsGlobalInclude" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="IsVisible" Val="1"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../game_logic/src/LFSR.sv">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../game_logic/src/hand_comparator.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../game_logic/src/deck.sv">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="hand_comparator"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/constraints.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/constraints.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/hand_eval_5card.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>

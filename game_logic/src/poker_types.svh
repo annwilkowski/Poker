@@ -8,8 +8,6 @@
 `define MAX_STACK_W 11 // Max stack of 2048
 `define DEFAULT_STACK 11'd256
 
-
-
 typedef enum logic [1:0] {
     Spades,
     Diamonds,
@@ -48,6 +46,19 @@ typedef enum logic [2:0] {
     river,
     showdown
 } hand_state_t;
+
+typedef enum logic [3:0] {
+    high_card,
+    one_pair,
+    two_pair,
+    three_oak,
+    straight,
+    flush,
+    full_house,
+    four_oak,
+    straight_flush
+} hand_type_t;
+
 
 `endif  // POKER_TYPES
 
