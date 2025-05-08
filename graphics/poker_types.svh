@@ -43,9 +43,9 @@ typedef enum logic [2:0] {
     shuffling,  // Shuffle deck
     dealing,    // Deal cards to players (has to be done one by one)
     pre_flop,
-    FLOP,
-    TURN,
-    RIVER,
+    flop,
+    turn,
+    river,
     showdown
 } hand_state_t;
 

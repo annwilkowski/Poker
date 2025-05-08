@@ -3,9 +3,12 @@
 module card_text_display (
     input logic [9:0] DrawX,        // Current pixel X position
     input logic [9:0] DrawY,        // Current pixel Y position
-    input logic [3:0] font_x,      
-    input logic [4:0] font_y,       
-    input card_t card,              // Card to display
+    input card_t player_cards[2][2],
+    input logic current_player,             // SID NEEDS TO IMPLEMENT
+    input card_t flop_card[3],             
+    input card_t turn_card,                 
+    input card_t river_card,
+    input hand_state_t curr_state,          // pre-flop is check and bet
     input logic [7:0] font_data,
     
     output logic red_font,
@@ -13,6 +16,11 @@ module card_text_display (
     output logic text_on,
     output logic [10:0] font_address
 );
+
+    card_t card;
+    logic [3:0] font_x;
+    logic [4:0] font_y;
+    logic other_player;
 
     // Font ROM addresses for ranks and suits
     logic [10:0] Rank_font_addr [0:12]; // Ace(0) to King(12)
@@ -43,6 +51,73 @@ module card_text_display (
 
     // Special handling for "10" which needs two characters
     logic [2:0] ten_x;
+
+    // display text on cards
+    always_comb begin : text_cards
+        // flop, turn, river cards
+        if ( (DrawY >= 210) && (DrawY < 242) )begin // check Y
+            font_y = (DrawY - 210);
+
+            if (curr_state >= flop) begin // 1st Flop Card
+                if ((DrawX >= 120) && (DrawX < 136)) begin // width of 17 for "10" case + clear bit
+                    font_x = (DrawX - 120);
+                    card = flop_card[0];
+                end
+                if ((DrawX >= 210) && (DrawX < 226)) begin // 2nd Flop Card
+                    font_x = (DrawX - 210);
+                    card = flop_card[1];
+                end
+                if ((DrawX >= 300) && (DrawX < 316)) begin  // 3rd Flop Card
+                    font_x = (DrawX - 300);
+                    card = flop_card[2];
+                end
+            end 
+            if (curr_state >= turn) begin // turn card
+                if ((DrawX >= 390) && (DrawX < 406)) begin
+                    font_x = (DrawX - 390);
+                    card = turn_card;
+                end
+            end 
+            if (curr_state >= river) begin // river card
+                if ((DrawX >= 480) && (DrawX < 496)) begin
+                    font_x = (DrawX - 480);
+                    card = river_card;
+                end
+            end 
+            
+        end
+
+        // CURRENT PLAYER
+        // display text on current players cards
+        if ( (DrawY >= 360) && (DrawY < 392) ) begin  // check Y
+            font_y = (DrawY - 360);
+            if ( (DrawX >= 180) && (DrawX < 196) ) begin  // first card
+                font_x = (DrawX - 180);
+                card = player_cards[current_player][0]; 
+            end
+            if ( (DrawX >= 270) && (DrawX < 286) ) begin  // second card
+                font_x = (DrawX - 270);
+                card = player_cards[current_player][1]; 
+            end
+        end
+
+        // OTHER PLAYER
+        // display text on other players cards if showdown
+        other_player = ~current_player;
+        if (curr_state == showdown) begin
+            if ( (DrawY >= 60) && (DrawY < 92) ) begin  // check Y
+                font_y = (DrawY - 60);
+                if ( (DrawX >= 210) && (DrawX < 226) ) begin  // first card
+                    font_x = (DrawX - 210);
+                    card = player_cards[other_player][0]; 
+                end
+                if ( (DrawX >= 300) && (DrawX < 316) ) begin  // second card
+                    font_x = (DrawX - 300);
+                    card = player_cards[other_player][1]; 
+                end
+            end
+        end
+    end
 
     always_comb begin
         // Default outputs

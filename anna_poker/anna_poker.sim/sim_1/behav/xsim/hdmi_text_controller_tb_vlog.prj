@@ -1,10 +1,15 @@
 # compile verilog/system verilog design source files
-sv xil_defaultlib  --include "../../../../anna_poker.gen/sources_1/bd/mb_usb/ipshared/7698" --include "../../../../anna_poker.gen/sources_1/bd/mb_usb/ipshared/ec67/hdl" --include "../../../../../graphics" \
+sv xil_defaultlib  --include "../../../../../graphics" \
 "../../../../../graphics/Game_Screen.sv" \
+"../../../../../graphics/Start_Screen.sv" \
+"../../../../../graphics/Top_Screen.sv" \
 "../../../../../graphics/VGA_controller.sv" \
+"../../../../../graphics/Wait_Screen.sv" \
+"../../../../../graphics/button_display.sv" \
 "../../../../../graphics/card_text_display.sv" \
 "../../../../../graphics/font_rom.sv" \
-"../../../../../graphics/sim/game_screen_tb.sv" \
+"../../../../../graphics/money_display.sv" \
+"../../../../../graphics/sim/top_screen_tb.sv" \
 
 # compile glbl module
 verilog xil_defaultlib "glbl.v"

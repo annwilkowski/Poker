@@ -25,14 +25,21 @@ module hdmi_text_controller_tb ();
     // game fsm signals used for game graphics
 
     logic [2:0] player_count;
-    card_t player_cards[2][8];
-    logic [10:0] player_stacks[8]; 
-    logic [10:0] player_pot[8];
+    card_t player_cards[2][2];
+    logic [10:0] player_stacks[2]; 
+    logic [10:0] player_pots[2];
+    logic [10:0] pot_size;
     logic current_player; 
-    card_t flop[3];
-    card_t turn;
-    card_t river;
+    logic current_dealer;
+    logic winner;
+
+    logic if_BetCheck;
+
+    card_t flop_card[3];
+    card_t turn_card;
+    card_t river_card;
     hand_state_t curr_state; 
+    logic wait_state;
 
     //Although we can look at the HDMI signal, it is not particularly useful for debugging
     //Instead, simulate and record the pixel clock and the pixel RGB values to generate
@@ -49,7 +56,7 @@ module hdmi_text_controller_tb ();
     integer i, j;  //use integers for loop indices, etc
 
     //Instantiation of DUT color mapper
-    graphics graphics_inst (
+    game_screen graphics_inst (
 
         .DrawX(drawX),
         .DrawY(drawY),
@@ -58,12 +65,19 @@ module hdmi_text_controller_tb ();
         .player_count(player_count),
         .player_cards(player_cards),
         .player_stacks(player_stacks), 
-        .player_pot(player_pot),  
+        .player_pots(player_pots), 
+        .pot_size(pot_size), 
         .current_player(current_player), 
-        .flop(flop),
-        .turn(turn),
-        .river(river),
+        .current_dealer(current_dealer),
+        .winner(winner),
+
+        .if_BetCheck(if_BetCheck),
+
+        .flop_card(flop_card),
+        .turn_card(turn_card),
+        .river_card(river_card),
         .curr_state(curr_state), 
+        .wait_state(wait_state),
 
         .Red(Red),
         .Green(Green),
@@ -202,10 +216,12 @@ module hdmi_text_controller_tb ();
         player_count = 2;
         
         // Initialize player stacks and pots (arbitrary values)
-        for (int i = 0; i < 8; i++) begin
-            player_stacks[i] = 1000;  // Each player starts with 1000 chips
-            player_pot[i] = 0;        // No money in pot initially
-        end
+        
+        player_stacks[0] = 1000;  // Each player starts with 1000 chips
+        player_stacks[1] = 999;
+        player_pots[0] = 123;
+        player_pots[1] = 456;        // No money in pot initially
+        pot_size = 7890;
         
         // Initialize player cards (create some test hands)
         // Player 1 gets Ace of Spades and King of Hearts
@@ -217,17 +233,22 @@ module hdmi_text_controller_tb ();
         player_cards[1][1] = '{rank: Jack, suit: Clubs};
         
         // Initialize flop cards (visible community cards)
-        flop[0] = '{rank: Ten, suit: Diamonds};    // 2♦
-        flop[1] = '{rank: Seven, suit: Clubs};     // 7♣
-        flop[2] = '{rank: Three, suit: Hearts};      // 3♥
+        flop_card[0] = '{rank: Ten, suit: Diamonds};    // 2♦
+        flop_card[1] = '{rank: Seven, suit: Clubs};     // 7♣
+        flop_card[2] = '{rank: Three, suit: Hearts};      // 3♥
         
         // Initialize turn and river (not shown yet)
-        turn = '{rank: Ace, suit: Clubs};       // A♦ (not shown yet)
-        river = '{rank: King, suit: Clubs};       // K♠ (not shown yet)
+        turn_card = '{rank: Ace, suit: Clubs};       // A♦ (not shown yet)
+        river_card = '{rank: Ten, suit: Spades};       // K♠ (not shown yet)
 
         // Set current player and game state
-        current_player = 0;  // Player 1's turn
-        curr_state = RIVER;   // Show flop cards
+        current_player = 1;  // Player 1's turn
+        current_dealer = 1;   // Player 1 is dealer
+        if_BetCheck = 0; 
+        curr_state = showdown;   // Show flop cards
+        winner = 1;
+        wait_state = 1;
+
 
         reset = 1;  //reset VGA controller
         repeat (8) @(posedge clk);

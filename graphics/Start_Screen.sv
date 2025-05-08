@@ -1,9 +1,11 @@
 
-module graphics (
+module start_screen (
     input logic [9:0] DrawX,
     input logic [9:0] DrawY,
     input logic clk,
+    input logic [ 7:0] font_data,
 
+    output logic [10:0] font_address,
     output logic [3:0] Red,
     output logic [3:0] Green,
     output logic [3:0] Blue
@@ -15,8 +17,6 @@ module graphics (
     logic [10:0] Diamond_font_addr;
     logic [10:0] Club_font_addr;
     logic [10:0] Heart_font_addr;
-    logic [10:0] font_address;
-    logic [ 7:0] font_data;
     logic [2:0] font_x;  // Pixel X within character (0-7)
     logic [3:0] font_y;  // Pixel Y within character (0-15)
 
@@ -33,10 +33,7 @@ module graphics (
     logic       black_font;
     logic       title_on;
 
-    font_rom fonts (
-        .addr(font_address),
-        .data(font_data)
-    );
+    logic [4:0]curr_char; // 0-10
 
     // necessary font addresses
     assign Ace_font_addr = (8'h41 << 4); // 65 * 16
@@ -55,17 +52,15 @@ module graphics (
 
 
     // Card Logic
-    always_comb
-    begin: card_pixel
+    always_comb begin
+
         if ( (DrawY > 170) && (DrawY < 320) && (((DrawX > 50) && (DrawX < 150)) || ((DrawX > 200) && (DrawX < 300)) || ((DrawX > 350) && (DrawX < 450)) || ((DrawX > 500) && (DrawX < 600))) )
             card_on = 1'b1;
         else 
             card_on = 1'b0;
-    end 
+
 
     // Text on Card Logic
-    always_comb
-    begin: text_color
         if ( (DrawY > 170) && (DrawY < 320) && (((DrawX > 50) && (DrawX < 150)) || ((DrawX > 350) && (DrawX < 450))) )begin
             red_font = 1'b0;
             black_font = 1'b1;
@@ -73,10 +68,9 @@ module graphics (
             red_font = 1'b1;
             black_font = 1'b0;
         end 
-    end 
-    always_comb
-    begin: text_type
-        // Drawing an Ace in Top Left
+    
+
+    // Drawing an Ace in Top Left
         if ( (DrawY >= 180) && (DrawY < 212) && (((DrawX >= 210) && (DrawX < 226)) || ((DrawX >= 510) && (DrawX < 526)) || ((DrawX >= 60) && (DrawX < 76)) || ((DrawX >= 360) && (DrawX < 376))) )begin
             font_y = ((DrawY - 180) >> 1); // divide by 2 to double size
             font_address = Ace_font_addr + font_y;  // draw an Ace
@@ -117,12 +111,9 @@ module graphics (
         end
         else
             text_on = 0; // to avoid unwanted high signals
-    end 
+
 
     // Title Text
-    logic [4:0]curr_char; // 0-10
-    always_comb
-    begin: title_text
         // "Poker Night"
         if ( (DrawY >= 50) && (DrawY < 114) && (DrawX >= 144) && (DrawX < 496) ) begin
             curr_char = ((DrawX - 144) >> 5); // divide by 32 to find which char to display out of 11

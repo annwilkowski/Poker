@@ -36,7 +36,7 @@ module hdmi_text_controller_tb ();
     integer i, j;  //use integers for loop indices, etc
 
     //Instantiation of DUT color mapper
-    graphics graphics_inst (
+    start_screen graphics_inst (
 
         .DrawX(drawX),
         .DrawY(drawY),

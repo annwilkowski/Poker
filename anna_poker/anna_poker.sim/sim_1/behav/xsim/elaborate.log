@@ -1,6 +1,6 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_text_controller_tb_behav xil_defaultlib.hdmi_text_controller_tb xil_defaultlib.glbl -log elaborate.log 
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot hdmi_text_controller_tb_behav xil_defaultlib.hdmi_text_controller_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -10,10 +10,15 @@ WARNING: [XSIM 43-4100] "C:/Poker/anna_poker/anna_poker.sim/sim_1/behav/xsim/glb
 WARNING: [XSIM 43-4100] "C:/Poker/anna_poker/anna_poker.sim/sim_1/behav/xsim/glbl.v" Line 6. Module glbl has a timescale but at least one module in design doesn't have timescale.
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling package xil_defaultlib.$unit_Game_Screen_sv_85414438
+Compiling package xil_defaultlib.$unit_Game_Screen_sv_385779133
 Compiling module xil_defaultlib.font_rom
+Compiling module xil_defaultlib.start_screen
 Compiling module xil_defaultlib.card_text_display
-Compiling module xil_defaultlib.graphics
+Compiling module xil_defaultlib.button_display
+Compiling module xil_defaultlib.money_display
+Compiling module xil_defaultlib.game_screen
+Compiling module xil_defaultlib.wait_screen
+Compiling module xil_defaultlib.top_screen
 Compiling module xil_defaultlib.vga_controller
 Compiling module xil_defaultlib.hdmi_text_controller_tb
 Compiling module xil_defaultlib.glbl

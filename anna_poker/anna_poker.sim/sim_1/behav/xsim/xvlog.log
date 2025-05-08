@@ -1,10 +1,20 @@
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/Game_Screen.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module graphics
+INFO: [VRFC 10-311] analyzing module game_screen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/Start_Screen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module start_screen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/Top_Screen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_screen
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/VGA_controller.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module vga_controller
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/Wait_Screen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module wait_screen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/button_display.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module button_display
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/card_text_display.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module card_text_display
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/font_rom.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module font_rom
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/sim/game_screen_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/money_display.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module money_display
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "C:/Poker/graphics/sim/top_screen_tb.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module hdmi_text_controller_tb

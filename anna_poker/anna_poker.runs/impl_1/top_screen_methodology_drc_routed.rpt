@@ -1,0 +1,374 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Thu May  8 15:48:06 2025
+| Host         : DESKTOP-227SA2M running 64-bit major release  (build 9200)
+| Command      : report_methodology -file top_screen_methodology_drc_routed.rpt -pb top_screen_methodology_drc_routed.pb -rpx top_screen_methodology_drc_routed.rpx
+| Design       : top_screen
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 67
++-----------+----------+--------------------------------+------------+
+| Rule      | Severity | Description                    | Violations |
++-----------+----------+--------------------------------+------------+
+| LUTAR-1   | Warning  | LUT drives async reset alert   | 5          |
+| SYNTH-10  | Warning  | Wide multiplier                | 6          |
+| TIMING-20 | Warning  | Non-clocked latch              | 55         |
+| LATCH-1   | Advisory | Existing latches in the design | 1          |
++-----------+----------+--------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell game_screen/card_texts/Green_reg[0]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) game_screen/Green_reg[0]/CLR, game_screen/Green_reg[3]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell start_screen/Blue_reg[3]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) start_screen/Blue_reg[0]/CLR, start_screen/Blue_reg[1]/CLR
+start_screen/Blue_reg[3]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell start_screen/Red_reg[0]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) game_screen/Red_reg[0]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell start_screen/Red_reg[1]_i_3, with 2 or more inputs, drives asynchronous preset/clear pin(s) game_screen/Red_reg[1]/PRE. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell start_screen/red_font_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) start_screen/black_font_reg/PRE, start_screen/red_font_reg/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+SYNTH-10#1 Warning
+Wide multiplier  
+Detected multiplier at game_screen/money/text_on3 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#2 Warning
+Wide multiplier  
+Detected multiplier at game_screen/money/text_on3__0 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#3 Warning
+Wide multiplier  
+Detected multiplier at game_screen/money/text_on3__1 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#4 Warning
+Wide multiplier  
+Detected multiplier at game_screen/money/text_on3__2 of size 15x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#5 Warning
+Wide multiplier  
+Detected multiplier at game_screen/money/text_on3__3 of size 18x18, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+SYNTH-10#6 Warning
+Wide multiplier  
+Detected multiplier at game_screen/money/text_on3__4 of size 18x15, it is decomposed from a wide multipler into 4 DSP blocks.
+Related violations: <none>
+
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch game_screen/Green_reg[0] cannot be properly analyzed as its control pin game_screen/Green_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch game_screen/Green_reg[3] cannot be properly analyzed as its control pin game_screen/Green_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch game_screen/Red_reg[0] cannot be properly analyzed as its control pin game_screen/Red_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch game_screen/Red_reg[1] cannot be properly analyzed as its control pin game_screen/Red_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/card_reg[rank][0] cannot be properly analyzed as its control pin game_screen/card_texts/card_reg[rank][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/card_reg[rank][1] cannot be properly analyzed as its control pin game_screen/card_texts/card_reg[rank][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/card_reg[rank][2] cannot be properly analyzed as its control pin game_screen/card_texts/card_reg[rank][2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/card_reg[rank][3] cannot be properly analyzed as its control pin game_screen/card_texts/card_reg[rank][3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/card_reg[suit][0] cannot be properly analyzed as its control pin game_screen/card_texts/card_reg[suit][0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/card_reg[suit][1] cannot be properly analyzed as its control pin game_screen/card_texts/card_reg[suit][1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_x_reg[0] cannot be properly analyzed as its control pin game_screen/card_texts/font_x_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_x_reg[1] cannot be properly analyzed as its control pin game_screen/card_texts/font_x_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_x_reg[2] cannot be properly analyzed as its control pin game_screen/card_texts/font_x_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_x_reg[3] cannot be properly analyzed as its control pin game_screen/card_texts/font_x_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_y_reg[0] cannot be properly analyzed as its control pin game_screen/card_texts/font_y_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_y_reg[1] cannot be properly analyzed as its control pin game_screen/card_texts/font_y_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_y_reg[2] cannot be properly analyzed as its control pin game_screen/card_texts/font_y_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#18 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_y_reg[3] cannot be properly analyzed as its control pin game_screen/card_texts/font_y_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#19 Warning
+Non-clocked latch  
+The latch game_screen/card_texts/font_y_reg[4] cannot be properly analyzed as its control pin game_screen/card_texts/font_y_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#20 Warning
+Non-clocked latch  
+The latch start_screen/Blue_reg[0] cannot be properly analyzed as its control pin start_screen/Blue_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#21 Warning
+Non-clocked latch  
+The latch start_screen/Blue_reg[1] cannot be properly analyzed as its control pin start_screen/Blue_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#22 Warning
+Non-clocked latch  
+The latch start_screen/Blue_reg[3] cannot be properly analyzed as its control pin start_screen/Blue_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#23 Warning
+Non-clocked latch  
+The latch start_screen/Green_reg[0] cannot be properly analyzed as its control pin start_screen/Green_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#24 Warning
+Non-clocked latch  
+The latch start_screen/Green_reg[2] cannot be properly analyzed as its control pin start_screen/Green_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#25 Warning
+Non-clocked latch  
+The latch start_screen/Green_reg[3] cannot be properly analyzed as its control pin start_screen/Green_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#26 Warning
+Non-clocked latch  
+The latch start_screen/Red_reg[0] cannot be properly analyzed as its control pin start_screen/Red_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#27 Warning
+Non-clocked latch  
+The latch start_screen/Red_reg[1] cannot be properly analyzed as its control pin start_screen/Red_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#28 Warning
+Non-clocked latch  
+The latch start_screen/Red_reg[3] cannot be properly analyzed as its control pin start_screen/Red_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#29 Warning
+Non-clocked latch  
+The latch start_screen/black_font_reg cannot be properly analyzed as its control pin start_screen/black_font_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#30 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[0] cannot be properly analyzed as its control pin start_screen/font_address_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#31 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[10] cannot be properly analyzed as its control pin start_screen/font_address_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#32 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[1] cannot be properly analyzed as its control pin start_screen/font_address_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#33 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[2] cannot be properly analyzed as its control pin start_screen/font_address_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#34 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[3] cannot be properly analyzed as its control pin start_screen/font_address_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#35 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[4] cannot be properly analyzed as its control pin start_screen/font_address_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#36 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[5] cannot be properly analyzed as its control pin start_screen/font_address_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#37 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[6] cannot be properly analyzed as its control pin start_screen/font_address_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#38 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[7] cannot be properly analyzed as its control pin start_screen/font_address_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#39 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[8] cannot be properly analyzed as its control pin start_screen/font_address_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#40 Warning
+Non-clocked latch  
+The latch start_screen/font_address_reg[9] cannot be properly analyzed as its control pin start_screen/font_address_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#41 Warning
+Non-clocked latch  
+The latch start_screen/font_x_reg[0] cannot be properly analyzed as its control pin start_screen/font_x_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#42 Warning
+Non-clocked latch  
+The latch start_screen/font_x_reg[1] cannot be properly analyzed as its control pin start_screen/font_x_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#43 Warning
+Non-clocked latch  
+The latch start_screen/font_x_reg[2] cannot be properly analyzed as its control pin start_screen/font_x_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#44 Warning
+Non-clocked latch  
+The latch start_screen/red_font_reg cannot be properly analyzed as its control pin start_screen/red_font_reg/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#45 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[0] cannot be properly analyzed as its control pin wait_screen/font_address_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#46 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[10] cannot be properly analyzed as its control pin wait_screen/font_address_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#47 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[1] cannot be properly analyzed as its control pin wait_screen/font_address_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#48 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[2] cannot be properly analyzed as its control pin wait_screen/font_address_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#49 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[3] cannot be properly analyzed as its control pin wait_screen/font_address_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#50 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[4] cannot be properly analyzed as its control pin wait_screen/font_address_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#51 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[5] cannot be properly analyzed as its control pin wait_screen/font_address_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#52 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[6] cannot be properly analyzed as its control pin wait_screen/font_address_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#53 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[7] cannot be properly analyzed as its control pin wait_screen/font_address_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#54 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[8] cannot be properly analyzed as its control pin wait_screen/font_address_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#55 Warning
+Non-clocked latch  
+The latch wait_screen/font_address_reg[9] cannot be properly analyzed as its control pin wait_screen/font_address_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+LATCH-1#1 Advisory
+Existing latches in the design  
+There are 60 latches found in the design. Inferred latches are often the result of HDL coding mistakes, such as incomplete if or case statements.
+Related violations: <none>
+
+
