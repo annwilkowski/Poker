@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log top_screen.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top_screen.tcl -notrace
+    with args -log top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 
 
 
@@ -9,28 +9,188 @@
   **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 
-source top_screen.tcl -notrace
-create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 372.070 ; gain = 63.043
+source top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Poker/graphics_controller_ip'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Poker/RD_hdmi_ip2020/hdmi_tx_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-Command: link_design -top top_screen -part xc7s50csga324-1
+Command: link_design -top top -part xc7s50csga324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7s50csga324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.065 . Memory (MB): peak = 777.906 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 442 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-454] Reading design checkpoint 'c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp' for cell 'vga_to_hdmi'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 794.480 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 113 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 871.355 ; gain = 0.000
+Parsing XDC File [c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1394.625 ; gain = 482.258
+Finished Parsing XDC File [c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc]
+CRITICAL WARNING: [Constraints 18-1055] Clock 'clk_100' completely overrides clock 'Clk', which is referenced by one or more other constraints. Any constraints that refer to the overridden clock will be ignored.
+New: create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk], [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:1]
+Previous: create_clock -period 10.000 [get_ports Clk], [c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:56]
+Resolution: Review the constraint files and remove the redundant clock definition(s). If the clock constraints are not saved in a file, you can first save the constraints to an XDC file and reload the design once the constraints have been corrected.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:9]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:9]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:10]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:10]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:11]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:11]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:12]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:12]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:13]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:13]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:14]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:14]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:15]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:15]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:16]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:16]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[7]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:17]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:17]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[6]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:18]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:18]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[5]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:19]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:19]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[4]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:20]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:20]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:21]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:21]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:22]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:22]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:23]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:23]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:24]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:24]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[7]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:25]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:25]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[6]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:26]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:26]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[5]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:27]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:27]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[4]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:28]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:28]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:29]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:29]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:30]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:30]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:31]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:31]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:32]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:32]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:33]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:33]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:34]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:34]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[4]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[5]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[6]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[7]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[4]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[5]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[6]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[7]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[0]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[1]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[2]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[3]'. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Poker/graphics/pin_assignment/mb_usb_hdmi_top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1394.625 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-8 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+14 Infos, 49 Warnings, 49 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 871.355 ; gain = 473.875
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1394.625 ; gain = 988.949
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
@@ -41,61 +201,56 @@ INFO: [DRC 23-27] Running DRC with 2 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:05 ; elapsed = 00:00:03 . Memory (MB): peak = 923.418 ; gain = 52.062
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.838 . Memory (MB): peak = 1394.625 ; gain = 0.000
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-Ending Cache Timing Information Task | Checksum: ff12032d
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 154d42ee1
 
-Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 1330.816 ; gain = 407.398
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 1416.496 ; gain = 21.871
 
 Starting Logic Optimization Task
 
 Phase 1 Retarget
-INFO: [Opt 31-1287] Pulled Inverter font_address_reg[10]_i_135 into driver instance start_screen/font_x_reg[2]_i_42, which resulted in an inversion of 109 pins
-INFO: [Opt 31-1287] Pulled Inverter font_address_reg[10]_i_137 into driver instance start_screen/font_address_reg[10]_i_94, which resulted in an inversion of 109 pins
-INFO: [Opt 31-1287] Pulled Inverter font_address_reg[10]_i_144 into driver instance start_screen/font_x_reg[2]_i_105, which resulted in an inversion of 40 pins
-INFO: [Opt 31-1287] Pulled Inverter font_address_reg[3]_i_117 into driver instance start_screen/font_address_reg[3]_i_26, which resulted in an inversion of 125 pins
-INFO: [Opt 31-1287] Pulled Inverter start_screen/Green_reg[2]_i_1 into driver instance start_screen/Red_reg[3]_i_6, which resulted in an inversion of 10 pins
-INFO: [Opt 31-1287] Pulled Inverter start_screen/font_x_reg[2]_i_103 into driver instance start_screen/font_x_reg[2]_i_15, which resulted in an inversion of 104 pins
-INFO: [Opt 31-1287] Pulled Inverter start_screen/g2_b0 into driver instance start_screen/g0_b0_i_5, which resulted in an inversion of 105 pins
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
-Phase 1 Retarget | Checksum: 124504794
+Phase 1 Retarget | Checksum: 1983d5ee5
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.306 . Memory (MB): peak = 1665.211 ; gain = 0.000
-INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 83 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 1 cells
+INFO: [Opt 31-1021] In phase Retarget, 1 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
 
 Phase 2 Constant propagation
-INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Phase 2 Constant propagation | Checksum: 8c6693af
+INFO: [Opt 31-138] Pushed 8 inverter(s) to 14 load pin(s).
+Phase 2 Constant propagation | Checksum: 1138bd98c
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.349 . Memory (MB): peak = 1665.211 ; gain = 0.000
-INFO: [Opt 31-389] Phase Constant propagation created 2 cells and removed 5 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [Opt 31-389] Phase Constant propagation created 127 cells and removed 284 cells
 
 Phase 3 Sweep
-Phase 3 Sweep | Checksum: ca31c67a
+Phase 3 Sweep | Checksum: 1a7dc2fcb
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.399 . Memory (MB): peak = 1665.211 ; gain = 0.000
-INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.095 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 24 cells
 
 Phase 4 BUFG optimization
-Phase 4 BUFG optimization | Checksum: ca31c67a
+Phase 4 BUFG optimization | Checksum: 1a7dc2fcb
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.487 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 1739.809 ; gain = 0.000
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
-Phase 5 Shift Register Optimization | Checksum: ca31c67a
+Phase 5 Shift Register Optimization | Checksum: 1a7dc2fcb
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.494 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.130 . Memory (MB): peak = 1739.809 ; gain = 0.000
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
-Phase 6 Post Processing Netlist | Checksum: ca31c67a
+Phase 6 Post Processing Netlist | Checksum: 1a7dc2fcb
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.502 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.132 . Memory (MB): peak = 1739.809 ; gain = 0.000
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -104,9 +259,9 @@ Opt_design Change Summary
 -------------------------------------------------------------------------------------------------------------------------
 |  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
 -------------------------------------------------------------------------------------------------------------------------
-|  Retarget                     |               0  |              83  |                                              0  |
-|  Constant propagation         |               2  |               5  |                                              0  |
-|  Sweep                        |               0  |               0  |                                              0  |
+|  Retarget                     |               0  |               1  |                                              1  |
+|  Constant propagation         |             127  |             284  |                                              0  |
+|  Sweep                        |               0  |              24  |                                              0  |
 |  BUFG optimization            |               0  |               0  |                                              0  |
 |  Shift Register Optimization  |               0  |               0  |                                              0  |
 |  Post Processing Netlist      |               0  |               0  |                                              0  |
@@ -116,37 +271,42 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Ending Logic Optimization Task | Checksum: 1d24e59bf
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 120ce0fa8
 
-Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.632 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
-Ending Power Optimization Task | Checksum: 1d24e59bf
+Ending Power Optimization Task | Checksum: 120ce0fa8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.041 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Starting Final Cleanup Task
-Ending Final Cleanup Task | Checksum: 1d24e59bf
+Ending Final Cleanup Task | Checksum: 120ce0fa8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Ending Netlist Obfuscation Task | Checksum: 1d24e59bf
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 120ce0fa8
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1739.809 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-32 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 49 Warnings, 49 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 1665.211 ; gain = 793.855
-INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_screen_opt.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_drc -file top_screen_drc_opted.rpt -pb top_screen_drc_opted.pb -rpx top_screen_drc_opted.rpx
-Command: report_drc -file top_screen_drc_opted.rpt -pb top_screen_drc_opted.pb -rpx top_screen_drc_opted.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
+Command: report_drc -file top_drc_opted.rpt -pb top_drc_opted.pb -rpx top_drc_opted.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Poker/anna_poker/anna_poker.runs/impl_1/top_screen_drc_opted.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Poker/anna_poker/anna_poker.runs/impl_1/top_drc_opted.rpt.
 report_drc completed successfully
 Command: place_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
@@ -165,108 +325,181 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d2af4702
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: d8be1e85
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.017 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
-INFO: [Timing 38-35] Done setting XDC timing constraints.
-Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1bdd9ce1a
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: b0211af1
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.156 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 1.3 Build Placer Netlist Model
-Phase 1.3 Build Placer Netlist Model | Checksum: 1ea2b0d17
+Phase 1.3 Build Placer Netlist Model | Checksum: 13121339d
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.398 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 1.4 Constrain Clocks/Macros
-Phase 1.4 Constrain Clocks/Macros | Checksum: 1ea2b0d17
+Phase 1.4 Constrain Clocks/Macros | Checksum: 13121339d
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Phase 1 Placer Initialization | Checksum: 1ea2b0d17
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.402 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 13121339d
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.410 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 2 Global Placement
 
 Phase 2.1 Floorplanning
-Phase 2.1 Floorplanning | Checksum: 1ea2b0d17
+Phase 2.1 Floorplanning | Checksum: 11dc60288
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.505 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 2.2 Update Timing before SLR Path Opt
-Phase 2.2 Update Timing before SLR Path Opt | Checksum: 1ea2b0d17
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: b41be060
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.548 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 2.3 Post-Processing in Floorplanning
-Phase 2.3 Post-Processing in Floorplanning | Checksum: 1ea2b0d17
+Phase 2.3 Post-Processing in Floorplanning | Checksum: b41be060
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.550 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 2.4 Global Placement Core
-WARNING: [Place 46-29] Timing had been disabled during Placer and, therefore, physical synthesis in Placer will be skipped.
-Phase 2.4 Global Placement Core | Checksum: 1b9c9db12
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Phase 2 Global Placement | Checksum: 1b9c9db12
+Phase 2.4.1 UpdateTiming Before Physical Synthesis
+Phase 2.4.1 UpdateTiming Before Physical Synthesis | Checksum: 114a8a5fe
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
+
+Phase 2.4.2 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 0 LUTNM shape to break, 36 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 0, two critical 0, total 0, new lutff created 0
+INFO: [Physopt 32-1138] End 1 Pass. Optimized 13 nets or LUTs. Breaked 0 LUT, combined 13 existing LUTs and moved 0 existing LUT
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-670] No setup violation found.  DSP Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register to Pipeline Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  Shift Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  BRAM Register Optimization was not performed.
+INFO: [Physopt 32-670] No setup violation found.  URAM Register Optimization was not performed.
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1739.809 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |            0  |             13  |                    13  |           0  |           1  |  00:00:00  |
+|  Retime                                           |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Shift Register                                   |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           0  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |            0  |             13  |                    13  |           0  |           4  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.4.2 Physical Synthesis In Placer | Checksum: 1d88f15dc
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 2.4 Global Placement Core | Checksum: 2174a80c6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 2174a80c6
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 3 Detail Placement
 
 Phase 3.1 Commit Multi Column Macros
-Phase 3.1 Commit Multi Column Macros | Checksum: 1b9c9db12
+Phase 3.1 Commit Multi Column Macros | Checksum: 14c2dcb0d
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 3.2 Commit Most Macros & LUTRAMs
-Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1eefb3f82
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 1c27accc9
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 3.3 Area Swap Optimization
-Phase 3.3 Area Swap Optimization | Checksum: 277b64965
+Phase 3.3 Area Swap Optimization | Checksum: 239aed4f1
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 3.4 Pipeline Register Optimization
-Phase 3.4 Pipeline Register Optimization | Checksum: 277b64965
+Phase 3.4 Pipeline Register Optimization | Checksum: 198079491
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 3.5 Small Shape Detail Placement
-Phase 3.5 Small Shape Detail Placement | Checksum: 230d2e5a7
+Phase 3.5 Small Shape Detail Placement | Checksum: 1ede624fa
 
-Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 3.6 Re-assign LUT pins
-Phase 3.6 Re-assign LUT pins | Checksum: 230d2e5a7
+Phase 3.6 Re-assign LUT pins | Checksum: 292462c4f
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 3.7 Pipeline Register Optimization
-Phase 3.7 Pipeline Register Optimization | Checksum: 230d2e5a7
+Phase 3.7 Pipeline Register Optimization | Checksum: 1b3eeeb6f
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Phase 3 Detail Placement | Checksum: 230d2e5a7
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 1b3eeeb6f
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 4 Post Placement Optimization and Clean-Up
 
 Phase 4.1 Post Commit Optimization
-Phase 4.1 Post Commit Optimization | Checksum: 230d2e5a7
+INFO: [Timing 38-35] Done setting XDC timing constraints.
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 112e642e3
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=34.090 | TNS=0.000 |
+Phase 1 Physical Synthesis Initialization | Checksum: 9e8a7d52
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 134d4468f
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 112e642e3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
+
+Phase 4.1.1.2 Post Placement Timing Optimization
+INFO: [Place 30-746] Post Placement Timing Summary WNS=34.090. For the most accurate timing information please run report_timing.
+Phase 4.1.1.2 Post Placement Timing Optimization | Checksum: 1b5a99819
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 1b5a99819
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 4.2 Post Placement Cleanup
-Phase 4.2 Post Placement Cleanup | Checksum: 230d2e5a7
+Phase 4.2 Post Placement Cleanup | Checksum: 1b5a99819
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 4.3 Placer Reporting
 
@@ -285,53 +518,55 @@ INFO: [Place 30-612] Post-Placement Estimated Congestion
 |       West|                1x1|                1x1|
 |___________|___________________|___________________|
 
-Phase 4.3.1 Print Estimated Congestion | Checksum: 230d2e5a7
+Phase 4.3.1 Print Estimated Congestion | Checksum: 1b5a99819
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Phase 4.3 Placer Reporting | Checksum: 230d2e5a7
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 1b5a99819
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
 Phase 4.4 Final Placement Cleanup
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1739.809 ; gain = 0.000
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Phase 4 Post Placement Optimization and Clean-Up | Checksum: 230d2e5a7
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 210bbe3da
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.211 ; gain = 0.000
-Ending Placer Task | Checksum: 1cf16f5d7
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
+Ending Placer Task | Checksum: 147d6a12d
 
-Time (s): cpu = 00:00:09 ; elapsed = 00:00:08 . Memory (MB): peak = 1665.211 ; gain = 0.000
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1739.809 ; gain = 0.000
 INFO: [Common 17-83] Releasing license: Implementation
-48 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+68 Infos, 49 Warnings, 49 Critical Warnings and 0 Errors encountered.
 place_design completed successfully
-place_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 1665.211 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.506 . Memory (MB): peak = 1669.484 ; gain = 4.273
-INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_screen_placed.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_io -file top_screen_io_placed.rpt
-report_io: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.083 . Memory (MB): peak = 1669.484 ; gain = 0.000
-INFO: [runtcl-4] Executing : report_utilization -file top_screen_utilization_placed.rpt -pb top_screen_utilization_placed.pb
-INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_screen_control_sets_placed.rpt
-report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1669.484 ; gain = 0.000
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file top_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_placed.rpt -pb top_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file top_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1739.809 ; gain = 0.000
 Command: phys_opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
 
 Starting Initial Update Timing Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.438 . Memory (MB): peak = 1669.484 ; gain = 0.000
-INFO: [Vivado_Tcl 4-235] No timing constraint found. The netlist was not modified.
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.086 . Memory (MB): peak = 1739.809 ; gain = 0.000
+INFO: [Vivado_Tcl 4-383] Design worst setup slack (WNS) is greater than or equal to 0.000 ns. Skipping all physical synthesis optimizations.
+INFO: [Vivado_Tcl 4-232] No setup violation found. The netlist was not modified.
 INFO: [Common 17-83] Releasing license: Implementation
-55 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+77 Infos, 49 Warnings, 49 Critical Warnings and 0 Errors encountered.
 phys_opt_design completed successfully
+INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.327 . Memory (MB): peak = 1685.707 ; gain = 14.875
-INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_screen_physopt.dcp' has been generated.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.096 . Memory (MB): peak = 1753.988 ; gain = 14.180
+INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_physopt.dcp' has been generated.
 Command: route_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
@@ -345,84 +580,118 @@ Starting Routing Task
 INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
 
 Phase 1 Build RT Design
-Checksum: PlaceDB: fc67aed5 ConstDB: 0 ShapeSum: d2af4702 RouteDB: 0
-Post Restoration Checksum: NetGraph: fd2ed8c5 NumContArr: ddac7a95 Constraints: 0 Timing: 0
-Phase 1 Build RT Design | Checksum: 1dadb535a
+Checksum: PlaceDB: bc6bb6b4 ConstDB: 0 ShapeSum: 8b6aea79 RouteDB: 0
+Post Restoration Checksum: NetGraph: a18a397e NumContArr: f283e27e Constraints: 0 Timing: 0
+Phase 1 Build RT Design | Checksum: 1940e1bfc
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 1766.512 ; gain = 68.699
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1833.277 ; gain = 69.156
 
 Phase 2 Router Initialization
-INFO: [Route 35-64] No timing constraints were detected. The router will operate in resource-optimization mode.
 
 Phase 2.1 Fix Topology Constraints
-Phase 2.1 Fix Topology Constraints | Checksum: 1dadb535a
+Phase 2.1 Fix Topology Constraints | Checksum: 1940e1bfc
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 1772.570 ; gain = 74.758
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1839.324 ; gain = 75.203
 
 Phase 2.2 Pre Route Cleanup
-Phase 2.2 Pre Route Cleanup | Checksum: 1dadb535a
+Phase 2.2 Pre Route Cleanup | Checksum: 1940e1bfc
 
-Time (s): cpu = 00:00:30 ; elapsed = 00:00:28 . Memory (MB): peak = 1772.570 ; gain = 74.758
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:17 . Memory (MB): peak = 1839.324 ; gain = 75.203
  Number of Nodes with overlaps = 0
 
+Phase 2.3 Update Timing
+Phase 2.3 Update Timing | Checksum: 9e74a454
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=34.832 | TNS=0.000  | WHS=-0.093 | THS=-3.419 |
+
+
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0 %
-  Global Horizontal Routing Utilization  = 0 %
+  Global Vertical Routing Utilization    = 0.00159451 %
+  Global Horizontal Routing Utilization  = 0.00247267 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
-  Number of Failed Nets               = 2297
+  Number of Failed Nets               = 462
     (Failed Nets is the sum of unrouted and partially routed nets)
-  Number of Unrouted Nets             = 2297
-  Number of Partially Routed Nets     = 0
-  Number of Node Overlaps             = 0
+  Number of Unrouted Nets             = 445
+  Number of Partially Routed Nets     = 17
+  Number of Node Overlaps             = 26
 
-Phase 2 Router Initialization | Checksum: 150171992
+Phase 2 Router Initialization | Checksum: 153fe921a
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1777.434 ; gain = 79.621
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
 
 Phase 3 Initial Routing
 
 Phase 3.1 Global Routing
-Phase 3.1 Global Routing | Checksum: 150171992
+Phase 3.1 Global Routing | Checksum: 153fe921a
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:28 . Memory (MB): peak = 1777.434 ; gain = 79.621
-Phase 3 Initial Routing | Checksum: f08aa627
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+Phase 3 Initial Routing | Checksum: 1ff1e379b
 
-Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 1777.434 ; gain = 79.621
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
 
 Phase 4 Rip-up And Reroute
 
 Phase 4.1 Global Iteration 0
- Number of Nodes with overlaps = 177
+ Number of Nodes with overlaps = 41
  Number of Nodes with overlaps = 0
-Phase 4.1 Global Iteration 0 | Checksum: 622883ba
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=33.338 | TNS=0.000  | WHS=N/A    | THS=N/A    |
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1777.434 ; gain = 79.621
-Phase 4 Rip-up And Reroute | Checksum: 622883ba
+Phase 4.1 Global Iteration 0 | Checksum: c383a69a
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1777.434 ; gain = 79.621
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=33.326 | TNS=0.000  | WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 2891ed1c8
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+Phase 4 Rip-up And Reroute | Checksum: 2891ed1c8
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
 
 Phase 5 Delay and Skew Optimization
-Phase 5 Delay and Skew Optimization | Checksum: 622883ba
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1777.434 ; gain = 79.621
+Phase 5.1 Delay CleanUp
+Phase 5.1 Delay CleanUp | Checksum: 2891ed1c8
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 2891ed1c8
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+Phase 5 Delay and Skew Optimization | Checksum: 2891ed1c8
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
 
 Phase 6 Post Hold Fix
 
 Phase 6.1 Hold Fix Iter
-Phase 6.1 Hold Fix Iter | Checksum: 622883ba
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1777.434 ; gain = 79.621
-Phase 6 Post Hold Fix | Checksum: 622883ba
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 2bea02920
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1777.434 ; gain = 79.621
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=33.405 | TNS=0.000  | WHS=0.167  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 27c6fb9fa
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
+Phase 6 Post Hold Fix | Checksum: 27c6fb9fa
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
 
 Phase 7 Route finalize
 
 Router Utilization Summary
-  Global Vertical Routing Utilization    = 0.815834 %
-  Global Horizontal Routing Utilization  = 0.829125 %
+  Global Vertical Routing Utilization    = 0.0859444 %
+  Global Horizontal Routing Utilization  = 0.105804 %
   Routable Net Status*
   *Does not include unroutable nets such as driverless and loadless.
   Run report_route_status for detailed report.
@@ -432,92 +701,72 @@ Router Utilization Summary
   Number of Partially Routed Nets     = 0
   Number of Node Overlaps             = 0
 
-Congestion Report
-North Dir 1x1 Area, Max Cong = 45.045%, No Congested Regions.
-South Dir 1x1 Area, Max Cong = 30.6306%, No Congested Regions.
-East Dir 1x1 Area, Max Cong = 33.8235%, No Congested Regions.
-West Dir 1x1 Area, Max Cong = 35.2941%, No Congested Regions.
+Phase 7 Route finalize | Checksum: 22678c325
 
-------------------------------
-Reporting congestion hotspots
-------------------------------
-Direction: North
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: South
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: East
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-Direction: West
-----------------
-Congested clusters found at Level 0
-Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
-
-Phase 7 Route finalize | Checksum: 622883ba
-
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1777.434 ; gain = 79.621
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.199 ; gain = 81.078
 
 Phase 8 Verifying routed nets
 
  Verification completed successfully
-Phase 8 Verifying routed nets | Checksum: 622883ba
+Phase 8 Verifying routed nets | Checksum: 22678c325
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 1778.074 ; gain = 80.262
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.703 ; gain = 81.582
 
 Phase 9 Depositing Routes
-Phase 9 Depositing Routes | Checksum: d83d34d7
+Phase 9 Depositing Routes | Checksum: 1ecb2fc87
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 1778.074 ; gain = 80.262
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.703 ; gain = 81.582
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=33.405 | TNS=0.000  | WHS=0.167  | THS=0.000  |
+
+INFO: [Route 35-327] The final timing numbers are based on the router estimated timing analysis. For a complete and accurate timing signoff, please run report_timing_summary.
+Phase 10 Post Router Timing | Checksum: 1ecb2fc87
+
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.703 ; gain = 81.582
 INFO: [Route 35-16] Router Completed Successfully
 
-Time (s): cpu = 00:00:32 ; elapsed = 00:00:30 . Memory (MB): peak = 1778.074 ; gain = 80.262
+Time (s): cpu = 00:00:20 ; elapsed = 00:00:18 . Memory (MB): peak = 1845.703 ; gain = 81.582
 
 Routing Is Done.
 INFO: [Common 17-83] Releasing license: Implementation
-64 Infos, 2 Warnings, 0 Critical Warnings and 0 Errors encountered.
+92 Infos, 49 Warnings, 49 Critical Warnings and 0 Errors encountered.
 route_design completed successfully
-route_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:31 . Memory (MB): peak = 1778.074 ; gain = 92.367
+route_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 1845.703 ; gain = 91.715
+INFO: [Timing 38-480] Writing timing data to binary archive.
 Writing XDEF routing.
 Writing XDEF routing logical nets.
 Writing XDEF routing special nets.
-Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.452 . Memory (MB): peak = 1790.855 ; gain = 12.781
-INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_screen_routed.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_drc -file top_screen_drc_routed.rpt -pb top_screen_drc_routed.pb -rpx top_screen_drc_routed.rpx
-Command: report_drc -file top_screen_drc_routed.rpt -pb top_screen_drc_routed.pb -rpx top_screen_drc_routed.rpx
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1860.527 ; gain = 14.824
+INFO: [Common 17-1381] The checkpoint 'C:/Poker/anna_poker/anna_poker.runs/impl_1/top_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
+Command: report_drc -file top_drc_routed.rpt -pb top_drc_routed.pb -rpx top_drc_routed.rpx
 INFO: [IP_Flow 19-1839] IP Catalog is up to date.
 INFO: [DRC 23-27] Running DRC with 2 threads
-INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Poker/anna_poker/anna_poker.runs/impl_1/top_screen_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-168] The results of DRC are in file C:/Poker/anna_poker/anna_poker.runs/impl_1/top_drc_routed.rpt.
 report_drc completed successfully
-INFO: [runtcl-4] Executing : report_methodology -file top_screen_methodology_drc_routed.rpt -pb top_screen_methodology_drc_routed.pb -rpx top_screen_methodology_drc_routed.rpx
-Command: report_methodology -file top_screen_methodology_drc_routed.rpt -pb top_screen_methodology_drc_routed.pb -rpx top_screen_methodology_drc_routed.rpx
+INFO: [runtcl-4] Executing : report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
+Command: report_methodology -file top_methodology_drc_routed.rpt -pb top_methodology_drc_routed.pb -rpx top_methodology_drc_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [DRC 23-133] Running Methodology with 2 threads
-INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Poker/anna_poker/anna_poker.runs/impl_1/top_screen_methodology_drc_routed.rpt.
+INFO: [Vivado_Tcl 2-1520] The results of Report Methodology are in file C:/Poker/anna_poker/anna_poker.runs/impl_1/top_methodology_drc_routed.rpt.
 report_methodology completed successfully
-INFO: [runtcl-4] Executing : report_power -file top_screen_power_routed.rpt -pb top_screen_power_summary_routed.pb -rpx top_screen_power_routed.rpx
-Command: report_power -file top_screen_power_routed.rpt -pb top_screen_power_summary_routed.pb -rpx top_screen_power_routed.rpx
+INFO: [runtcl-4] Executing : report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
+Command: report_power -file top_power_routed.rpt -pb top_power_summary_routed.pb -rpx top_power_routed.rpx
 INFO: [Timing 38-35] Done setting XDC timing constraints.
-WARNING: [Power 33-232] No user defined clocks were found in the design! Power estimation will be inaccurate until this is corrected.
-Resolution: Please specify clocks using create_clock/create_generated_clock for sequential elements. For pure combinatorial circuits, please specify a virtual clock, otherwise the vectorless estimation might be inaccurate
 Running Vector-less Activity Propagation...
 
 Finished Running Vector-less Activity Propagation
-75 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+104 Infos, 49 Warnings, 49 Critical Warnings and 0 Errors encountered.
 report_power completed successfully
-INFO: [runtcl-4] Executing : report_route_status -file top_screen_route_status.rpt -pb top_screen_route_status.pb
-INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_screen_timing_summary_routed.rpt -pb top_screen_timing_summary_routed.pb -rpx top_screen_timing_summary_routed.rpx -warn_on_violation 
+INFO: [runtcl-4] Executing : report_route_status -file top_route_status.rpt -pb top_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -report_unconstrained -file top_timing_summary_routed.rpt -pb top_timing_summary_routed.pb -rpx top_timing_summary_routed.rpx -warn_on_violation 
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-WARNING: [Timing 38-313] There are no user specified timing constraints. Timing constraints are needed for proper timing analysis.
-INFO: [runtcl-4] Executing : report_incremental_reuse -file top_screen_incremental_reuse_routed.rpt
+INFO: [runtcl-4] Executing : report_incremental_reuse -file top_incremental_reuse_routed.rpt
 INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
-INFO: [runtcl-4] Executing : report_clock_utilization -file top_screen_clock_utilization_routed.rpt
-INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_screen_bus_skew_routed.rpt -pb top_screen_bus_skew_routed.pb -rpx top_screen_bus_skew_routed.rpx
+INFO: [runtcl-4] Executing : report_clock_utilization -file top_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file top_bus_skew_routed.rpt -pb top_bus_skew_routed.pb -rpx top_bus_skew_routed.rpx
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-INFO: [Common 17-206] Exiting Vivado at Thu May  8 15:48:09 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu May  8 17:18:19 2025...

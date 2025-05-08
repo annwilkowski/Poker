@@ -8,7 +8,6 @@ module game_screen (
 
     output logic [10:0] font_address,
     // poker fsm input
-    input logic [2:0] player_count,
     input card_t player_cards[2][2],
     input logic [10:0] player_stacks[2],    
     input logic [10:0] player_pots[2],       // SID NEEDS TO IMPLEMENT  

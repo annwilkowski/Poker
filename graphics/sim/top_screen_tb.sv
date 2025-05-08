@@ -23,8 +23,6 @@ module hdmi_text_controller_tb ();
     logic sync;
 
     // game fsm signals used for game graphics
-
-    logic [2:0] player_count;
     card_t player_cards[2][2];
     logic [10:0] player_stacks[2]; 
     logic [10:0] player_pots[2];
@@ -65,7 +63,6 @@ module hdmi_text_controller_tb ();
         .DrawY(drawY),
         .clk(clk),
 
-        .player_count(player_count),
         .player_cards(player_cards),
         .player_stacks(player_stacks), 
         .player_pots(player_pots), 
@@ -218,11 +215,7 @@ module hdmi_text_controller_tb ();
     // Initial block for test vectors begins below
     initial begin : TEST_VECTORS
 
-        // Initialize player count and stacks
-        player_count = 2;
-        
-        // Initialize player stacks and pots (arbitrary values)
-        
+        // Initialize player stacks and pots (arbitrary values) 
         player_stacks[0] = 1000;  // Each player starts with 1000 chips
         player_stacks[1] = 999;
         player_pots[0] = 123;

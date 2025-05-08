@@ -6,7 +6,6 @@ module top_screen (
     input logic clk,
 
     // poker fsm input
-    input logic [2:0] player_count,
     input card_t player_cards[2][2],
     input logic [10:0] player_stacks[2],    
     input logic [10:0] player_pots[2],       // SID NEEDS TO IMPLEMENT  
@@ -73,7 +72,6 @@ module top_screen (
         .font_data(font_data),
 
         .font_address(game_font_address),
-        .player_count(player_count),
         .player_cards(player_cards),
         .player_stacks(player_stacks), 
         .player_pots(player_pots), 
