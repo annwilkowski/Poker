@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="hand_comparator_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_poker_types_svh_364280281 " />
+            <top_module name="glbl" />
+            <top_module name="hand_comparator_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="557.166 ns"></ZoomStartTime>
+      <ZoomEndTime time="770.567 ns"></ZoomEndTime>
+      <Cursor1Time time="726.866 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="340"></NameColumnWidth>
+      <ValueColumnWidth column_width="334"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="35" />
+   <wvobject fp_name="/hand_comparator_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/player1" type="array">
+      <obj_property name="ElementShortName">player1[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player1[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/player2" type="array">
+      <obj_property name="ElementShortName">player2[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player2[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/community" type="array">
+      <obj_property name="ElementShortName">community[0:4]</obj_property>
+      <obj_property name="ObjectShortName">community[0:4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/winner" type="logic">
+      <obj_property name="ElementShortName">winner</obj_property>
+      <obj_property name="ObjectShortName">winner</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/draw" type="logic">
+      <obj_property name="ElementShortName">draw</obj_property>
+      <obj_property name="ObjectShortName">draw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/winner_valid" type="logic">
+      <obj_property name="ElementShortName">winner_valid</obj_property>
+      <obj_property name="ObjectShortName">winner_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/start" type="logic">
+      <obj_property name="ElementShortName">start</obj_property>
+      <obj_property name="ObjectShortName">start</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/player1" type="array">
+      <obj_property name="ElementShortName">player1[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player1[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/player2" type="array">
+      <obj_property name="ElementShortName">player2[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player2[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/community" type="array">
+      <obj_property name="ElementShortName">community[0:4]</obj_property>
+      <obj_property name="ObjectShortName">community[0:4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/winner" type="logic">
+      <obj_property name="ElementShortName">winner</obj_property>
+      <obj_property name="ObjectShortName">winner</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/draw" type="logic">
+      <obj_property name="ElementShortName">draw</obj_property>
+      <obj_property name="ObjectShortName">draw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/winner_valid" type="logic">
+      <obj_property name="ElementShortName">winner_valid</obj_property>
+      <obj_property name="ObjectShortName">winner_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/state" type="array">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/comb" type="array">
+      <obj_property name="ElementShortName">comb[0:4][2:0]</obj_property>
+      <obj_property name="ObjectShortName">comb[0:4][2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/idx" type="array">
+      <obj_property name="ElementShortName">idx[4:0]</obj_property>
+      <obj_property name="ObjectShortName">idx[4:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/all1" type="array">
+      <obj_property name="ElementShortName">all1[0:6]</obj_property>
+      <obj_property name="ObjectShortName">all1[0:6]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/all2" type="array">
+      <obj_property name="ElementShortName">all2[0:6]</obj_property>
+      <obj_property name="ObjectShortName">all2[0:6]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/combo1" type="array">
+      <obj_property name="ElementShortName">combo1[0:4]</obj_property>
+      <obj_property name="ObjectShortName">combo1[0:4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/combo2" type="array">
+      <obj_property name="ElementShortName">combo2[0:4]</obj_property>
+      <obj_property name="ObjectShortName">combo2[0:4]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/curr_ht1" type="array">
+      <obj_property name="ElementShortName">curr_ht1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_ht1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/curr_ht2" type="array">
+      <obj_property name="ElementShortName">curr_ht2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_ht2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/curr_hr1" type="array">
+      <obj_property name="ElementShortName">curr_hr1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_hr1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/curr_hr2" type="array">
+      <obj_property name="ElementShortName">curr_hr2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_hr2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/best_ht1" type="array">
+      <obj_property name="ElementShortName">best_ht1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">best_ht1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/best_ht2" type="array">
+      <obj_property name="ElementShortName">best_ht2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">best_ht2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/best_hr1" type="array">
+      <obj_property name="ElementShortName">best_hr1[15:0]</obj_property>
+      <obj_property name="ObjectShortName">best_hr1[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/best_hr2" type="array">
+      <obj_property name="ElementShortName">best_hr2[15:0]</obj_property>
+      <obj_property name="ObjectShortName">best_hr2[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/hand_comparator_tb/dut/eval_valid" type="logic">
+      <obj_property name="ElementShortName">eval_valid</obj_property>
+      <obj_property name="ObjectShortName">eval_valid</obj_property>
+   </wvobject>
+</wave_config>

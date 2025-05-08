@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib "C:/Users/sidra/Documents/GitHub/Poker/game_logic/src/poker_types.svh" --include "../../../../../game_logic/src" \
+"../../../../../game_logic/src/hand_comparator.sv" \
+"../../../../../game_logic/sim/hand_eval_5card_tb.sv" \
+"../../../../../game_logic/sim/deck_tb.sv" \
+"../../../../../game_logic/sim/hand_comparator_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
