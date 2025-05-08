@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1746572706" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hand_eval_5card.dcp">
-  <File Type="PA-TCL" Name="hand_comparator.tcl"/>
-  <File Type="REPORTS-TCL" Name="hand_comparator_reports.tcl"/>
-  <File Type="RDS-RDS" Name="hand_comparator.vds"/>
-  <File Type="RDS-UTIL" Name="hand_comparator_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="hand_comparator_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="hand_comparator.dcp"/>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1746735421" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/hand_eval_5card.dcp">
+  <File Type="PA-TCL" Name="poker_hand_fsm.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="poker_hand_fsm_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="poker_hand_fsm_reports.tcl"/>
+  <File Type="RDS-RDS" Name="poker_hand_fsm.vds"/>
+  <File Type="RDS-UTIL" Name="poker_hand_fsm_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="poker_hand_fsm_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="poker_hand_fsm.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="poker_hand_fsm_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="poker_hand_fsm_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PPRDIR/../game_logic/src/poker_types.svh">
@@ -18,7 +21,6 @@
     </File>
     <File Path="$PPRDIR/../game_logic/src/LFSR.sv">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -33,7 +35,20 @@
     </File>
     <File Path="$PPRDIR/../game_logic/src/deck.sv">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../game_logic/src/player.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../game_logic/src/poker_hand_fsm.sv">
+      <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -41,7 +56,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="hand_comparator"/>
+      <Option Name="TopModule" Val="poker_hand_fsm"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">

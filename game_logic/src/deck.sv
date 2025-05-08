@@ -1,7 +1,7 @@
 `include "poker_types.svh"
 // Deck that shuffles itself using pseudo random numbers
 // Takes 52 clock cycles to shuffle after start_shuffle is asserted
-// ready is asserted when shuffling is done
+// is_shuffled is asserted when shuffling is done
 // reset sets deck to new deck order
 module card_deck (
     input  logic  clk,
@@ -9,7 +9,7 @@ module card_deck (
     input  logic  start_shuffle,
     input  logic  draw_card,
     output card_t top_card,
-    output logic  ready
+    output logic  is_shuffled
 );
 
     typedef enum logic [1:0] {
@@ -29,7 +29,7 @@ module card_deck (
     );
 
     assign top_card = deck[top_card_idx];
-    assign ready = (state == shuffled);
+    assign is_shuffled = (state == shuffled);
 
     // Controls actual deck
     always_ff @(posedge clk) begin : deck_next

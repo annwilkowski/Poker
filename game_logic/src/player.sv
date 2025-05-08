@@ -27,17 +27,20 @@ module player (
             stack <= DEFAULT_STACK;
             hole_cards[0] <= '{rank: Ace, suit: Spades};
             hole_cards[1] <= '{rank: Ace, suit: Spades};
-        end
-        else begin
+        end else begin
             if (en) begin
                 if (set_cards) begin
                     hole_cards <= input_cards;
                 end
-                if (make_bet && bet_amount <= stack) begin
-                    stack <= stack - bet_amount;
-                    prev_bet <= bet_amount;
-                end
-                else if (add_profit && bet_amount + stack < 2 ** MAX_STACK_W) begin
+                if (make_bet) begin
+                    if (bet_amount <= stack) begin
+                        stack <= stack - bet_amount;
+                        prev_bet <= bet_amount;
+                    end else begin
+                        stack <= 0;
+                        prev_bet <= stack;
+                    end
+                end else if (add_profit && bet_amount + stack < 2 ** MAX_STACK_W) begin
                     stack <= stack + bet_amount;
                 end
             end

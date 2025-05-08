@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log hand_comparator.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source hand_comparator.tcl" );
+         "-log poker_hand_fsm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source poker_hand_fsm.tcl" );
 
 
 

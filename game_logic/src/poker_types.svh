@@ -5,8 +5,8 @@
 `ifndef POKER_TYPES
 `define POKER_TYPES 
 
-`define MAX_STACK_W 11 // Max stack of 2048
-`define DEFAULT_STACK 11'd256
+parameter int MAX_STACK_W = 11;  // Max stack of 2047
+parameter logic [MAX_STACK_W-1:0] DEFAULT_STACK = 11'd512;
 
 typedef enum logic [1:0] {
     Spades,
