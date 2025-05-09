@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.runs/impl_1'
+HD_PWD='C:/Poker/poker_final/poker_final.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

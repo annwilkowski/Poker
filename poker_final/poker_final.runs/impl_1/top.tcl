@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.runs/impl_1/top.tcl"
+  variable script "C:/Poker/poker_final/poker_final.runs/impl_1/top.tcl"
   variable category "vivado_impl"
 }
 
@@ -116,8 +116,6 @@ OPTRACE "impl_1" END { }
 }
 
 set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -126,8 +124,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param tcl.collectionResultDisplayLimit 0
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param chipscope.maxJobs 4
+  set_param chipscope.maxJobs 2
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
@@ -135,20 +132,20 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.cache/wt [current_project]
-  set_property parent.project_path C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.xpr [current_project]
-  set_property ip_repo_paths C:/Users/sidra/Documents/GitHub/Poker/RD_hdmi_ip2020/hdmi_tx_1.0 [current_project]
+  set_property webtalk.parent_dir C:/Poker/poker_final/poker_final.cache/wt [current_project]
+  set_property parent.project_path C:/Poker/poker_final/poker_final.xpr [current_project]
+  set_property ip_repo_paths C:/Poker/RD_hdmi_ip2020/hdmi_tx_1.0 [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.cache/ip [current_project]
+  set_property ip_output_repo C:/Poker/poker_final/poker_final.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.runs/synth_1/top.dcp
-  read_ip -quiet C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
-  read_ip -quiet C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+  add_files -quiet C:/Poker/poker_final/poker_final.runs/synth_1/top.dcp
+  read_ip -quiet C:/Poker/poker_final/poker_final.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+  read_ip -quiet C:/Poker/poker_final/poker_final.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
+  read_xdc C:/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

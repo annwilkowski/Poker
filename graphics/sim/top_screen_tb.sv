@@ -228,7 +228,7 @@ module top_screen_tb ();
         player_stacks[1] = 999;
         player_pots[0] = 123;
         player_pots[1] = 456;        // No money in pot initially
-        pot_size = 7890;
+        pot_size = 301;
 
         min_bet_or_raise = 1234;
         call_size = 1000;

@@ -1,0 +1,13 @@
++====================+====================+==============================+
+| Launch Setup Clock | Launch Hold Clock  | Pin                          |
++====================+====================+==============================+
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Green_reg[3]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Green_reg[2]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Red_reg[1]/D   |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Red_reg[2]/D   |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Red_reg[0]/D   |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Green_reg[0]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Green_reg[1]/D |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Blue_reg[1]/D  |
+| clk_out1_clk_wiz_0 | clk_out1_clk_wiz_0 | graphics_inst/Red_reg[3]/D   |
++--------------------+--------------------+------------------------------+

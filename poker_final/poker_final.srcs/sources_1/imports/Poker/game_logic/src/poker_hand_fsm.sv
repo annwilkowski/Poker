@@ -216,13 +216,13 @@ module poker_hand_fsm (
             end
             flop: begin
                 if (betting_stage == next) begin
-                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown;
+                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown; // ANNA CHANGED
                     else next_state = turn;
                 end
             end
             turn: begin
                 if (betting_stage == next) begin
-                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown;
+                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown; // ANNA CHANGED
                     else next_state = river;
                 end
             end
@@ -301,7 +301,7 @@ module poker_hand_fsm (
         if (reset) begin
             // Round level signals
             small_blind <= 1'b0;
-            deal_count <= 4'b0;
+            deal_count <= 5'b0;
             // Deck signals
             start_shuffle <= 1'b0;
             input_cards[0] <= '{rank: Ace, suit: Spades};
@@ -356,20 +356,25 @@ module poker_hand_fsm (
                             flop_cards[0] <= top_card;
                             draw_card <= 1'b1;
                         end
-                        7: begin
+                        7: draw_card <= 1'b1;
+                        8: begin
                             flop_cards[1] <= top_card;
                             draw_card <= 1'b1;
                         end
-                        8: begin
+                        9: draw_card <= 1'b1;
+                        10: begin
                             flop_cards[2] <= top_card;
                             draw_card <= 1'b1;
                         end
-                        9: begin
+                        11:  draw_card <= 1'b1;  // wait state
+                        12: begin
                             turn_card <= top_card;
                             draw_card <= 1'b1;
                         end
-                        10: begin
+                        13: draw_card <= 1'b1; // Wait state to allow deck to prepare turn card
+                        14: begin
                             river_card <= top_card;
+                            draw_card <= 1'b1;
                         end
                     endcase
                     if (deal_count < 15) begin

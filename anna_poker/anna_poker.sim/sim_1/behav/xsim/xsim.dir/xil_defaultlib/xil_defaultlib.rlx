@@ -13,4 +13,4 @@ C:/Poker/graphics/card_text_display.sv,1746765244,systemVerilog,,C:/Poker/graphi
 C:/Poker/graphics/font_rom.sv,1743718671,systemVerilog,,C:/Poker/graphics/money_display.sv,,font_rom,,uvm,../../../../../graphics;../../../../anna_poker.gen/sources_1/ip/clk_wiz_0,,,,,
 C:/Poker/graphics/money_display.sv,1746776142,systemVerilog,,C:/Poker/graphics/sim/top_screen_tb.sv,C:/Poker/graphics/poker_types.svh,money_display,,uvm,../../../../../graphics;../../../../anna_poker.gen/sources_1/ip/clk_wiz_0,,,,,
 C:/Poker/graphics/poker_types.svh,1746578320,verilog,,,,,,,,,,,,
-C:/Poker/graphics/sim/top_screen_tb.sv,1746776214,systemVerilog,,,C:/Poker/graphics/poker_types.svh,top_screen_tb,,uvm,../../../../../graphics;../../../../anna_poker.gen/sources_1/ip/clk_wiz_0,,,,,
+C:/Poker/graphics/sim/top_screen_tb.sv,1746784734,systemVerilog,,,C:/Poker/graphics/poker_types.svh,top_screen_tb,,uvm,../../../../../graphics;../../../../anna_poker.gen/sources_1/ip/clk_wiz_0,,,,,

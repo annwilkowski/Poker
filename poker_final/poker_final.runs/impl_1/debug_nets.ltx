@@ -1,0 +1,394 @@
+{
+    "ltx_root": {
+        "version": 4,
+        "minor": 0,
+        "ltx_data": [
+            {
+                "name": "EDA_PROBESET",
+                "active": true,
+                "debug_cores": [
+                    {
+                        "type": "XSDB_V3",
+                        "name": "dbg_hub",
+                        "spec": "labtools_xsdbm_v3",
+                        "clk_input_freq_hz": "25000000"
+                    },
+                    {
+                        "type": "ILA_V3",
+                        "name": "u_ila_0",
+                        "spec": "labtools_ila_v6",
+                        "core_location": {
+                            "user_chain": 1,
+                            "slave_index": 0,
+                            "bscan_switch_index": 0
+                        },
+                        "uuid": "23e7d65a79bc59f7bc47406c1714dfae",
+                        "pins": [
+                            {
+                                "name": "probe0",
+                                "id": 0,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 0,
+                                "nets": [
+                                    {
+                                        "name": "flop_cards[0][suit]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "flop_cards[0][suit][1]"
+                                            },
+                                            {
+                                                "name": "flop_cards[0][suit][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe1",
+                                "id": 1,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 1,
+                                "nets": [
+                                    {
+                                        "name": "turn_card[rank]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "turn_card[rank][3]"
+                                            },
+                                            {
+                                                "name": "turn_card[rank][2]"
+                                            },
+                                            {
+                                                "name": "turn_card[rank][1]"
+                                            },
+                                            {
+                                                "name": "turn_card[rank][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe2",
+                                "id": 2,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 2,
+                                "nets": [
+                                    {
+                                        "name": "flop_cards[2][rank]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "flop_cards[2][rank][3]"
+                                            },
+                                            {
+                                                "name": "flop_cards[2][rank][2]"
+                                            },
+                                            {
+                                                "name": "flop_cards[2][rank][1]"
+                                            },
+                                            {
+                                                "name": "flop_cards[2][rank][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe3",
+                                "id": 3,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 3,
+                                "nets": [
+                                    {
+                                        "name": "flop_cards[1][suit]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "flop_cards[1][suit][1]"
+                                            },
+                                            {
+                                                "name": "flop_cards[1][suit][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe4",
+                                "id": 4,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 4,
+                                "nets": [
+                                    {
+                                        "name": "turn_card[suit]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "turn_card[suit][1]"
+                                            },
+                                            {
+                                                "name": "turn_card[suit][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe5",
+                                "id": 5,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 5,
+                                "nets": [
+                                    {
+                                        "name": "river_card[rank]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "river_card[rank][3]"
+                                            },
+                                            {
+                                                "name": "river_card[rank][2]"
+                                            },
+                                            {
+                                                "name": "river_card[rank][1]"
+                                            },
+                                            {
+                                                "name": "river_card[rank][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe6",
+                                "id": 6,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 6,
+                                "nets": [
+                                    {
+                                        "name": "river_card[suit]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "river_card[suit][1]"
+                                            },
+                                            {
+                                                "name": "river_card[suit][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe7",
+                                "id": 7,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 7,
+                                "nets": [
+                                    {
+                                        "name": "flop_cards[0][rank]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "flop_cards[0][rank][3]"
+                                            },
+                                            {
+                                                "name": "flop_cards[0][rank][2]"
+                                            },
+                                            {
+                                                "name": "flop_cards[0][rank][1]"
+                                            },
+                                            {
+                                                "name": "flop_cards[0][rank][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe8",
+                                "id": 8,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 8,
+                                "nets": [
+                                    {
+                                        "name": "flop_cards[2][suit]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "flop_cards[2][suit][1]"
+                                            },
+                                            {
+                                                "name": "flop_cards[2][suit][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe9",
+                                "id": 9,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 9,
+                                "nets": [
+                                    {
+                                        "name": "flop_cards[1][rank]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "flop_cards[1][rank][3]"
+                                            },
+                                            {
+                                                "name": "flop_cards[1][rank][2]"
+                                            },
+                                            {
+                                                "name": "flop_cards[1][rank][1]"
+                                            },
+                                            {
+                                                "name": "flop_cards[1][rank][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe10",
+                                "id": 10,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 10,
+                                "nets": [
+                                    {
+                                        "name": "poker_game/round_fsm/deal_count",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "poker_game/round_fsm/deal_count[0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe11",
+                                "id": 11,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 3,
+                                "portIndex": 11,
+                                "nets": [
+                                    {
+                                        "name": "poker_game/round_fsm/top_card[rank]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "poker_game/round_fsm/top_card[rank][3]"
+                                            },
+                                            {
+                                                "name": "poker_game/round_fsm/top_card[rank][2]"
+                                            },
+                                            {
+                                                "name": "poker_game/round_fsm/top_card[rank][1]"
+                                            },
+                                            {
+                                                "name": "poker_game/round_fsm/top_card[rank][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe12",
+                                "id": 12,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": true,
+                                "leftIndex": 0,
+                                "rightIndex": 1,
+                                "portIndex": 12,
+                                "nets": [
+                                    {
+                                        "name": "poker_game/round_fsm/top_card[suit]",
+                                        "isBus": true,
+                                        "subnets": [
+                                            {
+                                                "name": "poker_game/round_fsm/top_card[suit][1]"
+                                            },
+                                            {
+                                                "name": "poker_game/round_fsm/top_card[suit][0]"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            {
+                                "name": "probe13",
+                                "id": 13,
+                                "type": "DATA_TRIGGER",
+                                "direction": "IN",
+                                "isVector": false,
+                                "leftIndex": 0,
+                                "rightIndex": 0,
+                                "portIndex": 13,
+                                "nets": [
+                                    {
+                                        "name": "poker_game/round_fsm/draw_card0",
+                                        "isBus": false
+                                    }
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

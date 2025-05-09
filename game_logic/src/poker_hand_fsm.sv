@@ -295,7 +295,7 @@ module poker_hand_fsm (
         if (reset) begin
             // Round level signals
             small_blind <= 1'b0;
-            deal_count <= 4'b0;
+            deal_count <= 5'b0;
             // Deck signals
             start_shuffle <= 1'b0;
             input_cards[0] <= '{rank: Ace, suit: Spades};
