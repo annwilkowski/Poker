@@ -1,0 +1,8 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L secureip --snapshot poker_hand_tb_func_synth xil_defaultlib.poker_hand_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2996] 'sb_turn_reg' is not found for implicit .* port connection [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sim_1/imports/sim/poker_hand_tb.sv:40]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.

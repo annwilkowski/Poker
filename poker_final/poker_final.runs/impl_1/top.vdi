@@ -1,0 +1,223 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri May  9 06:37:27 2025
+# Process ID: 22696
+# Current directory: C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.runs/impl_1
+# Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
+# Log file: C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.runs/impl_1/top.vdi
+# Journal file: C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.runs/impl_1\vivado.jou
+# Running On: SidFW, OS: Windows, CPU Frequency: 3294 MHz, CPU Physical cores: 16, Host memory: 33618 MB
+#-----------------------------------------------------------
+source top.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/sidra/Documents/GitHub/Poker/RD_hdmi_ip2020/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+Command: link_design -top top -part xc7s50csga324-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.dcp' for cell 'clk_wiz'
+INFO: [Project 1-454] Reading design checkpoint 'c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/hdmi_tx_0/hdmi_tx_0.dcp' for cell 'vga_to_hdmi'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 804.273 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 653 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2022.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+WARNING: [Opt 31-35] Removing redundant IBUF, clk_wiz/inst/clkin1_ibufg, from the path connected to top-level port: clk 
+Resolution: The tool has removed redundant IBUF. To resolve this warning, check for redundant IBUF in the input design.
+WARNING: [Constraints 18-550] Could not create 'IBUF_LOW_PWR' constraint because net 'clk_wiz/clk_in1' is not directly connected to top level port. Synthesis is ignored for IBUF_LOW_PWR but preserved for implementation.
+Parsing XDC File [c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Finished Parsing XDC File [c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc:57]
+Finished Parsing XDC File [c:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc] for cell 'clk_wiz/inst'
+Parsing XDC File [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:35]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:35]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:36]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:36]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:37]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:37]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:38]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:38]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:39]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:39]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:40]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:40]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:41]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:41]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:42]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:42]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[7]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:43]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:43]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[6]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:44]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:44]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[5]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:45]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:45]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[4]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:46]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:46]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:47]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:47]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:48]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:48]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:49]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:49]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:50]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:50]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[7]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:51]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:51]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[6]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:52]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:52]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[5]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:53]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:53]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[4]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:56]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:56]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:57]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:57]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:58]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:58]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:59]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:59]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:60]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:60]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:61]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:61]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridA[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:62]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:62]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:63]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:63]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:64]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:64]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:65]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:65]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:66]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:66]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[4]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:67]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:67]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[5]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:68]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:68]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[6]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:69]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:69]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segA[7]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:70]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:70]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:71]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:71]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:72]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:72]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:73]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:73]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:74]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:74]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[4]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:75]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:75]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[5]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:76]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:76]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[6]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:77]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:77]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_segB[7]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'hex_gridB[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'poker_game/round_fsm/deal_count_reg[0]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:113]
+WARNING: [Vivado 12-507] No nets matched 'poker_game/round_fsm/deal_count_reg[1]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:113]
+WARNING: [Vivado 12-507] No nets matched 'poker_game/round_fsm/deal_count_reg[2]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:113]
+WARNING: [Vivado 12-507] No nets matched 'poker_game/round_fsm/deal_count_reg[3]'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:113]
+CRITICAL WARNING: [Common 17-162] Invalid option value specified for '-nets'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:113]
+WARNING: [Vivado 12-507] No nets matched 'poker_game/round_fsm/draw_card_reg_0'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:149]
+CRITICAL WARNING: [Common 17-162] Invalid option value specified for '-nets'. [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc:149]
+Finished Parsing XDC File [C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1370.828 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+14 Infos, 55 Warnings, 50 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1370.828 ; gain = 967.340
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7s50'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.700 . Memory (MB): peak = 1370.828 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Cache Timing Information Task | Checksum: 192df9dab
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.188 . Memory (MB): peak = 1387.891 ; gain = 17.062
+
+Starting Logic Optimization Task
+INFO: [Common 17-83] Releasing license: Implementation
+21 Infos, 55 Warnings, 50 Critical Warnings and 1 Errors encountered.
+opt_design failed
+ERROR: [Chipscope 16-213] The debug port 'u_ila_0/probe0' has 4 unconnected channels (bits). This will cause errors during implementation.
+INFO: [Common 17-206] Exiting Vivado at Fri May  9 06:37:44 2025...

@@ -1,0 +1,4 @@
+Running: xsim.dir/poker_hand_tb_behav/xsimk.exe -simmode gui -wdb poker_hand_tb_behav.wdb -simrunnum 0 -socket 54092
+Design successfully loaded
+Design Loading Memory Usage: 9288 KB (Peak: 9288 KB)
+Design Loading CPU Usage: 61 ms

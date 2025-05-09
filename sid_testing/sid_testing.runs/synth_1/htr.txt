@@ -6,4 +6,4 @@ REM          to be invoked for Vivado to track run status.
 REM Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 REM
 
-vivado -log poker_hand_fsm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source poker_hand_fsm.tcl
+vivado -log game_fsm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source game_fsm.tcl

@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log poker_hand_fsm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source poker_hand_fsm.tcl
+EAStep vivado -log game_fsm.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source game_fsm.tcl

@@ -18,12 +18,14 @@ module poker_hand_fsm (
     output logic small_blind,  // small_blind posts small blind, other player posts big blind
     output logic [MAX_STACK_W-1:0] current_pot,
     output logic [MAX_STACK_W-1:0] min_bet_or_raise,
+    output logic [MAX_STACK_W-1:0] call_size,
     output hand_state_t curr_state,
     output logic call_or_raise,
     output logic winner,
     output logic is_draw,
     output logic wait_screen,
-    output logic ready,
+    output logic adv_ready,
+    output logic play_ready,
     // Community cards
     output card_t flop_cards[3],
     output card_t turn_card,
@@ -44,7 +46,6 @@ module poker_hand_fsm (
 
     /** Round state variables **/
     hand_state_t state, next_state;  // FSM state
-    logic player_turn;
 
     /** Module Inputs and Outputs **/
 
@@ -96,7 +97,6 @@ module poker_hand_fsm (
     logic bb_en;
     logic both_played;
     logic [MAX_STACK_W-1:0] pot_size;  // Max of 2048
-    logic [MAX_STACK_W-1:0] call_size;
     logic [MAX_STACK_W-1:0] sb_stack;
     logic [MAX_STACK_W-1:0] bb_stack;
     logic [MAX_STACK_W-1:0] p1_invested_chips;
@@ -278,13 +278,14 @@ module poker_hand_fsm (
     end
 
     always_comb begin
-        ready = 0;
+        adv_ready  = 1'b0;
+        play_ready = 1'b0;
         case (betting_stage)
-            bb_ready, bb_play, sb_ready, sb_play: ready = 1;
-            default: ready = 0;
+            bb_play, sb_play: play_ready = 1'b1;
+            default: play_ready = 0;
         endcase
-        if (state == idle || state == showdown) ready = 1;
-
+        if ((state == idle) || (state == showdown) || (betting_stage == bb_ready) || (betting_stage == sb_ready))
+            adv_ready = 1'b1;
     end
 
     /** -------------------------- Sequential Logic -------------------------- **/
@@ -299,6 +300,9 @@ module poker_hand_fsm (
             start_shuffle <= 1'b0;
             input_cards[0] <= '{rank: Ace, suit: Spades};
             input_cards[1] <= '{rank: Ace, suit: Spades};
+            foreach (flop_cards[i]) flop_cards[i] <= '{rank: Ace, suit: Spades};
+            turn_card <= '{rank: Ace, suit: Spades};
+            river_card <= '{rank: Ace, suit: Spades};
             //Player Signals
             p1_deal_en <= 1'b0;
             p2_deal_en <= 1'b0;
@@ -307,6 +311,7 @@ module poker_hand_fsm (
             // Hand Evaluation signals
             start_eval <= 1'b0;
             winner <= 1'b0;
+            draw <= 1'b0;
         end else begin
             // Default values
             p1_deal_en <= 1'b0;
@@ -318,27 +323,28 @@ module poker_hand_fsm (
                 idle: begin
                     if (next_state == shuffling) start_shuffle <= 1'b1;
                 end
-                // shuffling: begin
-                //     ;  // Do nothing, just wait for shuffling to be done
-                // end
+                shuffling: begin
+                    if (next_state == dealing) draw_card <= 1'b1;
+                end
                 dealing: begin
                     draw_card <= 1'b1;
                     unique case (deal_count)
-                        0, 3: input_cards[0] <= top_card;
-                        1, 4: input_cards[1] <= top_card;
+                        0, 3:    input_cards[0] <= top_card;
+                        1, 4: begin
+                            input_cards[1] <= top_card;
+                            draw_card <= 1'b0;
+                        end
                         2: begin
                             p1_deal_en <= 1'b1;
                             set_cards  <= 1'b1;
-                            draw_card  <= 1'b0;
                         end
                         5: begin
                             p2_deal_en <= 1'b1;
                             set_cards  <= 1'b1;
-                            draw_card  <= 1'b0;
                         end
                         6, 7, 8: flop_cards[deal_count-6] <= top_card;
-                        9: turn_card <= top_card;
-                        10: river_card <= top_card;
+                        9:       turn_card <= top_card;
+                        10:      river_card <= top_card;
                         default: begin
                             draw_card <= 1'b0;
                         end
@@ -427,11 +433,13 @@ module poker_hand_fsm (
                                 make_bet <= 1'b1;
                                 sb_en <= 1'b1;
                                 bet_size <= SB_SIZE;
+                                pot_size <= pot_size + SB_SIZE;
                             end else if (bb_invested_chips == 0) begin
                                 make_bet <= 1'b1;
                                 bb_en <= 1'b1;
                                 bet_size <= BB_SIZE;
                                 bb_invested_chips <= BB_SIZE;
+                                pot_size <= pot_size + BB_SIZE;
                             end else begin
                                 betting_stage <= sb_ready;
                             end
@@ -521,6 +529,7 @@ module poker_hand_fsm (
                             sb_invested_chips <= 0;
                             bb_invested_chips <= 0;
                             sb_turn <= 1'b0;
+                            both_played <= 0;
                         end
                         bb_ready: begin
                             if (advance) betting_stage <= bb_play;
@@ -599,17 +608,20 @@ module poker_hand_fsm (
                     endcase
                 end
                 showdown: begin
-                    if (draw) begin
-
-                    end
-                    if (winner == small_blind) begin
-                        sb_en <= 1'b1;
-                    end else begin
-                        bb_en <= 1'b1;
-                    end
                     add_profit <= 1'b1;
-                    bet_size   <= pot_size;
                     pot_size   <= 0;
+                    if (draw) begin
+                        bet_size <= pot_size / 2;
+                        sb_en <= 1'b1;
+                        bb_en <= 1'b1;
+                    end else begin
+                        if (winner == small_blind) begin
+                            sb_en <= 1'b1;
+                        end else begin
+                            bb_en <= 1'b1;
+                        end
+                        bet_size <= pot_size;
+                    end
                 end
             endcase
         end

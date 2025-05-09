@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="poker_hand_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="\$unit_Game_Screen_sv_3704022511 " />
+            <top_module name="glbl" />
+            <top_module name="poker_hand_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="451.500 ns"></ZoomStartTime>
+      <ZoomEndTime time="839.701 ns"></ZoomEndTime>
+      <Cursor1Time time="775.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="588"></NameColumnWidth>
+      <ValueColumnWidth column_width="279"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="89" />
+   <wave_markers>
+      <marker time="805000" label="" />
+      <marker time="825000" label="" />
+      <marker time="845000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/poker_hand_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/advance_button" type="logic">
+      <obj_property name="ElementShortName">advance_button</obj_property>
+      <obj_property name="ObjectShortName">advance_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/check_or_call_button" type="logic">
+      <obj_property name="ElementShortName">check_or_call_button</obj_property>
+      <obj_property name="ObjectShortName">check_or_call_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/bet_or_raise_button" type="logic">
+      <obj_property name="ElementShortName">bet_or_raise_button</obj_property>
+      <obj_property name="ObjectShortName">bet_or_raise_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/fold_button" type="logic">
+      <obj_property name="ElementShortName">fold_button</obj_property>
+      <obj_property name="ObjectShortName">fold_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/bet_input" type="array">
+      <obj_property name="ElementShortName">bet_input[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bet_input[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/small_blind" type="logic">
+      <obj_property name="ElementShortName">small_blind</obj_property>
+      <obj_property name="ObjectShortName">small_blind</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/current_pot" type="array">
+      <obj_property name="ElementShortName">current_pot[10:0]</obj_property>
+      <obj_property name="ObjectShortName">current_pot[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/min_bet_or_raise" type="array">
+      <obj_property name="ElementShortName">min_bet_or_raise[10:0]</obj_property>
+      <obj_property name="ObjectShortName">min_bet_or_raise[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/call_size" type="array">
+      <obj_property name="ElementShortName">call_size[10:0]</obj_property>
+      <obj_property name="ObjectShortName">call_size[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/curr_round_state" type="array">
+      <obj_property name="ElementShortName">curr_round_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_round_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/call_or_raise" type="logic">
+      <obj_property name="ElementShortName">call_or_raise</obj_property>
+      <obj_property name="ObjectShortName">call_or_raise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/current_player" type="logic">
+      <obj_property name="ElementShortName">current_player</obj_property>
+      <obj_property name="ObjectShortName">current_player</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/player1_cards" type="array">
+      <obj_property name="ElementShortName">player1_cards[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player1_cards[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/player2_cards" type="array">
+      <obj_property name="ElementShortName">player2_cards[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player2_cards[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/player1_stack" type="array">
+      <obj_property name="ElementShortName">player1_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player1_stack[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/player2_stack" type="array">
+      <obj_property name="ElementShortName">player2_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player2_stack[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/player1_invested" type="array">
+      <obj_property name="ElementShortName">player1_invested[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player1_invested[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/player2_invested" type="array">
+      <obj_property name="ElementShortName">player2_invested[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player2_invested[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/bet_input" type="array">
+      <obj_property name="ElementShortName">bet_input[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bet_input[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/small_blind" type="logic">
+      <obj_property name="ElementShortName">small_blind</obj_property>
+      <obj_property name="ObjectShortName">small_blind</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/curr_round_state" type="array">
+      <obj_property name="ElementShortName">curr_round_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_round_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/game_state" type="array">
+      <obj_property name="ElementShortName">game_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">game_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/game_next_state" type="array">
+      <obj_property name="ElementShortName">game_next_state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">game_next_state[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/advance" type="logic">
+      <obj_property name="ElementShortName">advance</obj_property>
+      <obj_property name="ObjectShortName">advance</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/check_or_call" type="logic">
+      <obj_property name="ElementShortName">check_or_call</obj_property>
+      <obj_property name="ObjectShortName">check_or_call</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/bet_or_raise" type="logic">
+      <obj_property name="ElementShortName">bet_or_raise</obj_property>
+      <obj_property name="ObjectShortName">bet_or_raise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/fold" type="logic">
+      <obj_property name="ElementShortName">fold</obj_property>
+      <obj_property name="ObjectShortName">fold</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/prev_advance_button" type="logic">
+      <obj_property name="ElementShortName">prev_advance_button</obj_property>
+      <obj_property name="ObjectShortName">prev_advance_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/prev_check_or_call_button" type="logic">
+      <obj_property name="ElementShortName">prev_check_or_call_button</obj_property>
+      <obj_property name="ObjectShortName">prev_check_or_call_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/prev_bet_or_raise_button" type="logic">
+      <obj_property name="ElementShortName">prev_bet_or_raise_button</obj_property>
+      <obj_property name="ObjectShortName">prev_bet_or_raise_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/prev_fold_button" type="logic">
+      <obj_property name="ElementShortName">prev_fold_button</obj_property>
+      <obj_property name="ObjectShortName">prev_fold_button</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/adv_ready" type="logic">
+      <obj_property name="ElementShortName">adv_ready</obj_property>
+      <obj_property name="ObjectShortName">adv_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/play_ready" type="logic">
+      <obj_property name="ElementShortName">play_ready</obj_property>
+      <obj_property name="ObjectShortName">play_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/bet_valid" type="logic">
+      <obj_property name="ElementShortName">bet_valid</obj_property>
+      <obj_property name="ObjectShortName">bet_valid</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/start_game" type="logic">
+      <obj_property name="ElementShortName">start_game</obj_property>
+      <obj_property name="ObjectShortName">start_game</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/curr_state" type="array">
+      <obj_property name="ElementShortName">curr_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/reset" type="logic">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/advance" type="logic">
+      <obj_property name="ElementShortName">advance</obj_property>
+      <obj_property name="ObjectShortName">advance</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/check_or_call" type="logic">
+      <obj_property name="ElementShortName">check_or_call</obj_property>
+      <obj_property name="ObjectShortName">check_or_call</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/bet_or_raise" type="logic">
+      <obj_property name="ElementShortName">bet_or_raise</obj_property>
+      <obj_property name="ObjectShortName">bet_or_raise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/fold" type="logic">
+      <obj_property name="ElementShortName">fold</obj_property>
+      <obj_property name="ObjectShortName">fold</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/bet_input" type="array">
+      <obj_property name="ElementShortName">bet_input[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bet_input[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/small_blind" type="logic">
+      <obj_property name="ElementShortName">small_blind</obj_property>
+      <obj_property name="ObjectShortName">small_blind</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/current_pot" type="array">
+      <obj_property name="ElementShortName">current_pot[10:0]</obj_property>
+      <obj_property name="ObjectShortName">current_pot[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/min_bet_or_raise" type="array">
+      <obj_property name="ElementShortName">min_bet_or_raise[10:0]</obj_property>
+      <obj_property name="ObjectShortName">min_bet_or_raise[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/call_size" type="array">
+      <obj_property name="ElementShortName">call_size[10:0]</obj_property>
+      <obj_property name="ObjectShortName">call_size[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/curr_state" type="array">
+      <obj_property name="ElementShortName">curr_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/call_or_raise" type="logic">
+      <obj_property name="ElementShortName">call_or_raise</obj_property>
+      <obj_property name="ObjectShortName">call_or_raise</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/winner" type="logic">
+      <obj_property name="ElementShortName">winner</obj_property>
+      <obj_property name="ObjectShortName">winner</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/is_draw" type="logic">
+      <obj_property name="ElementShortName">is_draw</obj_property>
+      <obj_property name="ObjectShortName">is_draw</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/show_wait_screen" type="logic">
+      <obj_property name="ElementShortName">show_wait_screen</obj_property>
+      <obj_property name="ObjectShortName">show_wait_screen</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/adv_ready" type="logic">
+      <obj_property name="ElementShortName">adv_ready</obj_property>
+      <obj_property name="ObjectShortName">adv_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/play_ready" type="logic">
+      <obj_property name="ElementShortName">play_ready</obj_property>
+      <obj_property name="ObjectShortName">play_ready</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/betting_stage" type="array">
+      <obj_property name="ElementShortName">betting_stage[3:0]</obj_property>
+      <obj_property name="ObjectShortName">betting_stage[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/flop_cards" type="array">
+      <obj_property name="ElementShortName">flop_cards[0:2]</obj_property>
+      <obj_property name="ObjectShortName">flop_cards[0:2]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/turn_card" type="array">
+      <obj_property name="ElementShortName">turn_card</obj_property>
+      <obj_property name="ObjectShortName">turn_card</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/river_card" type="array">
+      <obj_property name="ElementShortName">river_card</obj_property>
+      <obj_property name="ObjectShortName">river_card</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/current_player" type="logic">
+      <obj_property name="ElementShortName">current_player</obj_property>
+      <obj_property name="ObjectShortName">current_player</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/player1_cards" type="array">
+      <obj_property name="ElementShortName">player1_cards[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player1_cards[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/player2_cards" type="array">
+      <obj_property name="ElementShortName">player2_cards[0:1]</obj_property>
+      <obj_property name="ObjectShortName">player2_cards[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/player1_stack" type="array">
+      <obj_property name="ElementShortName">player1_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player1_stack[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/player2_stack" type="array">
+      <obj_property name="ElementShortName">player2_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player2_stack[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/player1_invested" type="array">
+      <obj_property name="ElementShortName">player1_invested[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player1_invested[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/player2_invested" type="array">
+      <obj_property name="ElementShortName">player2_invested[10:0]</obj_property>
+      <obj_property name="ObjectShortName">player2_invested[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/state" type="array">
+      <obj_property name="ElementShortName">state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/next_state" type="array">
+      <obj_property name="ElementShortName">next_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">next_state[2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/input_cards" type="array">
+      <obj_property name="ElementShortName">input_cards[0:1]</obj_property>
+      <obj_property name="ObjectShortName">input_cards[0:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/set_cards" type="logic">
+      <obj_property name="ElementShortName">set_cards</obj_property>
+      <obj_property name="ObjectShortName">set_cards</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/make_bet" type="logic">
+      <obj_property name="ElementShortName">make_bet</obj_property>
+      <obj_property name="ObjectShortName">make_bet</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/add_profit" type="logic">
+      <obj_property name="ElementShortName">add_profit</obj_property>
+      <obj_property name="ObjectShortName">add_profit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/bet_size" type="array">
+      <obj_property name="ElementShortName">bet_size[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bet_size[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/p1_en" type="logic">
+      <obj_property name="ElementShortName">p1_en</obj_property>
+      <obj_property name="ObjectShortName">p1_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/p1_stack" type="array">
+      <obj_property name="ElementShortName">p1_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">p1_stack[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/p1_prev_bet" type="array">
+      <obj_property name="ElementShortName">p1_prev_bet[10:0]</obj_property>
+      <obj_property name="ObjectShortName">p1_prev_bet[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/p2_en" type="logic">
+      <obj_property name="ElementShortName">p2_en</obj_property>
+      <obj_property name="ObjectShortName">p2_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/p2_stack" type="array">
+      <obj_property name="ElementShortName">p2_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">p2_stack[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/p2_prev_bet" type="array">
+      <obj_property name="ElementShortName">p2_prev_bet[10:0]</obj_property>
+      <obj_property name="ObjectShortName">p2_prev_bet[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/pot_size" type="array">
+      <obj_property name="ElementShortName">pot_size[10:0]</obj_property>
+      <obj_property name="ObjectShortName">pot_size[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/sb_stack" type="array">
+      <obj_property name="ElementShortName">sb_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sb_stack[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/bb_stack" type="array">
+      <obj_property name="ElementShortName">bb_stack[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_stack[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/sb_invested_chips" type="array">
+      <obj_property name="ElementShortName">sb_invested_chips[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sb_invested_chips[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/bb_invested_chips" type="array">
+      <obj_property name="ElementShortName">bb_invested_chips[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_invested_chips[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/sb_prev_bet" type="array">
+      <obj_property name="ElementShortName">sb_prev_bet[10:0]</obj_property>
+      <obj_property name="ObjectShortName">sb_prev_bet[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/bb_prev_bet" type="array">
+      <obj_property name="ElementShortName">bb_prev_bet[10:0]</obj_property>
+      <obj_property name="ObjectShortName">bb_prev_bet[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/BB_SIZE" type="array">
+      <obj_property name="ElementShortName">BB_SIZE[10:0]</obj_property>
+      <obj_property name="ObjectShortName">BB_SIZE[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/poker_hand_tb/dut/round_fsm/SB_SIZE" type="array">
+      <obj_property name="ElementShortName">SB_SIZE[10:0]</obj_property>
+      <obj_property name="ObjectShortName">SB_SIZE[10:0]</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,39 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot poker_hand_tb_behav xil_defaultlib.poker_hand_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/game_fsm.sv" Line 3. Module game_fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv" Line 6. Module poker_hand_fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/player.sv" Line 3. Module player doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/player.sv" Line 3. Module player doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/deck.sv" Line 6. Module card_deck doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/LFSR.sv" Line 2. Module pseudo_rand_lfsr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv" Line 3. Module hand_comparator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv" Line 173. Module hand_eval_5card doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv" Line 173. Module hand_eval_5card doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/game_fsm.sv" Line 3. Module game_fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv" Line 6. Module poker_hand_fsm doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/player.sv" Line 3. Module player doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/player.sv" Line 3. Module player doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/deck.sv" Line 6. Module card_deck doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/LFSR.sv" Line 2. Module pseudo_rand_lfsr doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv" Line 3. Module hand_comparator doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv" Line 173. Module hand_eval_5card doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "C:/Users/sidra/Documents/GitHub/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv" Line 173. Module hand_eval_5card doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package xil_defaultlib.$unit_Game_Screen_sv_3704022511
+Compiling module xil_defaultlib.player
+Compiling module xil_defaultlib.pseudo_rand_lfsr
+Compiling module xil_defaultlib.card_deck
+Compiling module xil_defaultlib.hand_eval_5card
+Compiling module xil_defaultlib.hand_comparator
+Compiling module xil_defaultlib.poker_hand_fsm
+Compiling module xil_defaultlib.game_fsm
+Compiling module xil_defaultlib.poker_hand_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot poker_hand_tb_behav
