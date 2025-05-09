@@ -216,13 +216,13 @@ module poker_hand_fsm (
             end
             flop: begin
                 if (betting_stage == next) begin
-                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown; // ANNA CHANGED
+                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown; 
                     else next_state = turn;
                 end
             end
             turn: begin
                 if (betting_stage == next) begin
-                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown; // ANNA CHANGED
+                    if (sb_stack == 0 || bb_stack == 0) next_state = showdown; 
                     else next_state = river;
                 end
             end
@@ -233,6 +233,7 @@ module poker_hand_fsm (
                 if (advance) next_state = shuffling;
             end
         endcase
+        if(betting_stage == sb_win || betting_stage == bb_win) next_state = shuffling;
     end
 
     always_comb begin
@@ -527,7 +528,7 @@ module poker_hand_fsm (
                                     make_bet <= 1'b1;
                                     bb_en <= 1'b1;
                                     betting_stage <= sb_ready;
-                                    sb_turn <= 1'b0;
+                                    sb_turn <= 1'b1;
                                     min_bet_or_raise <= sb_invested_chips + bet_input;
                                     call_or_raise <= 1'b1;
                                 end
@@ -542,7 +543,7 @@ module poker_hand_fsm (
                             add_profit <= 1'b1;
                             bet_size <= pot_size;
                             pot_size <= 0;
-                            betting_stage <= next;
+                            betting_stage <= start_betting;
                         end
                         next: begin
                             betting_stage <= start_betting;
@@ -604,6 +605,7 @@ module poker_hand_fsm (
                                     pot_size <= pot_size + call_size;
                                     sb_invested_chips <= bb_invested_chips;
                                     make_bet <= 1'b1;
+                                    sb_turn <= 1'b0;
                                     sb_en <= 1'b1;
                                     betting_stage <= next;
                                     call_or_raise <= 1'b0;
@@ -614,7 +616,7 @@ module poker_hand_fsm (
                                     make_bet <= 1'b1;
                                     sb_en <= 1'b1;
                                     betting_stage <= bb_ready;
-                                    sb_turn <= 1'b1;
+                                    sb_turn <= 1'b0;
                                     min_bet_or_raise <= bb_invested_chips + bet_input;
                                     call_or_raise <= 1'b1;
                                 end
@@ -629,7 +631,7 @@ module poker_hand_fsm (
                             add_profit <= 1'b1;
                             bet_size <= pot_size;
                             pot_size <= 0;
-                            betting_stage <= next;
+                            betting_stage <= start_betting;
                         end
                         next: begin
                             betting_stage <= start_betting;

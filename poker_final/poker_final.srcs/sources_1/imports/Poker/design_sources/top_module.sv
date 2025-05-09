@@ -36,6 +36,8 @@ module top (
     logic current_dealer;  // SID NEEDS TO IMPLEMENT
     logic winner;
     logic is_draw;
+    logic [10:0] min_bet_or_raise;
+    logic [10:0] call_size;
 
     logic if_BetCheck;  // NOT SURE YET HOW TO IMPLEMENT (Bet and Check) or (Raise and Call)
     logic call_or_raise;
@@ -56,6 +58,7 @@ module top (
     logic [14:0] sw_s;
 
     assign if_BetCheck = ~call_or_raise;
+    assign reset = reset_rtl_0;
 
     //Keycode HEX drivers
     // hex_driver HexA (
@@ -203,10 +206,5 @@ module top (
         .q(sw_s)
     );
 
-    sync_flop rst_sync (
-        .clk(clk),
-        .d  (reset_rtl_0),
-        .q  (reset)
-    );
 
 endmodule

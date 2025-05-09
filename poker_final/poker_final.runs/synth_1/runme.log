@@ -25,14 +25,12 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 75232
+INFO: [Synth 8-7075] Helper process launched with PID 83340
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'text_on' is not allowed [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/graphics/money_display.sv:40]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'font_address' is not allowed [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/graphics/money_display.sv:41]
-INFO: [Synth 8-11241] undeclared symbol 'min_bet_or_raise', assumed default net type 'wire' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:90]
-INFO: [Synth 8-11241] undeclared symbol 'call_size', assumed default net type 'wire' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:91]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1188.719 ; gain = 409.984
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1188.406 ; gain = 409.492
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'top' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:3]
 INFO: [Synth 8-6157] synthesizing module 'top_screen' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/graphics/Top_Screen.sv:3]
@@ -67,42 +65,40 @@ INFO: [Synth 8-155] case statement is not full and has no default [C:/Poker/poke
 INFO: [Synth 8-155] case statement is not full and has no default [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv:109]
 INFO: [Synth 8-6155] done synthesizing module 'hand_comparator' (0#1) [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/hand_comparator.sv:3]
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:201]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:329]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:337]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:431]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:453]
-INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:553]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:330]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:338]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:432]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:454]
+INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:554]
 INFO: [Synth 8-6155] done synthesizing module 'poker_hand_fsm' (0#1) [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/poker_hand_fsm.sv:6]
 INFO: [Synth 8-294] found qualifier unique on case statement: implementing as parallel_case [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/game_fsm.sv:99]
 INFO: [Synth 8-6155] done synthesizing module 'game_fsm' (0#1) [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/game_logic/src/game_fsm.sv:3]
-WARNING: [Synth 8-689] width (1) of port connection 'min_bet_or_raise' does not match port width (11) of module 'game_fsm' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:119]
-WARNING: [Synth 8-689] width (1) of port connection 'call_size' does not match port width (11) of module 'game_fsm' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:120]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-24044-DESKTOP-227SA2M/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-24044-DESKTOP-227SA2M/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-66008-DESKTOP-227SA2M/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-66008-DESKTOP-227SA2M/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/graphics/VGA_controller.sv:26]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/graphics/VGA_controller.sv:26]
-WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:150]
-WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:150]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-24044-DESKTOP-227SA2M/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-24044-DESKTOP-227SA2M/realtime/hdmi_tx_0_stub.v:5]
+WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:153]
+WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:153]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-66008-DESKTOP-227SA2M/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Poker/poker_final/poker_final.runs/synth_1/.Xil/Vivado-66008-DESKTOP-227SA2M/realtime/hdmi_tx_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'sync_debounce' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/sync.sv:9]
 INFO: [Synth 8-6155] done synthesizing module 'sync_debounce' (0#1) [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/sync.sv:9]
 INFO: [Synth 8-6157] synthesizing module 'sync_flop' [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/sync.sv:39]
 INFO: [Synth 8-6155] done synthesizing module 'sync_flop' (0#1) [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/sync.sv:39]
 INFO: [Synth 8-6155] done synthesizing module 'top' (0#1) [C:/Poker/poker_final/poker_final.srcs/sources_1/imports/Poker/design_sources/top_module.sv:3]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1337.484 ; gain = 558.750
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1337.488 ; gain = 558.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1337.484 ; gain = 558.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1337.488 ; gain = 558.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1337.484 ; gain = 558.750
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1337.488 ; gain = 558.574
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.058 . Memory (MB): peak = 1337.484 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.054 . Memory (MB): peak = 1337.488 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -169,23 +165,23 @@ Parsing XDC File [C:/Poker/poker_final/poker_final.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [C:/Poker/poker_final/poker_final.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1447.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1448.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.018 . Memory (MB): peak = 1447.691 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1448.168 ; gain = 0.000
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1447.691 ; gain = 668.957
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1448.168 ; gain = 669.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1447.691 ; gain = 668.957
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1448.168 ; gain = 669.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -211,7 +207,7 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  c:/Poke
 Applied set_property KEEP_HIERARCHY = SOFT for vga_to_hdmi. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for clk_wiz. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1447.691 ; gain = 668.957
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 1448.168 ; gain = 669.254
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'card_deck'
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'hand_comparator'
@@ -247,7 +243,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'poker_hand_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1447.691 ; gain = 668.957
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1448.168 ; gain = 669.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -278,7 +274,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 71    
 	                3 Bit    Registers := 5     
 	                2 Bit    Registers := 64    
-	                1 Bit    Registers := 73    
+	                1 Bit    Registers := 71    
 +---Multipliers : 
 	              32x32  Multipliers := 2     
 +---Muxes : 
@@ -311,9 +307,10 @@ Detailed RTL Component Info :
 	   3 Input    4 Bit        Muxes := 1     
 	   8 Input    4 Bit        Muxes := 2     
 	   3 Input    3 Bit        Muxes := 4     
-	   2 Input    3 Bit        Muxes := 134   
+	   2 Input    3 Bit        Muxes := 126   
 	   4 Input    3 Bit        Muxes := 7     
-	   8 Input    3 Bit        Muxes := 4     
+	   8 Input    3 Bit        Muxes := 3     
+	  20 Input    3 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 101   
 	   3 Input    2 Bit        Muxes := 3     
 	   4 Input    2 Bit        Muxes := 26    
@@ -370,7 +367,7 @@ WARNING: [Synth 8-7129] Port sw[12] in module top is either unconnected or has n
 WARNING: [Synth 8-7129] Port sw[11] in module top is either unconnected or has no load
 WARNING: [Synth 8-3332] Sequential element (FSM_onehot_state_reg[3]) is unused and will be removed from module hand_comparator.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:31 ; elapsed = 00:02:34 . Memory (MB): peak = 1655.199 ; gain = 876.465
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:38 ; elapsed = 00:02:43 . Memory (MB): peak = 1669.328 ; gain = 890.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -408,19 +405,19 @@ Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-565] redefining clock 'clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:39 ; elapsed = 00:02:42 . Memory (MB): peak = 1655.199 ; gain = 876.465
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:46 ; elapsed = 00:02:51 . Memory (MB): peak = 1669.328 ; gain = 890.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:02:45 ; elapsed = 00:02:48 . Memory (MB): peak = 1655.199 ; gain = 876.465
+Finished Timing Optimization : Time (s): cpu = 00:02:52 ; elapsed = 00:02:58 . Memory (MB): peak = 1669.328 ; gain = 890.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:02:48 ; elapsed = 00:02:51 . Memory (MB): peak = 1655.199 ; gain = 876.465
+Finished Technology Mapping : Time (s): cpu = 00:02:56 ; elapsed = 00:03:01 . Memory (MB): peak = 1669.328 ; gain = 890.414
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -438,37 +435,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Finished IO Insertion : Time (s): cpu = 00:03:00 ; elapsed = 00:03:06 . Memory (MB): peak = 1676.938 ; gain = 898.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:52 ; elapsed = 00:02:55 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Finished Renaming Generated Instances : Time (s): cpu = 00:03:00 ; elapsed = 00:03:06 . Memory (MB): peak = 1676.938 ; gain = 898.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:53 ; elapsed = 00:02:56 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:03:01 ; elapsed = 00:03:06 . Memory (MB): peak = 1676.938 ; gain = 898.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:53 ; elapsed = 00:02:56 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Finished Renaming Generated Ports : Time (s): cpu = 00:03:01 ; elapsed = 00:03:07 . Memory (MB): peak = 1676.938 ; gain = 898.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:53 ; elapsed = 00:02:56 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:03:01 ; elapsed = 00:03:07 . Memory (MB): peak = 1676.938 ; gain = 898.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:53 ; elapsed = 00:02:56 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Finished Renaming Generated Nets : Time (s): cpu = 00:03:01 ; elapsed = 00:03:07 . Memory (MB): peak = 1676.938 ; gain = 898.023
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -501,46 +498,46 @@ Report Cell Usage:
 +------+--------+------+
 |1     |clk_wiz |     1|
 |2     |hdmi_tx |     1|
-|3     |CARRY4  |   368|
+|3     |CARRY4  |   392|
 |4     |DSP48E1 |     6|
-|5     |LUT1    |    53|
-|6     |LUT2    |   856|
-|7     |LUT3    |   864|
-|8     |LUT4    |   776|
-|9     |LUT5    |   591|
-|10    |LUT6    |  2052|
-|11    |MUXF7   |   215|
+|5     |LUT1    |    58|
+|6     |LUT2    |   920|
+|7     |LUT3    |   890|
+|8     |LUT4    |   804|
+|9     |LUT5    |   581|
+|10    |LUT6    |  2103|
+|11    |MUXF7   |   216|
 |12    |MUXF8   |    68|
-|13    |FDCE    |    92|
+|13    |FDCE    |    91|
 |14    |FDPE    |     6|
-|15    |FDRE    |   512|
+|15    |FDRE    |   510|
 |16    |FDSE    |   144|
 |17    |IBUF    |    16|
 +------+--------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:53 ; elapsed = 00:02:56 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Finished Writing Synthesis Report : Time (s): cpu = 00:03:01 ; elapsed = 00:03:07 . Memory (MB): peak = 1676.938 ; gain = 898.023
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 7 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:02:44 ; elapsed = 00:02:54 . Memory (MB): peak = 1664.969 ; gain = 776.027
-Synthesis Optimization Complete : Time (s): cpu = 00:02:53 ; elapsed = 00:02:56 . Memory (MB): peak = 1664.969 ; gain = 886.234
+Synthesis Optimization Runtime : Time (s): cpu = 00:02:53 ; elapsed = 00:03:05 . Memory (MB): peak = 1676.938 ; gain = 787.344
+Synthesis Optimization Complete : Time (s): cpu = 00:03:02 ; elapsed = 00:03:07 . Memory (MB): peak = 1676.938 ; gain = 898.023
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.059 . Memory (MB): peak = 1681.324 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 657 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.063 . Memory (MB): peak = 1692.281 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 682 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1685.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1695.930 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: f7be6275
+Synth Design complete, checksum: 72002138
 INFO: [Common 17-83] Releasing license: Synthesis
-87 Infos, 63 Warnings, 0 Critical Warnings and 0 Errors encountered.
+85 Infos, 61 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:58 ; elapsed = 00:03:02 . Memory (MB): peak = 1685.051 ; gain = 1281.445
+synth_design: Time (s): cpu = 00:03:07 ; elapsed = 00:03:13 . Memory (MB): peak = 1695.930 ; gain = 1292.555
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'C:/Poker/poker_final/poker_final.runs/synth_1/top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri May  9 09:54:10 2025...
+INFO: [Common 17-206] Exiting Vivado at Fri May  9 12:20:56 2025...
