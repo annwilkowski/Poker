@@ -48,6 +48,9 @@ module top_screen (
     logic [ 7:0] font_data;
     logic [10:0] font_address;
 
+    // pipelining
+    logic [7:0] font_data_reg;
+
     font_rom fonts (
         .addr(font_address),
         .data(font_data)
@@ -57,7 +60,7 @@ module top_screen (
         .DrawX(DrawX),
         .DrawY(DrawY),
         .clk(clk),
-        .font_data(font_data),
+        .font_data(font_data_reg),
 
         .font_address(start_font_address),
         .Red(Start_Red),
@@ -69,7 +72,7 @@ module top_screen (
         .DrawX(DrawX),
         .DrawY(DrawY),
         .clk(clk),
-        .font_data(font_data),
+        .font_data(font_data_reg),
 
         .font_address(game_font_address),
         .player_cards(player_cards),
@@ -97,7 +100,7 @@ module top_screen (
         .DrawX(DrawX),
         .DrawY(DrawY),
         .clk(clk),
-        .font_data(font_data),
+        .font_data(font_data_reg),
 
         .font_address(wait_font_address),
         .Red(Wait_Red),
@@ -105,6 +108,9 @@ module top_screen (
         .Blue(Wait_Blue)
     );
     
+    always_ff @(posedge clk) begin
+        font_data_reg <= font_data;
+    end
 
     // fixing multiple drivers for font_address
     always_comb begin : font_address_assignments
@@ -117,23 +123,23 @@ module top_screen (
     end
     
     // Color selection per pixel
-    always_comb begin : Pixel_Color_Assignments
+    always_ff @(posedge clk) begin : Pixel_Color_Assignments
         if (start_state) begin
-            Red   = Start_Red;
-            Green = Start_Green;
-            Blue  = Start_Blue;
+            Red   <= Start_Red;
+            Green <= Start_Green;
+            Blue  <= Start_Blue;
         end else if (game_state) begin
-            Red   = Game_Red;  // white card
-            Green = Game_Green;
-            Blue  = Game_Blue; 
+            Red   <= Game_Red;  // white card
+            Green <= Game_Green;
+            Blue  <= Game_Blue; 
         end else if (wait_state) begin
-            Red   = Wait_Red;
-            Green = Wait_Green;
-            Blue  = Wait_Blue;
+            Red   <= Wait_Red;
+            Green <= Wait_Green;
+            Blue  <= Wait_Blue;
         end else begin
-            Red   = 4'h3;  // Background color default (Dark Green)
-            Green = 4'h6;
-            Blue  = 4'h2;
+            Red   <= 4'h3;  // Background color default (Dark Green)
+            Green <= 4'h6;
+            Blue  <= 4'h2;
         end
     end
 

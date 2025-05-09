@@ -39,6 +39,10 @@ module wait_screen (
     logic [4:0]curr_char; // 0-10
     always_comb
     begin: title_text
+        font_address = 0; //default
+        font_x = 0;
+        font_y = 0;
+
         // "Switch Player"
         if ( (DrawY >= 100) && (DrawY < 164) && (DrawX >= 100) && (DrawX < 516) ) begin
             curr_char = ((DrawX - 100) >> 5); // divide by 32 to find which char to display out of 11

@@ -3,6 +3,7 @@
 module money_display (
     input logic [9:0] DrawX,        // Current pixel X position
     input logic [9:0] DrawY,        // Current pixel Y position
+    input logic clk,
     input logic [10:0] player_stacks[2],    
     input logic [10:0] player_pots[2],  
     input logic [10:0] pot_size, 
@@ -21,17 +22,28 @@ module money_display (
     // signals for displaying binary as numbers
     logic [3:0] stack_digits[0:3];
     logic [10:0] player_stack_value;
-
     logic [3:0] player_pot_digits[0:3];
     logic [10:0] player_pot_value;
-
     logic [3:0] other_player_pot_digits[0:3];
     logic [10:0] other_player_pot_value;
-
     logic [3:0] total_pot_digits[0:3];
     logic [10:0] total_pot_value;
 
     logic other_player;
+
+    logic text_on;
+    logic [10:0] font_address;
+
+     // temp variables
+    logic [3:0] curr_char;
+    logic [3:0] font_x;
+    logic [4:0] font_y;
+
+    // dealer chip logic
+    int x_center, y_center;
+    int dx, dy;
+    int dist_sq;
+    int chip_radius_sq;
 
     // font ROM addressing
     logic [10:0] stack_font_addr [0:5];    // STACK: 
@@ -90,18 +102,7 @@ module money_display (
         (11'd78 << 4),  // N
         (11'd83 << 4)  // S
     };
-
-
-    // temp variables
-    logic [3:0] curr_char;
-    logic [3:0] font_x;
-    logic [4:0] font_y;
-
-    // dealer chip logic
-    int x_center, y_center;
-    int dx, dy;
-    int dist_sq;
-    int chip_radius_sq;
+   
 
     always_comb begin 
         text_on = 0; // default values
@@ -164,8 +165,7 @@ module money_display (
                     else
                         font_address = num_font_addr[stack_digits[curr_char-1]] + font_y; // numbers
                     text_on = font_data[7-font_x];
-                end
-
+            end
         end
 
         // Your Pot
@@ -221,8 +221,9 @@ module money_display (
                     else
                         font_address = num_font_addr[other_player_pot_digits[curr_char-1]] + font_y; // numbers
                     text_on = font_data[7-font_x];
-                end
+            end
         end
+
 
         // Total Pot
         if ( (DrawX >= 540) && (DrawX < 612)) begin // check horizontal position
@@ -236,16 +237,16 @@ module money_display (
                 text_on = font_data[7-font_x];
             end
 
-        // display total pot number
-        if ( (DrawY >= 76) && (DrawY < 92) ) begin // check Fold vertical position
-                font_y = (DrawY - 76);
-                if (curr_char == 0)
-                    font_address = (11'd36 << 4) + font_y; // $ sign
-                else if (curr_char > 4)
-                    font_address = (11'd32 << 4) + font_y; // space
-                else
-                    font_address = num_font_addr[total_pot_digits[curr_char-1]] + font_y; // numbers
-                text_on = font_data[7-font_x];
+            // display total pot number
+            if ( (DrawY >= 76) && (DrawY < 92) ) begin // check Fold vertical position
+                    font_y = (DrawY - 76);
+                    if (curr_char == 0)
+                        font_address = (11'd36 << 4) + font_y; // $ sign
+                    else if (curr_char > 4)
+                        font_address = (11'd32 << 4) + font_y; // space
+                    else
+                        font_address = num_font_addr[total_pot_digits[curr_char-1]] + font_y; // numbers
+                    text_on = font_data[7-font_x];
             end
         end
 
@@ -267,9 +268,9 @@ module money_display (
             end
         end
 
+
         // DEALER CHIP DISPLAY
         // For circle: (x - x0)^2 + (y - y0)^2 <= r^2
-
         if (current_dealer == current_player) begin
             x_center = 391;
             y_center = 50;
@@ -288,16 +289,17 @@ module money_display (
             text_on = 1; // default 
             // Inside circle
             // Now cut out a small rectangle for the 'D' (say 8×16 pixels)
-            x_center = x_center + 2;
-            y_center = y_center + 2;
-            if ( (DrawX >= (x_center - 8)) && (DrawX < (x_center + 8)) &&
-                (DrawY >= (y_center - 16)) && (DrawY < (y_center + 16)) ) begin
-                font_x = (DrawX - (x_center - 8)) >> 1;
-                font_y = (DrawY - (y_center - 16)) >> 1;
+            // x_center = x_center + 2;
+            // y_center = y_center + 2;
+            if ( (DrawX >= (x_center - 6)) && (DrawX < (x_center + 10)) &&
+                (DrawY >= (y_center - 14)) && (DrawY < (y_center + 18)) ) begin
+                font_x = (DrawX - (x_center - 6)) >> 1;
+                font_y = (DrawY - (y_center - 14)) >> 1;
                 font_address = (11'd68 << 4) + font_y;
                 text_on = ~(font_data[7 - font_x]); // leave blank for font to render 'D'
             end 
         end
     end
+
 
 endmodule

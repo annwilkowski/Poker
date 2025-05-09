@@ -72,10 +72,7 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
 set_param chipscope.maxJobs 2
-set_param synth.incrementalSynthesisCache C:/Users/Radek/AppData/Roaming/Xilinx/Vivado/.Xil/Vivado-33908-DESKTOP-227SA2M/incrSyn
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL 9-1061} -limit 100000
-set_msg_config -id {HDL 9-1654} -limit 100000
+set_param xicom.use_bs_reader 1
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -111,14 +108,15 @@ read_verilog -library xil_defaultlib -sv {
   C:/Poker/graphics/card_text_display.sv
   C:/Poker/graphics/font_rom.sv
   C:/Poker/graphics/money_display.sv
+  C:/Poker/design_sources/sync.sv
   C:/Poker/graphics/top_module.sv
 }
-read_ip -quiet c:/Poker/anna_poker/anna_poker.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
+read_ip -quiet C:/Poker/anna_poker/anna_poker.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
 set_property used_in_implementation false [get_files -all c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Poker/anna_poker/anna_poker.gen/sources_1/ip/clk_wiz_0/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet c:/Poker/anna_poker/anna_poker.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+read_ip -quiet C:/Poker/anna_poker/anna_poker.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

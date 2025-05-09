@@ -1,14 +1,16 @@
 `include "poker_types.svh"
 
 module top(
-    input logic Clk,
+    input logic clk,
     input logic reset_rtl_0,
+    input  logic [3:0] btn, //4 button inputs
+    input logic [15:0] sw,  //16 switch inputs
     
-     //HDMI
-     output logic hdmi_tmds_clk_n,
-     output logic hdmi_tmds_clk_p,
-     output logic [2:0]hdmi_tmds_data_n,
-     output logic [2:0]hdmi_tmds_data_p
+    //HDMI
+    output logic hdmi_tmds_clk_n,
+    output logic hdmi_tmds_clk_p,
+    output logic [2:0]hdmi_tmds_data_n,
+    output logic [2:0]hdmi_tmds_data_p
         
     // //HEX displays
     // output logic [7:0] hex_segA,
@@ -18,14 +20,13 @@ module top(
 );
     
     logic [31:0] keycode0_gpio, keycode1_gpio;
-    logic clk_25MHz, clk_125MHz, clk, clk_100MHz;
+    logic clk_25MHz, clk_125MHz, clk_100MHz;
     logic locked;
     logic [9:0] DrawX, DrawY;
 
     logic hsync, vsync, vde;
     logic [3:0] Red, Green, Blue;
     logic reset_ah;
-
 
     // poker fsm input
     card_t player_cards[2][2];
@@ -47,11 +48,14 @@ module top(
     logic start_state;
     logic game_state;
     logic wait_state;   
-    
+
+    // synchronized input
+    logic [3:0] butt_s;
+
     assign reset_ah = reset_rtl_0;
     
     // Initial block for test vectors begins below
-    initial begin : TEST_VECTORS
+    always_comb begin : TEST_VECTORS
 
         // Initialize player stacks and pots (arbitrary values)
         player_stacks[0] = 1000;  // Each player starts with 1000 chips
@@ -82,9 +86,37 @@ module top(
         current_player = 1;  // Player 1's turn
         current_dealer = 1;   // Player 1 is dealer
         if_BetCheck = 0; 
-        curr_state = showdown;   // Show flop cards
+        curr_state = flop;   // Show flop cards
         winner = 1;
-        wait_state = 1;
+
+
+        if (butt_s[0] == 1) begin
+            start_state = 1;
+            game_state = 0;
+            wait_state = 0;
+        end else
+        if (butt_s[1] == 1) begin
+            start_state = 0;
+            game_state = 1;
+            wait_state = 0;
+            curr_state = flop;
+        end else
+        if (butt_s[2] == 1) begin
+            start_state = 0;
+            game_state = 0;
+            wait_state = 1;
+        end else
+        if (butt_s[3] == 1) begin
+            start_state = 0;
+            game_state = 1;
+            wait_state = 0;
+            curr_state = showdown;
+        end
+        else begin
+            start_state = 1;
+            game_state = 0;
+            wait_state = 0;
+        end
     end
 
 
@@ -111,7 +143,7 @@ module top(
         .clk_out2(clk_125MHz),
         .reset(reset_ah),
         .locked(locked),
-        .clk_in1(Clk)
+        .clk_in1(clk)
     );
     
     //VGA Sync signal generator
@@ -182,5 +214,20 @@ module top(
         .game_state(game_state),
         .wait_state(wait_state)
     );
+
+    // synchronizers
+    sync_debounce button_sync [3:0] (
+        .clk	(clk), 
+        .d		(btn), 
+        
+        .q		(butt_s)
+    );
+
+    sync_flop sw_sync [15:0] (
+        .clk	(clk),
+        .d		(sw_i),
+
+        .q		(sw_s)
+    );	
     
 endmodule

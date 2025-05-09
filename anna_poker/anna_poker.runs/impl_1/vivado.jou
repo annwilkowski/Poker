@@ -2,12 +2,11 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu May  8 17:17:26 2025
-# Process ID: 15516
+# Start of session at: Thu May  8 23:35:56 2025
+# Process ID: 84696
 # Current directory: C:/Poker/anna_poker/anna_poker.runs/impl_1
 # Command line: vivado.exe -log top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source top.tcl -notrace
 # Log file: C:/Poker/anna_poker/anna_poker.runs/impl_1/top.vdi
 # Journal file: C:/Poker/anna_poker/anna_poker.runs/impl_1\vivado.jou
 # Running On: DESKTOP-227SA2M, OS: Windows, CPU Frequency: 2803 MHz, CPU Physical cores: 4, Host memory: 16856 MB
 #-----------------------------------------------------------
-source top.tcl -notrace

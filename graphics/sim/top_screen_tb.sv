@@ -13,7 +13,7 @@
 `include "poker_types.svh"
 //Uncomment to simulate entire screen and write BMP (slow)
 
-module hdmi_text_controller_tb ();
+module top_screen_tb ();
 
     logic clk;
     logic [ 3:0] Red;
@@ -23,6 +23,7 @@ module hdmi_text_controller_tb ();
     logic sync;
 
     // game fsm signals used for game graphics
+
     card_t player_cards[2][2];
     logic [10:0] player_stacks[2]; 
     logic [10:0] player_pots[2];
@@ -215,7 +216,8 @@ module hdmi_text_controller_tb ();
     // Initial block for test vectors begins below
     initial begin : TEST_VECTORS
 
-        // Initialize player stacks and pots (arbitrary values) 
+        // Initialize player stacks and pots (arbitrary values)
+        
         player_stacks[0] = 1000;  // Each player starts with 1000 chips
         player_stacks[1] = 999;
         player_pots[0] = 123;
@@ -247,8 +249,8 @@ module hdmi_text_controller_tb ();
         curr_state = showdown;   // Show flop cards
         winner = 1;
 
-        start_state = 1;
-        game_state = 0;
+        start_state = 0;
+        game_state = 1;
         wait_state = 0;
 
         reset = 1;  //reset VGA controller

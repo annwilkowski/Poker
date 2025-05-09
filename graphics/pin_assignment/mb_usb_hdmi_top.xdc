@@ -1,11 +1,37 @@
 create_clock -period 10.000 -name clk_100 -waveform {0.000 5.000} [get_ports Clk]
 
-set_property IOSTANDARD LVCMOS33 [get_ports Clk]
+set_property IOSTANDARD LVCMOS33 [get_ports clk]
 set_property IOSTANDARD LVCMOS25 [get_ports reset_rtl_0]
-set_property PACKAGE_PIN N15 [get_ports Clk]
-set_property PACKAGE_PIN J2 [get_ports reset_rtl_0]
+set_property PACKAGE_PIN N15 [get_ports clk]
+set_property PACKAGE_PIN A8 [get_ports reset_rtl_0]
+
+# On-board Buttons
+set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS25} [get_ports {btn[0]}]
+set_property -dict {PACKAGE_PIN J1 IOSTANDARD LVCMOS25} [get_ports {btn[1]}]
+set_property -dict {PACKAGE_PIN G2 IOSTANDARD LVCMOS25} [get_ports {btn[2]}]
+set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS25} [get_ports {btn[3]}]
 
 
+# On-board Slide Switches
+set_property -dict {PACKAGE_PIN G1 IOSTANDARD LVCMOS25} [get_ports {sw[0]}]
+set_property -dict {PACKAGE_PIN F2 IOSTANDARD LVCMOS25} [get_ports {sw[1]}]
+set_property -dict {PACKAGE_PIN F1 IOSTANDARD LVCMOS25} [get_ports {sw[2]}]
+set_property -dict {PACKAGE_PIN E2 IOSTANDARD LVCMOS25} [get_ports {sw[3]}]
+set_property -dict {PACKAGE_PIN E1 IOSTANDARD LVCMOS25} [get_ports {sw[4]}]
+set_property -dict {PACKAGE_PIN D2 IOSTANDARD LVCMOS25} [get_ports {sw[5]}]
+set_property -dict {PACKAGE_PIN D1 IOSTANDARD LVCMOS25} [get_ports {sw[6]}]
+set_property -dict {PACKAGE_PIN C2 IOSTANDARD LVCMOS25} [get_ports {sw[7]}]
+set_property -dict {PACKAGE_PIN B2 IOSTANDARD LVCMOS25} [get_ports {sw[8]}]
+set_property -dict {PACKAGE_PIN A4 IOSTANDARD LVCMOS25} [get_ports {sw[9]}]
+set_property -dict {PACKAGE_PIN A5 IOSTANDARD LVCMOS25} [get_ports {sw[10]}]
+set_property -dict {PACKAGE_PIN A6 IOSTANDARD LVCMOS25} [get_ports {sw[11]}]
+set_property -dict {PACKAGE_PIN C7 IOSTANDARD LVCMOS25} [get_ports {sw[12]}]
+set_property -dict {PACKAGE_PIN A7 IOSTANDARD LVCMOS25} [get_ports {sw[13]}]
+set_property -dict {PACKAGE_PIN B7 IOSTANDARD LVCMOS25} [get_ports {sw[14]}]
+
+
+
+# hex display
 set_property IOSTANDARD LVCMOS25 [get_ports {hex_gridA[3]}]
 set_property IOSTANDARD LVCMOS25 [get_ports {hex_gridA[2]}]
 set_property IOSTANDARD LVCMOS25 [get_ports {hex_gridA[1]}]

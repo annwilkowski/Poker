@@ -79,6 +79,7 @@ module game_screen (
     money_display money (
         .DrawX(DrawX),         // Current pixel X position
         .DrawY(DrawY),         // Current pixel Y position
+        .clk(clk),
         .player_stacks(player_stacks),    
         .player_pots(player_pots),       // SID NEEDS TO IMPLEMENT  
         .pot_size(pot_size),
@@ -151,6 +152,10 @@ module game_screen (
                 Red   = 4'h0;  // black
                 Green = 4'h0;
                 Blue  = 4'h0;
+            end else begin
+                Red   = 4'h3;  // Background color (Dark Green)
+                Green = 4'h6;
+                Blue  = 4'h2;
             end     
         end else if (card_on) begin
             Red   = 4'hf;  // white card

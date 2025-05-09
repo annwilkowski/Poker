@@ -53,6 +53,16 @@ module start_screen (
 
     // Card Logic
     always_comb begin
+        card_on     = 1'b0;
+        red_font    = 1'b0;
+        black_font  = 1'b0;
+        text_on     = 1'b0;
+        title_on    = 1'b0;
+        font_address= 11'd0;
+        font_x      = 4'd0;
+        font_y      = 4'd0;
+        curr_char   = 5'd0;
+
 
         if ( (DrawY > 170) && (DrawY < 320) && (((DrawX > 50) && (DrawX < 150)) || ((DrawX > 200) && (DrawX < 300)) || ((DrawX > 350) && (DrawX < 450)) || ((DrawX > 500) && (DrawX < 600))) )
             card_on = 1'b1;
@@ -146,7 +156,12 @@ module start_screen (
                 Red   = 4'h0;  // black
                 Green = 4'h0;
                 Blue  = 4'h0;
-            end     
+            end 
+            else begin
+                Red   = 4'h3;  // Background color (Dark Green)
+                Green = 4'h6;
+                Blue  = 4'h2;
+            end
         end else if (card_on) begin
             Red   = 4'hf;  // white card
             Green = 4'hf;
