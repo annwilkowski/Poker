@@ -14,6 +14,7 @@ module game_screen (
     input logic current_player,             // SID NEEDS TO IMPLEMENT
     input logic current_dealer,             // SID NEEDS TO IMPLEMENT
     input logic winner,
+    input logic draw,
     input logic [10:0] min_bet_or_raise,
     input logic [10:0] call_size,
 
@@ -89,6 +90,7 @@ module game_screen (
         .font_data(font_data),
 
         .winner(winner),
+        .draw(draw),
         .curr_state(curr_state),
 
         .current_dealer(current_dealer),

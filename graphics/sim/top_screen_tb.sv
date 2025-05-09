@@ -31,6 +31,7 @@ module top_screen_tb ();
     logic current_player; 
     logic current_dealer;
     logic winner;
+    logic draw;
     logic [10:0] min_bet_or_raise;
     logic [10:0] call_size;
 
@@ -73,6 +74,7 @@ module top_screen_tb ();
         .current_player(current_player), 
         .current_dealer(current_dealer),
         .winner(winner),
+        .draw(draw),
         .min_bet_or_raise(min_bet_or_raise),
         .call_size(call_size),
 
@@ -251,10 +253,11 @@ module top_screen_tb ();
 
         // Set current player and game state
         current_player = 1;  // Player 1's turn
-        current_dealer = 1;   // Player 1 is dealer
+        current_dealer = 0;   // Player 1 is dealer
         if_BetCheck = 0; 
         curr_state = showdown;   // Show flop cards
-        winner = 1;
+        winner = 0;
+        draw = 0;
 
         start_state = 0;
         game_state = 1;

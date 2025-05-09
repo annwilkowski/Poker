@@ -13,6 +13,7 @@ module top_screen (
     input logic current_player,             // SID NEEDS TO IMPLEMENT
     input logic current_dealer,             // SID NEEDS TO IMPLEMENT
     input logic winner,
+    input logic draw,
     input logic [10:0] min_bet_or_raise,
     input logic [10:0] call_size,
 
@@ -82,6 +83,7 @@ module top_screen (
         .current_player(current_player), 
         .current_dealer(current_dealer),
         .winner(winner),
+        .draw(draw),
         .min_bet_or_raise(min_bet_or_raise),
         .call_size(call_size),
 

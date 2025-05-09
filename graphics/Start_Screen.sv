@@ -23,7 +23,7 @@ module start_screen (
     logic [10:0] Title_font_addr [0:10]; // array of 11 elements with 11 bits
     
     // Start Text Storage
-    logic [10:0] Start_font_addr [0:21]; // array of 22
+    logic [10:0] Start_font_addr [0:17]; // array of 18
 
     // Color Storage
     logic       card_on;  // determines whether on or off pixel
@@ -43,11 +43,27 @@ module start_screen (
     // stores font ROM addresses of 'POKER NIGHT'
     assign Title_font_addr = '{(11'd80 << 4), (11'd79 << 4), (11'd75 << 4), (11'd69 << 4), (11'd82 << 4), 
                 (11'd32 << 4), (11'd78 << 4), (11'd73 << 4), (11'd71 << 4), (11'd72 << 4), (11'd84 << 4)};
-    // stores font ROM addresses of 'PRESS "ENTER" TO START'
-    assign Start_font_addr = '{(11'd80 << 4), (11'd82 << 4), (11'd69 << 4), (11'd83 << 4), (11'd83 << 4), 
-                (11'd32 << 4), (11'd34 << 4), (11'd69 << 4), (11'd78 << 4), (11'd84 << 4), (11'd69 << 4),
-                (11'd82 << 4), (11'd34 << 4), (11'd32 << 4), (11'd84 << 4), (11'd79 << 4), (11'd32 << 4),
-                (11'd83 << 4), (11'd84 << 4), (11'd65 << 4), (11'd82 << 4), (11'd84 << 4)};
+    // stores font ROM addresses of 'PRESS "1" TO START'
+    assign Start_font_addr = '{
+        (11'd80 << 4),  // P
+        (11'd82 << 4), // R
+        (11'd69 << 4), // E
+        (11'd83 << 4), // S
+        (11'd83 << 4), // S
+        (11'd32 << 4), // "space"
+        (11'd34 << 4), // "
+        (11'd48 << 4), // 0
+        (11'd34 << 4), // "
+        (11'd32 << 4), // "space"
+        (11'd84 << 4), // T
+        (11'd79 << 4), // O
+        (11'd32 << 4), // "space"
+        (11'd83 << 4), // S
+        (11'd84 << 4), // T
+        (11'd65 << 4), // A
+        (11'd82 << 4), // R
+        (11'd84 << 4)  // T
+    };
 
 
     // Card Logic
@@ -132,10 +148,10 @@ module start_screen (
             title_on = font_data[7-font_x];
         end
         // Start text
-        else if ( (DrawY >= 400) && (DrawY < 448) && (DrawX >= 56) && (DrawX < 584) ) begin
-            curr_char = ((DrawX - 56) / 24); // divide by 24 to find which char to display out of 22
-            font_y = ((DrawY - 400) / 3);   // divide by 3 to quadruple size!
-            font_x = ((DrawX - 56) / 3); 
+        else if ( (DrawY >= 400) && (DrawY < 448) && (DrawX >= 100) && (DrawX < 532) ) begin
+            curr_char = ((DrawX - 100) / 24); // divide by 24 to find which char to display out of 22
+            font_y = ((DrawY - 400) / 3);   // divide by 3 to triple size!
+            font_x = ((DrawX - 100) / 3); 
             font_address = Start_font_addr[curr_char] + font_y;
             title_on = font_data[7-font_x];
         end

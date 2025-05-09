@@ -28,7 +28,7 @@ module button_display (
     // button addresses
     assign fold_font_addr = '{
         (11'd91 << 4),  // [
-        (11'd70 << 4),  // F
+        (11'd51 << 4),  // 3
         (11'd93 << 4),  // ]
         (11'd32 << 4),  // "space"
         (11'd70 << 4),  // F
@@ -45,7 +45,7 @@ module button_display (
     };
     assign check_font_addr = '{
         (11'd91 << 4),  // [
-        (11'd67 << 4),  // C
+        (11'd49 << 4),  // 1
         (11'd93 << 4),  // ]
         (11'd32 << 4),  // "space"
         (11'd67 << 4),  // C
@@ -62,7 +62,7 @@ module button_display (
     };
     assign bet_font_addr = '{
         (11'd91 << 4),  // [
-        (11'd66 << 4),  // B
+        (11'd50 << 4),  // 2
         (11'd93 << 4),  // ]
         (11'd32 << 4),  // "space"
         (11'd66 << 4),  // B
@@ -75,7 +75,7 @@ module button_display (
     };
     assign call_font_addr = '{
         (11'd91 << 4),  // [
-        (11'd67 << 4),  // C
+        (11'd49 << 4),  // 1
         (11'd93 << 4),  // ]
         (11'd32 << 4),  // "space"
         (11'd67 << 4),  // C
@@ -88,7 +88,7 @@ module button_display (
     };
     assign raise_font_addr = '{
         (11'd91 << 4),  // [
-        (11'd82 << 4),  // R
+        (11'd50 << 4),  // 2
         (11'd93 << 4),  // ]
         (11'd32 << 4),  // "space"
         (11'd82 << 4),  // R

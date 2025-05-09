@@ -10,6 +10,7 @@ module money_display (
     input logic [7:0] font_data,
 
     input logic winner,
+    input logic draw,
     input hand_state_t curr_state,   
 
     input logic current_dealer,                   
@@ -19,12 +20,18 @@ module money_display (
 );
 
     // signals for displaying binary as numbers
-    logic [3:0] stack_digits[0:3];
-    logic [10:0] player_stack_value;
+    logic [3:0] your_stack_digits[0:3];
+    logic [10:0] your_stack_value;
+
+    logic [3:0] other_stack_digits[0:3];
+    logic [10:0] other_stack_value;
+
     logic [3:0] player_pot_digits[0:3];
     logic [10:0] player_pot_value;
+
     logic [3:0] other_player_pot_digits[0:3];
     logic [10:0] other_player_pot_value;
+
     logic [3:0] total_pot_digits[0:3];
     logic [10:0] total_pot_value;
 
@@ -50,6 +57,7 @@ module money_display (
     logic [10:0] player_font_addr [0:6];
     logic [10:0] total_pot_font_addr [0:8];
     logic [10:0] wins_font_addr [0:4];
+    logic [10:0] draw_font_addr [0:3];
 
     assign stack_font_addr = '{
         (11'd83 << 4),  // S
@@ -99,7 +107,13 @@ module money_display (
         (11'd87 << 4),  // W
         (11'd73 << 4),  // I
         (11'd78 << 4),  // N
-        (11'd83 << 4)  // S
+        (11'd83 << 4)   // S
+    };
+    assign draw_font_addr = '{
+        (11'd68 << 4),  // D
+        (11'd82 << 4),  // R
+        (11'd65 << 4),  // A
+        (11'd87 << 4)  // W
     };
    
 
@@ -112,37 +126,40 @@ module money_display (
 
         other_player = (~current_player);
 
-        player_stack_value = player_stacks[current_player];
+        your_stack_value = player_stacks[current_player];
+        other_stack_value = player_stacks[other_player];
         player_pot_value = player_pots[current_player];
         other_player_pot_value = player_pots[~current_player];
         total_pot_value = pot_size;
 
         // split into 4 decimal digits
-        stack_digits[0] = (player_stack_value / 1000) % 10;
-        stack_digits[1] = (player_stack_value / 100)  % 10;
-        stack_digits[2] = (player_stack_value / 10)   % 10;
-        stack_digits[3] =  player_stack_value         % 10;
+        your_stack_digits[0] = (your_stack_value / 1000) % 10;
+        your_stack_digits[1] = (your_stack_value / 100)  % 10;
+        your_stack_digits[2] = (your_stack_value / 10)   % 10;
+        your_stack_digits[3] =  your_stack_value         % 10;
 
-        // split into 4 decimal digits
+        other_stack_digits[0] = (other_stack_value / 1000) % 10;
+        other_stack_digits[1] = (other_stack_value / 100)  % 10;
+        other_stack_digits[2] = (other_stack_value / 10)   % 10;
+        other_stack_digits[3] =  other_stack_value         % 10;
+
         player_pot_digits[0] = (player_pot_value / 1000) % 10;
         player_pot_digits[1] = (player_pot_value / 100)  % 10;
         player_pot_digits[2] = (player_pot_value / 10)   % 10;
         player_pot_digits[3] =  player_pot_value         % 10;
 
-        // split into 4 decimal digits
         other_player_pot_digits[0] = (other_player_pot_value / 1000) % 10;
         other_player_pot_digits[1] = (other_player_pot_value / 100)  % 10;
         other_player_pot_digits[2] = (other_player_pot_value / 10)   % 10;
         other_player_pot_digits[3] =  other_player_pot_value         % 10;
 
-        // split into 4 decimal digits
         total_pot_digits[0] = (total_pot_value / 1000) % 10;
         total_pot_digits[1] = (total_pot_value / 100)  % 10;
         total_pot_digits[2] = (total_pot_value / 10)   % 10;
         total_pot_digits[3] =  total_pot_value         % 10;
         
 
-        // Your Stack
+        // YOUR STACK
         if ( (DrawX >= 406) && (DrawX < 454)) begin // check horizontal position
             curr_char = ((DrawX - 406) >> 3); // divide by 8
             font_x = ((DrawX - 406) % 8); // Get pixel within character (0-7)
@@ -162,12 +179,39 @@ module money_display (
                     else if (curr_char > 4)
                         font_address = (11'd32 << 4) + font_y; // space
                     else
-                        font_address = num_font_addr[stack_digits[curr_char-1]] + font_y; // numbers
+                        font_address = num_font_addr[your_stack_digits[curr_char-1]] + font_y; // numbers
                     text_on = font_data[7-font_x];
             end
         end
 
-        // Your Pot
+
+        // OTHER PLAYER STACK
+        if ( (DrawX >= 406) && (DrawX < 454)) begin // check horizontal position
+            curr_char = ((DrawX - 406) >> 3); // divide by 8
+            font_x = ((DrawX - 406) % 8); // Get pixel within character (0-7)
+
+            // display "STACK: "
+            if ( (DrawY >= 50) && (DrawY < 66) ) begin 
+                    font_y = (DrawY - 50);
+                    font_address = stack_font_addr[curr_char] + font_y;
+                    text_on = font_data[7-font_x];
+                end
+
+            // display stack number
+            if ( (DrawY >= 76) && (DrawY < 92) ) begin // check Fold vertical position
+                    font_y = (DrawY - 76);
+                    if (curr_char == 0)
+                        font_address = (11'd36 << 4) + font_y; // $ sign
+                    else if (curr_char > 4)
+                        font_address = (11'd32 << 4) + font_y; // space
+                    else
+                        font_address = num_font_addr[other_stack_digits[curr_char-1]] + font_y; // numbers
+                    text_on = font_data[7-font_x];
+            end
+        end
+
+
+        // YOUR POT
         if ( (DrawX >= 49) && (DrawX < 113)) begin // check horizontal position
             curr_char = ((DrawX - 49) >> 3); // divide by 8
             font_x = ((DrawX - 49) % 8); // Get pixel within character (0-7)
@@ -195,7 +239,7 @@ module money_display (
             end
         end
 
-        // Other player Pot
+        // OTHER PLAYER POT
         if ( (DrawX >= 49) && (DrawX < 113)) begin // check horizontal position
             curr_char = ((DrawX - 49) >> 3); // divide by 8
             font_x = ((DrawX - 49) % 8); // Get pixel within character (0-7)
@@ -249,21 +293,30 @@ module money_display (
             end
         end
 
-        // display "PLAYER # WINS
+        // display DRAW "PLAYER # WINS"
         if (curr_state == showdown) begin
             if ( (DrawX >= 391) && (DrawX < 599)) begin // check horizontal position
                 curr_char = ((DrawX - 391) >> 4); // divide by 16
                 font_x = ((DrawX - 391) >> 1) % 8; // double size
                 if ( (DrawY >= 120) && (DrawY < 152) ) begin 
                     font_y = ((DrawY - 120) >> 1);  // double size
-                    if (curr_char == 7)
-                        font_address = num_font_addr[winner+1] + font_y;
-                    else if (curr_char < 7)
-                        font_address = player_font_addr[curr_char] + font_y;
-                    else
-                        font_address = wins_font_addr[curr_char-8] + font_y;
+                    if (draw) begin
+                        if (curr_char < 4)
+                            font_address = draw_font_addr[curr_char] + font_y;
+                        else
+                            font_address = (11'd32 << 4) + font_y; // space
+                    end
+                    else begin
+                        if (curr_char == 7)
+                            font_address = num_font_addr[winner+1] + font_y;
+                        else if (curr_char < 7)
+                            font_address = player_font_addr[curr_char] + font_y;
+                        else
+                            font_address = wins_font_addr[curr_char-8] + font_y;
+                    end
                     text_on = font_data[7-font_x];
                 end
+                
             end
         end
 
@@ -271,11 +324,11 @@ module money_display (
         // DEALER CHIP DISPLAY
         // For circle: (x - x0)^2 + (y - y0)^2 <= r^2
         if (current_dealer == current_player) begin
-            x_center = 391;
-            y_center = 50;
-        end else begin
             x_center = 360;
             y_center = 400;
+        end else begin
+            x_center = 150;
+            y_center = 50;
         end
 
         // Dealer chip drawing
