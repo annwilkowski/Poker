@@ -3,145 +3,100 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="hdmi_text_controller_tb_behav.wdb" id="1">
+      <db_ref path="top_screen_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="\$unit_Game_Screen_sv_839792813 " />
+            <top_module name="\$unit_Game_Screen_sv_385779133 " />
             <top_module name="glbl" />
-            <top_module name="hdmi_text_controller_tb" />
+            <top_module name="top_screen_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="3.939257728 ms"></ZoomStartTime>
-      <ZoomEndTime time="9.899257729 ms"></ZoomEndTime>
-      <Cursor1Time time="15.648120000 ms"></Cursor1Time>
+      <ZoomStartTime time="12,063.040000 us"></ZoomStartTime>
+      <ZoomEndTime time="14,569.040001 us"></ZoomEndTime>
+      <Cursor1Time time="13,141.040000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="160"></NameColumnWidth>
-      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+      <NameColumnWidth column_width="192"></NameColumnWidth>
+      <ValueColumnWidth column_width="91"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
-   <wvobject fp_name="/hdmi_text_controller_tb/clk" type="logic">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/Red" type="array">
-      <obj_property name="ElementShortName">Red[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Red[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/Green" type="array">
-      <obj_property name="ElementShortName">Green[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Green[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/Blue" type="array">
-      <obj_property name="ElementShortName">Blue[3:0]</obj_property>
-      <obj_property name="ObjectShortName">Blue[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/reset" type="logic">
-      <obj_property name="ElementShortName">reset</obj_property>
-      <obj_property name="ObjectShortName">reset</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/pixel_rgb" type="array">
-      <obj_property name="ElementShortName">pixel_rgb[0:2][3:0]</obj_property>
-      <obj_property name="ObjectShortName">pixel_rgb[0:2][3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/drawX" type="array">
-      <obj_property name="ElementShortName">drawX[9:0]</obj_property>
-      <obj_property name="ObjectShortName">drawX[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/drawY" type="array">
-      <obj_property name="ElementShortName">drawY[9:0]</obj_property>
-      <obj_property name="ObjectShortName">drawY[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/font_x" type="array">
-      <obj_property name="ElementShortName">font_x[3:0]</obj_property>
-      <obj_property name="ObjectShortName">font_x[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/font_y" type="array">
-      <obj_property name="ElementShortName">font_y[4:0]</obj_property>
-      <obj_property name="ObjectShortName">font_y[4:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/DrawX" type="array">
+   <WVObjectSize size="19" />
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/DrawX" type="array">
       <obj_property name="ElementShortName">DrawX[9:0]</obj_property>
       <obj_property name="ObjectShortName">DrawX[9:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/DrawY" type="array">
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/DrawY" type="array">
       <obj_property name="ElementShortName">DrawY[9:0]</obj_property>
       <obj_property name="ObjectShortName">DrawY[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/if_BetCheck" type="logic">
+      <obj_property name="ElementShortName">if_BetCheck</obj_property>
+      <obj_property name="ObjectShortName">if_BetCheck</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/min_bet_or_raise" type="array">
+      <obj_property name="ElementShortName">min_bet_or_raise[10:0]</obj_property>
+      <obj_property name="ObjectShortName">min_bet_or_raise[10:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_x" type="array">
-      <obj_property name="ElementShortName">font_x[3:0]</obj_property>
-      <obj_property name="ObjectShortName">font_x[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/call_size" type="array">
+      <obj_property name="ElementShortName">call_size[10:0]</obj_property>
+      <obj_property name="ObjectShortName">call_size[10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_y" type="array">
-      <obj_property name="ElementShortName">font_y[4:0]</obj_property>
-      <obj_property name="ObjectShortName">font_y[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/card" type="array">
-      <obj_property name="ElementShortName">card</obj_property>
-      <obj_property name="ObjectShortName">card</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_data" type="array">
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/font_data" type="array">
       <obj_property name="ElementShortName">font_data[7:0]</obj_property>
       <obj_property name="ObjectShortName">font_data[7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/red_font" type="logic">
-      <obj_property name="ElementShortName">red_font</obj_property>
-      <obj_property name="ObjectShortName">red_font</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/black_font" type="logic">
-      <obj_property name="ElementShortName">black_font</obj_property>
-      <obj_property name="ObjectShortName">black_font</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/text_on" type="logic">
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/text_on" type="logic">
       <obj_property name="ElementShortName">text_on</obj_property>
       <obj_property name="ObjectShortName">text_on</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/button_on" type="logic">
-      <obj_property name="ElementShortName">button_on</obj_property>
-      <obj_property name="ObjectShortName">button_on</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/money_text_on" type="logic">
-      <obj_property name="ElementShortName">money_text_on</obj_property>
-      <obj_property name="ObjectShortName">money_text_on</obj_property>
-   </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/font_address" type="array">
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/font_address" type="array">
       <obj_property name="ElementShortName">font_address[10:0]</obj_property>
       <obj_property name="ObjectShortName">font_address[10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/Rank_font_addr" type="array">
-      <obj_property name="ElementShortName">Rank_font_addr[0:12][10:0]</obj_property>
-      <obj_property name="ObjectShortName">Rank_font_addr[0:12][10:0]</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/fold_font_addr" type="array">
+      <obj_property name="ElementShortName">fold_font_addr[0:14][10:0]</obj_property>
+      <obj_property name="ObjectShortName">fold_font_addr[0:14][10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/suit_font_addr" type="array">
-      <obj_property name="ElementShortName">suit_font_addr[0:3][10:0]</obj_property>
-      <obj_property name="ObjectShortName">suit_font_addr[0:3][10:0]</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/check_font_addr" type="array">
+      <obj_property name="ElementShortName">check_font_addr[0:14][10:0]</obj_property>
+      <obj_property name="ObjectShortName">check_font_addr[0:14][10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/card_texts/ten_x" type="array">
-      <obj_property name="ElementShortName">ten_x[2:0]</obj_property>
-      <obj_property name="ObjectShortName">ten_x[2:0]</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/bet_font_addr" type="array">
+      <obj_property name="ElementShortName">bet_font_addr[0:10][10:0]</obj_property>
+      <obj_property name="ObjectShortName">bet_font_addr[0:10][10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/money_font_address" type="array">
-      <obj_property name="ElementShortName">money_font_address[10:0]</obj_property>
-      <obj_property name="ObjectShortName">money_font_address[10:0]</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/call_font_addr" type="array">
+      <obj_property name="ElementShortName">call_font_addr[0:10][10:0]</obj_property>
+      <obj_property name="ObjectShortName">call_font_addr[0:10][10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/money/stack_digits" type="array">
-      <obj_property name="ElementShortName">stack_digits[0:3][3:0]</obj_property>
-      <obj_property name="ObjectShortName">stack_digits[0:3][3:0]</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/raise_font_addr" type="array">
+      <obj_property name="ElementShortName">raise_font_addr[0:10][10:0]</obj_property>
+      <obj_property name="ObjectShortName">raise_font_addr[0:10][10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/money/font_address" type="array">
-      <obj_property name="ElementShortName">font_address[10:0]</obj_property>
-      <obj_property name="ObjectShortName">font_address[10:0]</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/num_font_addr" type="array">
+      <obj_property name="ElementShortName">num_font_addr[0:9][10:0]</obj_property>
+      <obj_property name="ObjectShortName">num_font_addr[0:9][10:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/hdmi_text_controller_tb/graphics_inst/money/font_data" type="array">
-      <obj_property name="ElementShortName">font_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">font_data[7:0]</obj_property>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/min_bet_or_raise_digits" type="array">
+      <obj_property name="ElementShortName">min_bet_or_raise_digits[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">min_bet_or_raise_digits[0:3][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/call_size_digits" type="array">
+      <obj_property name="ElementShortName">call_size_digits[0:3][3:0]</obj_property>
+      <obj_property name="ObjectShortName">call_size_digits[0:3][3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/curr_char" type="array">
+      <obj_property name="ElementShortName">curr_char[3:0]</obj_property>
+      <obj_property name="ObjectShortName">curr_char[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/font_x" type="array">
+      <obj_property name="ElementShortName">font_x[3:0]</obj_property>
+      <obj_property name="ObjectShortName">font_x[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top_screen_tb/graphics_inst/game_screen/button/font_y" type="array">
+      <obj_property name="ElementShortName">font_y[4:0]</obj_property>
+      <obj_property name="ObjectShortName">font_y[4:0]</obj_property>
    </wvobject>
 </wave_config>

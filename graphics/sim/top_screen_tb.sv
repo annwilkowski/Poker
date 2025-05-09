@@ -31,6 +31,8 @@ module top_screen_tb ();
     logic current_player; 
     logic current_dealer;
     logic winner;
+    logic [10:0] min_bet_or_raise;
+    logic [10:0] call_size;
 
     logic if_BetCheck;
 
@@ -71,6 +73,8 @@ module top_screen_tb ();
         .current_player(current_player), 
         .current_dealer(current_dealer),
         .winner(winner),
+        .min_bet_or_raise(min_bet_or_raise),
+        .call_size(call_size),
 
         .if_BetCheck(if_BetCheck),
 
@@ -223,6 +227,9 @@ module top_screen_tb ();
         player_pots[0] = 123;
         player_pots[1] = 456;        // No money in pot initially
         pot_size = 7890;
+
+        min_bet_or_raise = 1234;
+        call_size = 1000;
         
         // Initialize player cards (create some test hands)
         // Player 1 gets Ace of Spades and King of Hearts

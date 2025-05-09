@@ -2,7 +2,6 @@
 module start_screen (
     input logic [9:0] DrawX,
     input logic [9:0] DrawY,
-    input logic clk,
     input logic [ 7:0] font_data,
 
     output logic [10:0] font_address,

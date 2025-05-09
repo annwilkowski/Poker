@@ -13,6 +13,8 @@ module top_screen (
     input logic current_player,             // SID NEEDS TO IMPLEMENT
     input logic current_dealer,             // SID NEEDS TO IMPLEMENT
     input logic winner,
+    input logic [10:0] min_bet_or_raise,
+    input logic [10:0] call_size,
 
     input logic if_BetCheck,                // NOT SURE YET HOW TO IMPLEMENT (Bet and Check) or (Raise and Call)
 
@@ -59,8 +61,7 @@ module top_screen (
     start_screen start_screen (
         .DrawX(DrawX),
         .DrawY(DrawY),
-        .clk(clk),
-        .font_data(font_data_reg),
+        .font_data(font_data),
 
         .font_address(start_font_address),
         .Red(Start_Red),
@@ -71,8 +72,7 @@ module top_screen (
     game_screen game_screen (
         .DrawX(DrawX),
         .DrawY(DrawY),
-        .clk(clk),
-        .font_data(font_data_reg),
+        .font_data(font_data),
 
         .font_address(game_font_address),
         .player_cards(player_cards),
@@ -82,6 +82,8 @@ module top_screen (
         .current_player(current_player), 
         .current_dealer(current_dealer),
         .winner(winner),
+        .min_bet_or_raise(min_bet_or_raise),
+        .call_size(call_size),
 
         .if_BetCheck(if_BetCheck),
 
@@ -89,7 +91,6 @@ module top_screen (
         .turn_card(turn_card),
         .river_card(river_card),
         .curr_state(curr_state), 
-        .wait_state(wait_state),
 
         .Red(Game_Red),
         .Green(Game_Green),
@@ -99,18 +100,14 @@ module top_screen (
     wait_screen wait_screen (
         .DrawX(DrawX),
         .DrawY(DrawY),
-        .clk(clk),
-        .font_data(font_data_reg),
+        .font_data(font_data),
 
         .font_address(wait_font_address),
         .Red(Wait_Red),
         .Green(Wait_Green),
         .Blue(Wait_Blue)
     );
-    
-    always_ff @(posedge clk) begin
-        font_data_reg <= font_data;
-    end
+
 
     // fixing multiple drivers for font_address
     always_comb begin : font_address_assignments

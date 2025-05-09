@@ -3,7 +3,6 @@
 module money_display (
     input logic [9:0] DrawX,        // Current pixel X position
     input logic [9:0] DrawY,        // Current pixel Y position
-    input logic clk,
     input logic [10:0] player_stacks[2],    
     input logic [10:0] player_pots[2],  
     input logic [10:0] pot_size, 

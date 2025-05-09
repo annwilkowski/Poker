@@ -3,7 +3,6 @@
 module game_screen (
     input logic [9:0] DrawX,
     input logic [9:0] DrawY,
-    input logic clk,
     input logic [ 7:0] font_data,
 
     output logic [10:0] font_address,
@@ -15,6 +14,9 @@ module game_screen (
     input logic current_player,             // SID NEEDS TO IMPLEMENT
     input logic current_dealer,             // SID NEEDS TO IMPLEMENT
     input logic winner,
+    input logic [10:0] min_bet_or_raise,
+    input logic [10:0] call_size,
+
     input logic if_BetCheck,                // NOT SURE YET HOW TO IMPLEMENT (Bet and Check) or (Raise and Call)
 
     //input logic [MAX_STACK_W-1:0] current_pot,
@@ -22,7 +24,6 @@ module game_screen (
     input card_t turn_card,                 // turn in game fsm
     input card_t river_card,                //river in game fsm
     input hand_state_t curr_state,          // pre-flop is check and bet
-    input logic wait_state,                      // if wait show blank screen
 
     output logic [3:0] Red,
     output logic [3:0] Green,
@@ -31,7 +32,7 @@ module game_screen (
 
     // Font Rom 
     logic [10:0] card_font_address;
-    logic [10:0] white_font_address;
+    logic [10:0] button_font_address;
     logic [10:0] money_font_address;
     logic [3:0] font_x;  // Pixel X within 2 characters (0-15) for '10' case
     logic [4:0] font_y;  // Pixel Y within 2 characters (0-31) for suit underneath
@@ -70,16 +71,17 @@ module game_screen (
         .DrawX(DrawX),         // Current pixel X position
         .DrawY(DrawY),         // Current pixel Y position
         .if_BetCheck(if_BetCheck),   // '1' for (Bet and Check), '0' for (Raise and Call) 
+        .min_bet_or_raise(min_bet_or_raise),
+        .call_size(call_size),
         .font_data(font_data),
  
         .text_on(button_on),
-        .font_address(white_font_address)
+        .font_address(button_font_address)
     );
 
     money_display money (
         .DrawX(DrawX),         // Current pixel X position
         .DrawY(DrawY),         // Current pixel Y position
-        .clk(clk),
         .player_stacks(player_stacks),    
         .player_pots(player_pots),       // SID NEEDS TO IMPLEMENT  
         .pot_size(pot_size),
@@ -129,8 +131,8 @@ module game_screen (
 
     // FONT_ADDRESS assignment
     always_comb begin
-        if ((DrawX >= 540) && (DrawX < 612) && (DrawY >= 350) && (DrawY < 458))
-            font_address = white_font_address;
+        if ((DrawX >= 500) && (DrawX < 620) && (DrawY >= 350) && (DrawY < 458))
+            font_address = button_font_address;
         else if (((DrawX >= 110) && (DrawX < 530) && (DrawY >= 200) && (DrawY < 300)) || ((DrawX >= 170) && (DrawX < 320) && (DrawY >= 350) && (DrawY < 450)) || ((DrawX >= 200) && (DrawX < 350) && (DrawY >= 50) && (DrawY < 150)))
             font_address = card_font_address;
         else
@@ -139,11 +141,7 @@ module game_screen (
     
     // Color selection per pixel
     always_comb begin : Pixel_Color_Assignments
-        if (wait_state) begin
-            Red   = 4'h3;  // Background color (Dark Green)
-            Green = 4'h6;
-            Blue  = 4'h2;
-        end else if (card_text_on) begin
+        if (card_text_on) begin
             if (red_font) begin
                 Red   = 4'hf;  // red
                 Green = 4'h0;
